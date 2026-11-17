@@ -1,76 +1,66 @@
 ---
 name: zotero-tagging
 description: >-
-  Import literature into Zotero (from local PDFs or topic-based search) and apply the
-  L0-L4 V2.0 orthogonal taxonomy (`#Ａ１Type`..`#Ｅ１Method`) with the `~ZTag-V2` marker.
-  Use when adding papers by PDF or research topic, tagging or auditing Zotero items,
-  finding untagged entries missing `~ZTag-V2`, or updating item attachments safely.
+  Import literature into Zotero and apply the 154-term V2.1 controlled taxonomy
+  (#Ａ１Type..#Ｅ１Method) with the ~ZTag-V2 marker. Use for literature import,
+  tagging, targeted tag audits, and approved name migrations while preserving
+  collection membership, user tags, reading states, and attachment relationships.
 ---
 
-# Zotero 文献导入与 V2.0 多级自动打标 Skill
+# Zotero 文献导入与标签管理
 
-本 Skill 将用户 Zotero 知识库的 **V2.0 十维正交词表**（153 个受控标签，见 [references/ZOTERO_TAG_SPEC.md](./references/ZOTERO_TAG_SPEC.md) 与 [references/taxonomy.json](./references/taxonomy.json)）与 `zotero-mcp-plugin` 导入链路整合为标准化执行规程，确保新入库与存量文献结构统一、检索精准、标签零损。
+使用 **V2.1（154项）** 十维受控词表。分类服务精读分流、直接检索与结构化多选字段；名称使用熟悉的英文词、缩写和必要中文提示。
 
----
+- [taxonomy.json](references/taxonomy.json)：唯一规范词表、稳定ID、逐词定义、名称映射与别名。
+- [ZOTERO_TAG_SPEC.md](references/ZOTERO_TAG_SPEC.md)：分类边界、完整词表、ZoteroStyle显示规则。
+- [pending_review.json](references/pending_review.json)：已有定点待核记录；日常维护保留其分类，内容复核按用户当前授权推进。
+- [structured_fields.json](references/structured_fields.json)：十维多选字段映射设计，实际字段和选项ID在连接目标库后绑定。
 
-## 一、AI 打标识别标记与标准执行顺序
+## 阅读与归类
 
-### 1. 识别标记：`~ZTag-V2`
-- 所有按本规范完成标注的文献统一附带普通标签 **`~ZTag-V2`**（纯 ASCII 字符，不含 `#` 或 `/`），在 ZoteroStyle 中不进入 `#` 多级树与 `/` 状态文件夹，自然位于平铺标签末尾。
-- 增量打标前通过 `get_item_details` 检查条目标签，或在 Zotero 高级检索使用 **`标签` `不包含` `~ZTag-V2`** 定位未标注条目；已含 `~ZTag-V2` 的条目仅在用户明确要求更新时重标。
+1. 先查重并确定唯一父条目。已有文献优先补充原条目；通过DOI、PMID等导入时优先使用Zotero元数据解析器。
+2. 挂接已有或获准获取的全文附件，保持父条目和已有引用关联。
+3. 阅读标题、摘要及能取得的全文，选择与核心研究对象、干预、机制、表型和关键方法相符的规范标签。证据不足的具体归类记入待核清单。
+4. 运行校验脚本，检查拟新增、移除及保留内容后，通过Zotero工具写入并回读。
 
-### 2. 导入、挂附件与打标顺序
-全部入库与更新任务严格遵循三步顺序：
+独立笔记、插件配置和PDF批注属于系统与用户内容。已按本规范打标的独立文献PDF，可在授权的名称迁移中同步更名。
 
-> **Step 1 锁定唯一父条目 ➔ Step 2 挂齐 PDF 附件 ➔ Step 3 读取全文内容并写入 V2.0 标签与 `~ZTag-V2`**
+## 精读分流
 
-- 元数据识别（`RecognizeDocument`）作用于未归母条目的孤立 PDF 时会新建父条目并生成新 `itemKey`；而 `write_item(action="import" | "reparent")` 在已定父条目上挂接附件会完整保留父条目现有标签。按上述三步顺序执行即可兼顾元数据准确度、全文可读性与标签完整性。
+`#Ａ１Type`选择一个主要类型：
 
----
+- `Article/Mechanistic`：生物学机制、分子或细胞调控关系。
+- `Article/Biomaterial`：材料设计、制备及生物效应。
+- `Article/DeviceEvaluation`：器械或固定系统的力学、降解、相容性及临床前评价。
+- `Clinical`保留RCT、Prospective、Retrospective、CrossSectional、CaseReport，并包含CaseControl。按当前论文明确的主要设计选择；病例对照使用CaseControl，RCT衍生随访按当前分析设计归类。
+- Review、SystematicReview、MetaAnalysis、Computational等沿用各自直接入口。
 
-## 二、三大标准工作流（经 MCP 工具执行）
+交叉研究按主要贡献选择阅读路线。机制主题与证据强度分别记录；关联证据也可服务机制类阅读。
 
-### 工作流 A：基于本地 PDF 导入并打标
-1. **提取标识并查重**：读取 PDF 前 1–2 页获取 DOI / PMID / arXiv ID 与标题，调用 `search_library` 检索 Zotero 库；若文献已存在，直接对既有 `itemKey` 补挂缺失 PDF 或增量更新标签。
-2. **建立确定父条目**：
-   - 具备 DOI / PMID / arXiv ID：调用 `add_by_identifier(identifiers=[id], collectionKey=..., saveAttachments=false)` 生成标准元数据父条目并取得 `parentKey`；
-   - 无标准标识符（如产品手册、教材章节、技术报告）：提取题名、作者、年份、出版方后调用 `write_item(action="create", itemType=..., fields=..., creators=...)` 建父条目，必要时调用 `add_items_to_collection` 归档。
-3. **挂接本地 PDF**：调用 `write_item(action="import", parentItemKey=parentKey, filePath=absPdfPath, linkMode="imported_file")` 完成附件归档。
-4. **读取全文并写入标签**：调用 `get_item_details` 与 `get_item_abstract`（摘要缺失或细节在正文时补充调用 `get_content(itemKey=parentKey)`），经 [scripts/validate_tags.py](./scripts/validate_tags.py) 校验后，通过 `write_tag(action="add", ...)` 写入 V2.0 `#` 标签与 `~ZTag-V2`（若用户指定阅读状态再一并写入）。
+## 内容标签与词表维护
 
-### 工作流 B：按研究主题检索、批量导入与打标
-1. **外部检索与筛选**：通过学术检索工具（PubMed / OpenAlex / EuropePMC / arXiv 等）筛选高相关性文献，汇总经核验的 DOI / PMID / arXiv ID 列表，并用 `search_library` 过滤库内已有条目。
-2. **批量入库与拉取附件**：调用 `add_by_identifier(identifiers=..., collectionKey=..., saveAttachments=true, skipExisting=true, titleDuplicates="flag")`（批次超过 3 篇按返回的 `jobID` 轮询至完成）；若有需手动补挂的本地 PDF，先执行 `write_item(action="import", ...)` 挂齐。
-3. **读取落库内容并集中打标**：逐篇调用 `get_item_details`、`get_item_abstract` 及 `get_content`，依据实际研究内容对照 [references/taxonomy.json](./references/taxonomy.json) 选标，经校验后批量写入 V2.0 标签与 `~ZTag-V2`。
+- 其余九维按实际研究内容选择，可留空。同一分支已有明确具体词时优先具体词。
+- Wnt-BMP-TGFβ、InnateImmune、糖酵解与氧化磷酸化、脂质与氨基酸代谢等综合词，表示其中一个或多个相关主题。
+- 保留材料体系、载体、药物、靶点、机制、表型与方法的职责边界。材料按基体和组成判断；商品配方以具体原文或产品版本为依据。
+- 日常AI选用固定词表。新词提案说明实际检索用途、相关文献与现有分组的不足，集中审定后升级词表。
+- 标签数量用于观察检索质量；内容重标依据具体问题和证据，保存逐条判断。
+- 十维标签可直接映射十个多选字段。笔记记录证据来源和阅读理解；持续需要筛选的属性采用受控标签或明确的结构化字段。
 
-### 工作流 C：存量条目补标、重标或更新附件后复核
-1. **保护既有状态与用户标签**：先调用 `get_item_details` 读取已有 `tags`，保留既有工作流状态（优先级 `/Done` > `/reading` > `/unread`）及用户自定义标签；仅增量补充时优先用 `write_tag(action="add", ...)`，需替换分类并执行 `write_tag(action="set", ...)` 时先经 `validate_tags.py --existing ...` 合并输出。
-2. **更新附件后复核**：通过 `write_item(action="import", parentItemKey=...)` 补充新附件后原有标签保持不变；若新附件提供了此前缺失的实验方法或材料信息，重读 `get_content` 并补充相应标签，确认携带 `~ZTag-V2`。
-3. **系统条目边界**：批量任务自动跳过独立笔记（`itemType == "note"`）、插件配置条目及普通 PDF 批注子条目。
+## 写入与保留规则
 
----
+`~ZTag-V2`作为V2系列已打标标记继续使用；词表精确版本保存在词表与操作记录中。标记表示处理状态，证据及待核状态单独记录。
 
-## 三、V2.0 打标核心规则（153 个受控词表）
-
-1. **受控词表精确匹配**：全部 `#` 标签逐字取自 [references/taxonomy.json](./references/taxonomy.json) 的 `canonical_tags`（含全角前缀 `#Ａ１Type`..`#Ｅ１Method`、中英文、空格、括号与允许的半角 `ﾉ` `U+FF89`），确保编码纯净。
-2. **单一 `#Ａ１Type` 排他原则**：每篇文献在 `#Ａ１Type/` 下**严格标注 1 个**标签；横向对比设计归入 `#Ｅ１Method/StudyDesign 研究设计/Comparative 横向对比研究`。
-   - 临床研究 5 类互斥：`RCT`、`Prospective`（前瞻随访）、`Retrospective`（回顾病历）、`CrossSectional`（横断面调查或生物标志物横断面关联）、`CaseReport`（病例报告与系列）。
-   - 器械评价用 `Article/DeviceEvaluation`；产品说明书用 `ProductManual`；实验流程用 `Protocol`；报告规范与治理标准用 `Standard`。
-3. **三级叶节点优先（就细不就粗）**：同一分支下存在明确三级子标签时，只标三级子标签；仅在综述或未限定具体子类时标注二级母标签。常见商品名按真实成分归并：`LactoSorb` → `PLGA`、`SonicWeld`/`Resorb-X`/`PDLLA` → `PDLLA`、`Osteotrans` → `u-HAﾉPLLA`、`TMJ-OA` → `#Ｂ１Disease/TMD.../TMJ-OA`、`BRONJ` → `#Ｂ１Disease/MRONJ.../BRONJ`。
-4. **MeSH Major Topic 与正交边界**：
-   - 每篇通常标注 **2～9 个**核心 `#` 标签，聚焦核心对象、干预、主要机制/通路与关键表型；
-   - `#Ｃ１Material` 表征化学骨架与表面改性，`#Ｃ２Carrier` 区分 `Scaffold` 与 `Nanocarrier`（结构性固定板/螺钉载体留空）；
-   - 按实际研究内容严格区分 `Biomechanics` vs `Biodegradation`、`Angiogenesis` vs `Hemostasis`、`Adipogenesis` vs `EnergyMetabolism`、`Wound` vs `Scar`、`CellDifferentiation` / `CellMigration` / `CellSenescence`；仅研究微观破膜/EPS 瓦解机理时标注 `#Ｄ２Mechanism/AntimicrobialMech`，常规 CFU/抑菌圈实验标注 `#Ｄ３Phenotype/Antibacterial`；光热/光动力干预标注 `#Ｅ１Method/PhysicalTherapy 物理治疗技术/Phototherapy 光热与光动力治疗 (PTTﾉPDT)`；
-   - 同主题文献保持一致口径：正颌临床/动物研究伴随 `#Ｂ１Disease/DentofacialDeformity 牙颌面畸形`（不混入创伤内固定 `MaxillofacialFixation`）；MRONJ/BRONJ 中 `BPs`/`Denosumab` 仅在药物自身为评价或毒性研究对象时进入 `#Ｃ３Drug`；临床随访与疗效研究统一伴随 `#Ｄ３Phenotype/ClinicalOutcome 临床疗效与并发症`。
-
----
-
-## 四、写入前机器校验
-
-在调用 `write_tag` 前，先在当前 Skill 目录下运行 [scripts/validate_tags.py](./scripts/validate_tags.py) 校验结构并自动合并保留状态与 `~ZTag-V2`：
+- `add`模式保留已有标签并增补受控词。
+- `replace-managed`模式仅替换词表管理的标签及其已知旧名称，保留用户自定义标签，包括以`#`或`/`开头的标签。
+- 阅读状态默认原样保留。明确需要转换状态时使用`--status`；普通名称迁移保持状态、标记和标签属性。
+- 批量迁移先备份数据库、Skill、条目标签与集合关系；冻结逐条变更清单，写入前核对当前状态，写后回读。遇到状态变化时先重新对照差异。
+- 集合组织按用户当前任务独立处理；标签写入保持集合和附件关系。
 
 ```bash
 python3 scripts/validate_tags.py \
   --existing '["/unread"]' \
-  --tags '#Ａ１Type/Article 论著/Biomaterial 生物材料研究' '#Ｂ１Disease/BoneDefect 骨缺损与拔牙窝创伤'
+  --tags '#Ａ１Type/Article 论著/Biomaterial 生物材料研究' \
+         '#Ｂ１Disease/BoneDefect 骨缺损与拔牙窝创伤'
 ```
+
+完整替换本词表管理的分类时，增加`--mode replace-managed`并提供该条完整拟保留分类。校验结果中的`diff`用于检查变更范围。旧名称通过精确一对一映射归一，陌生名称返回错误。

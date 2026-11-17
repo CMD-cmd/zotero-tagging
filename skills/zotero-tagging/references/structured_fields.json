@@ -1,0 +1,1009 @@
+{
+  "taxonomy_version": "2.1.0",
+  "fields": [
+    {
+      "dimension": "Ａ１Type",
+      "field_name": "精读分流与文献类型",
+      "field_type": "multi_select",
+      "feishu_field_id": null,
+      "options": [
+        {
+          "canonical_id": "ZT-001",
+          "option_name": "Article 论著/Mechanistic 机制研究",
+          "zotero_tag": "#Ａ１Type/Article 论著/Mechanistic 机制研究",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-002",
+          "option_name": "Article 论著/Biomaterial 生物材料研究",
+          "zotero_tag": "#Ａ１Type/Article 论著/Biomaterial 生物材料研究",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-003",
+          "option_name": "Article 论著/DeviceEvaluation 器械临床前评价",
+          "zotero_tag": "#Ａ１Type/Article 论著/DeviceEvaluation 器械临床前评价",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-004",
+          "option_name": "Clinical 临床研究/RCT 随机对照试验",
+          "zotero_tag": "#Ａ１Type/Clinical 临床研究/RCT 随机对照试验",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-005",
+          "option_name": "Clinical 临床研究/Prospective 前瞻性临床研究",
+          "zotero_tag": "#Ａ１Type/Clinical 临床研究/Prospective 前瞻性临床研究",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-006",
+          "option_name": "Clinical 临床研究/Retrospective 回顾性临床研究",
+          "zotero_tag": "#Ａ１Type/Clinical 临床研究/Retrospective 回顾性临床研究",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-007",
+          "option_name": "Clinical 临床研究/CrossSectional 横断面研究",
+          "zotero_tag": "#Ａ１Type/Clinical 临床研究/CrossSectional 横断面研究",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-008",
+          "option_name": "Clinical 临床研究/CaseReport 病例报告与系列",
+          "zotero_tag": "#Ａ１Type/Clinical 临床研究/CaseReport 病例报告与系列",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-009",
+          "option_name": "Review 综述",
+          "zotero_tag": "#Ａ１Type/Review 综述",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-010",
+          "option_name": "SystematicReview 系统综述",
+          "zotero_tag": "#Ａ１Type/SystematicReview 系统综述",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-011",
+          "option_name": "SystematicReview 系统综述/MetaAnalysis Meta分析",
+          "zotero_tag": "#Ａ１Type/SystematicReview 系统综述/MetaAnalysis Meta分析",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-012",
+          "option_name": "Computational 计算与仿真/FEA 有限元分析",
+          "zotero_tag": "#Ａ１Type/Computational 计算与仿真/FEA 有限元分析",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-013",
+          "option_name": "Computational 计算与仿真/Bioinformatics 生物信息与分子模拟",
+          "zotero_tag": "#Ａ１Type/Computational 计算与仿真/Bioinformatics 生物信息与分子模拟",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-014",
+          "option_name": "Guideline 指南与规范/ClinicalGuideline 临床诊疗指南",
+          "zotero_tag": "#Ａ１Type/Guideline 指南与规范/ClinicalGuideline 临床诊疗指南",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-015",
+          "option_name": "Guideline 指南与规范/Standard 技术标准与报告规范",
+          "zotero_tag": "#Ａ１Type/Guideline 指南与规范/Standard 技术标准与报告规范",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-016",
+          "option_name": "Protocol 实验方案与规程",
+          "zotero_tag": "#Ａ１Type/Protocol 实验方案与规程",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-017",
+          "option_name": "ProductInfo 产品资料",
+          "zotero_tag": "#Ａ１Type/ProductInfo 产品资料",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-018",
+          "option_name": "Book 专著与教材",
+          "zotero_tag": "#Ａ１Type/Book 专著与教材",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-019",
+          "option_name": "Commentary 述评与观点",
+          "zotero_tag": "#Ａ１Type/Commentary 述评与观点",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-020",
+          "option_name": "Humanities 科技人文与方法论",
+          "zotero_tag": "#Ａ１Type/Humanities 科技人文与方法论",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-021",
+          "option_name": "Humanities 科技人文与方法论/Bioethics 生命伦理与治理",
+          "zotero_tag": "#Ａ１Type/Humanities 科技人文与方法论/Bioethics 生命伦理与治理",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-154",
+          "option_name": "Clinical 临床研究/CaseControl 病例对照",
+          "zotero_tag": "#Ａ１Type/Clinical 临床研究/CaseControl 病例对照",
+          "feishu_option_id": null
+        }
+      ]
+    },
+    {
+      "dimension": "Ｂ１Disease",
+      "field_name": "疾病",
+      "field_type": "multi_select",
+      "feishu_field_id": null,
+      "options": [
+        {
+          "canonical_id": "ZT-022",
+          "option_name": "MRONJ 药物相关颌骨坏死",
+          "zotero_tag": "#Ｂ１Disease/MRONJ 药物相关颌骨坏死",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-023",
+          "option_name": "MRONJ 药物相关颌骨坏死/BRONJ 双膦酸盐相关颌骨坏死",
+          "zotero_tag": "#Ｂ１Disease/MRONJ 药物相关颌骨坏死/BRONJ 双膦酸盐相关颌骨坏死",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-024",
+          "option_name": "MRONJ 药物相关颌骨坏死/DRONJ 地诺单抗相关颌骨坏死",
+          "zotero_tag": "#Ｂ１Disease/MRONJ 药物相关颌骨坏死/DRONJ 地诺单抗相关颌骨坏死",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-025",
+          "option_name": "ONFH 股骨头坏死",
+          "zotero_tag": "#Ｂ１Disease/ONFH 股骨头坏死",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-026",
+          "option_name": "ONFH 股骨头坏死/SONFH 激素性股骨头坏死",
+          "zotero_tag": "#Ｂ１Disease/ONFH 股骨头坏死/SONFH 激素性股骨头坏死",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-027",
+          "option_name": "ONFH 股骨头坏死/IschemicONFH 缺血性股骨头坏死",
+          "zotero_tag": "#Ｂ１Disease/ONFH 股骨头坏死/IschemicONFH 缺血性股骨头坏死",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-028",
+          "option_name": "TMD 颞下颌关节病",
+          "zotero_tag": "#Ｂ１Disease/TMD 颞下颌关节病",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-029",
+          "option_name": "TMD 颞下颌关节病/TMJ-OA 颞下颌关节骨关节炎",
+          "zotero_tag": "#Ｂ１Disease/TMD 颞下颌关节病/TMJ-OA 颞下颌关节骨关节炎",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-030",
+          "option_name": "Osteoarthritis 骨关节炎",
+          "zotero_tag": "#Ｂ１Disease/Osteoarthritis 骨关节炎",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-031",
+          "option_name": "Osteoporosis 骨质疏松症",
+          "zotero_tag": "#Ｂ１Disease/Osteoporosis 骨质疏松症",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-032",
+          "option_name": "Periodontitis 牙周炎",
+          "zotero_tag": "#Ｂ１Disease/Periodontitis 牙周炎",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-033",
+          "option_name": "Peri-Implantitis 种植体周围炎",
+          "zotero_tag": "#Ｂ１Disease/Peri-Implantitis 种植体周围炎",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-034",
+          "option_name": "Endodontics 牙体牙髓病",
+          "zotero_tag": "#Ｂ１Disease/Endodontics 牙体牙髓病",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-035",
+          "option_name": "DentofacialDeformity 牙颌面畸形",
+          "zotero_tag": "#Ｂ１Disease/DentofacialDeformity 牙颌面畸形",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-036",
+          "option_name": "Craniosynostosis 颅缝早闭",
+          "zotero_tag": "#Ｂ１Disease/Craniosynostosis 颅缝早闭",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-037",
+          "option_name": "CraniofacialFracture 颅颌面骨折",
+          "zotero_tag": "#Ｂ１Disease/CraniofacialFracture 颅颌面骨折",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-038",
+          "option_name": "CraniofacialFracture 颅颌面骨折/MandibularFracture 下颌骨骨折",
+          "zotero_tag": "#Ｂ１Disease/CraniofacialFracture 颅颌面骨折/MandibularFracture 下颌骨骨折",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-039",
+          "option_name": "CraniofacialFracture 颅颌面骨折/MidfacialFracture 面中部与眶壁骨折",
+          "zotero_tag": "#Ｂ１Disease/CraniofacialFracture 颅颌面骨折/MidfacialFracture 面中部与眶壁骨折",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-040",
+          "option_name": "BoneDefect 骨缺损与拔牙窝创伤",
+          "zotero_tag": "#Ｂ１Disease/BoneDefect 骨缺损与拔牙窝创伤",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-041",
+          "option_name": "Infection 感染性疾病/OralInfection 口腔细菌与生物膜感染",
+          "zotero_tag": "#Ｂ１Disease/Infection 感染性疾病/OralInfection 口腔细菌与生物膜感染",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-042",
+          "option_name": "Infection 感染性疾病/ImplantInfection 手术与植入物感染",
+          "zotero_tag": "#Ｂ１Disease/Infection 感染性疾病/ImplantInfection 手术与植入物感染",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-043",
+          "option_name": "Wound 皮肤黏膜创面",
+          "zotero_tag": "#Ｂ１Disease/Wound 皮肤黏膜创面",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-044",
+          "option_name": "Scar 病理性瘢痕与纤维化",
+          "zotero_tag": "#Ｂ１Disease/Scar 病理性瘢痕与纤维化",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-045",
+          "option_name": "MetabolicDisorder 糖脂代谢疾病",
+          "zotero_tag": "#Ｂ１Disease/MetabolicDisorder 糖脂代谢疾病",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-046",
+          "option_name": "AutoimmuneDisease 自身免疫与风湿病",
+          "zotero_tag": "#Ｂ１Disease/AutoimmuneDisease 自身免疫与风湿病",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-047",
+          "option_name": "CardiovascularDisease 心血管疾病",
+          "zotero_tag": "#Ｂ１Disease/CardiovascularDisease 心血管疾病",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-048",
+          "option_name": "Tumor 肿瘤",
+          "zotero_tag": "#Ｂ１Disease/Tumor 肿瘤",
+          "feishu_option_id": null
+        }
+      ]
+    },
+    {
+      "dimension": "Ｂ２Surgery",
+      "field_name": "术式",
+      "field_type": "multi_select",
+      "feishu_field_id": null,
+      "options": [
+        {
+          "canonical_id": "ZT-049",
+          "option_name": "Orthognathic 正颌外科",
+          "zotero_tag": "#Ｂ２Surgery/Orthognathic 正颌外科",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-050",
+          "option_name": "Orthognathic 正颌外科/SSRO 矢状劈开术",
+          "zotero_tag": "#Ｂ２Surgery/Orthognathic 正颌外科/SSRO 矢状劈开术",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-051",
+          "option_name": "Orthognathic 正颌外科/LeFort-I 截骨术",
+          "zotero_tag": "#Ｂ２Surgery/Orthognathic 正颌外科/LeFort-I 截骨术",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-052",
+          "option_name": "Orthognathic 正颌外科/Genioplasty 颏成形术",
+          "zotero_tag": "#Ｂ２Surgery/Orthognathic 正颌外科/Genioplasty 颏成形术",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-053",
+          "option_name": "Orthognathic 正颌外科/DO 牵张成骨",
+          "zotero_tag": "#Ｂ２Surgery/Orthognathic 正颌外科/DO 牵张成骨",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-054",
+          "option_name": "MaxillofacialFixation 颌面创伤与重建内固定",
+          "zotero_tag": "#Ｂ２Surgery/MaxillofacialFixation 颌面创伤与重建内固定",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-055",
+          "option_name": "ImplantSurgery 牙槽与种植外科",
+          "zotero_tag": "#Ｂ２Surgery/ImplantSurgery 牙槽与种植外科",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-056",
+          "option_name": "OrthopedicFixation 骨科内固定与关节置换",
+          "zotero_tag": "#Ｂ２Surgery/OrthopedicFixation 骨科内固定与关节置换",
+          "feishu_option_id": null
+        }
+      ]
+    },
+    {
+      "dimension": "Ｃ１Material",
+      "field_name": "材料",
+      "field_type": "multi_select",
+      "feishu_field_id": null,
+      "options": [
+        {
+          "canonical_id": "ZT-057",
+          "option_name": "ResorbablePolymer 可吸收高分子",
+          "zotero_tag": "#Ｃ１Material/ResorbablePolymer 可吸收高分子",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-058",
+          "option_name": "ResorbablePolymer 可吸收高分子/PLLA",
+          "zotero_tag": "#Ｃ１Material/ResorbablePolymer 可吸收高分子/PLLA",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-059",
+          "option_name": "ResorbablePolymer 可吸收高分子/PDLLA 乳酸共聚物",
+          "zotero_tag": "#Ｃ１Material/ResorbablePolymer 可吸收高分子/PDLLA 乳酸共聚物",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-060",
+          "option_name": "ResorbablePolymer 可吸收高分子/PLGA",
+          "zotero_tag": "#Ｃ１Material/ResorbablePolymer 可吸收高分子/PLGA",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-061",
+          "option_name": "ResorbablePolymer 可吸收高分子/PGA",
+          "zotero_tag": "#Ｃ１Material/ResorbablePolymer 可吸收高分子/PGA",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-062",
+          "option_name": "ResorbablePolymer 可吸收高分子/PCL",
+          "zotero_tag": "#Ｃ１Material/ResorbablePolymer 可吸收高分子/PCL",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-063",
+          "option_name": "ResorbablePolymer 可吸收高分子/u-HAﾉPLLA",
+          "zotero_tag": "#Ｃ１Material/ResorbablePolymer 可吸收高分子/u-HAﾉPLLA",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-064",
+          "option_name": "BiodegradableMetal 可降解金属",
+          "zotero_tag": "#Ｃ１Material/BiodegradableMetal 可降解金属",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-065",
+          "option_name": "BiodegradableMetal 可降解金属/Mg 镁基",
+          "zotero_tag": "#Ｃ１Material/BiodegradableMetal 可降解金属/Mg 镁基",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-066",
+          "option_name": "BiodegradableMetal 可降解金属/Zn-Fe 锌基与铁基",
+          "zotero_tag": "#Ｃ１Material/BiodegradableMetal 可降解金属/Zn-Fe 锌基与铁基",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-067",
+          "option_name": "Titanium 钛与钛合金",
+          "zotero_tag": "#Ｃ１Material/Titanium 钛与钛合金",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-068",
+          "option_name": "Hydrogel 水凝胶",
+          "zotero_tag": "#Ｃ１Material/Hydrogel 水凝胶",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-069",
+          "option_name": "Hydrogel 水凝胶/GelMA",
+          "zotero_tag": "#Ｃ１Material/Hydrogel 水凝胶/GelMA",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-070",
+          "option_name": "Hydrogel 水凝胶/NaturalHydrogel 天然高分子水凝胶",
+          "zotero_tag": "#Ｃ１Material/Hydrogel 水凝胶/NaturalHydrogel 天然高分子水凝胶",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-071",
+          "option_name": "Hydrogel 水凝胶/SmartHydrogel 合成与响应型水凝胶",
+          "zotero_tag": "#Ｃ１Material/Hydrogel 水凝胶/SmartHydrogel 合成与响应型水凝胶",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-072",
+          "option_name": "MOF 金属有机框架",
+          "zotero_tag": "#Ｃ１Material/MOF 金属有机框架",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-073",
+          "option_name": "MOF 金属有机框架/ZIF-8",
+          "zotero_tag": "#Ｃ１Material/MOF 金属有机框架/ZIF-8",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-074",
+          "option_name": "Bioceramic 生物陶瓷与活性玻璃",
+          "zotero_tag": "#Ｃ１Material/Bioceramic 生物陶瓷与活性玻璃",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-075",
+          "option_name": "Nanomaterial 无机与复合纳米材料",
+          "zotero_tag": "#Ｃ１Material/Nanomaterial 无机与复合纳米材料",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-076",
+          "option_name": "SurfaceModification 表面改性/Coating 表面涂层",
+          "zotero_tag": "#Ｃ１Material/SurfaceModification 表面改性/Coating 表面涂层",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-077",
+          "option_name": "SurfaceModification 表面改性/SurfaceTopography 表面形貌与电荷修饰",
+          "zotero_tag": "#Ｃ１Material/SurfaceModification 表面改性/SurfaceTopography 表面形貌与电荷修饰",
+          "feishu_option_id": null
+        }
+      ]
+    },
+    {
+      "dimension": "Ｃ２Carrier",
+      "field_name": "载体",
+      "field_type": "multi_select",
+      "feishu_field_id": null,
+      "options": [
+        {
+          "canonical_id": "ZT-078",
+          "option_name": "Scaffold 组织工程与控释支架",
+          "zotero_tag": "#Ｃ２Carrier/Scaffold 组织工程与控释支架",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-079",
+          "option_name": "Nanocarrier 纳米递送载体",
+          "zotero_tag": "#Ｃ２Carrier/Nanocarrier 纳米递送载体",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-080",
+          "option_name": "tFNAs 四面体核酸",
+          "zotero_tag": "#Ｃ２Carrier/tFNAs 四面体核酸",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-081",
+          "option_name": "EVs 细胞外囊泡",
+          "zotero_tag": "#Ｃ２Carrier/EVs 细胞外囊泡",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-082",
+          "option_name": "CellCarrier 细胞与血小板载体",
+          "zotero_tag": "#Ｃ２Carrier/CellCarrier 细胞与血小板载体",
+          "feishu_option_id": null
+        }
+      ]
+    },
+    {
+      "dimension": "Ｃ３Drug",
+      "field_name": "药物",
+      "field_type": "multi_select",
+      "feishu_field_id": null,
+      "options": [
+        {
+          "canonical_id": "ZT-083",
+          "option_name": "Antiresorptive 抗骨吸收药/BPs 双膦酸盐",
+          "zotero_tag": "#Ｃ３Drug/Antiresorptive 抗骨吸收药/BPs 双膦酸盐",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-084",
+          "option_name": "Antiresorptive 抗骨吸收药/Denosumab 地诺单抗",
+          "zotero_tag": "#Ｃ３Drug/Antiresorptive 抗骨吸收药/Denosumab 地诺单抗",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-085",
+          "option_name": "Biologics 蛋白与抗体药物/TCZ 托珠单抗",
+          "zotero_tag": "#Ｃ３Drug/Biologics 蛋白与抗体药物/TCZ 托珠单抗",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-086",
+          "option_name": "Biologics 蛋白与抗体药物/GrowthFactor 重组生长因子与多肽",
+          "zotero_tag": "#Ｃ３Drug/Biologics 蛋白与抗体药物/GrowthFactor 重组生长因子与多肽",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-087",
+          "option_name": "SmallMolecule 小分子化学药",
+          "zotero_tag": "#Ｃ３Drug/SmallMolecule 小分子化学药",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-088",
+          "option_name": "NucleicAcid 核酸药物",
+          "zotero_tag": "#Ｃ３Drug/NucleicAcid 核酸药物",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-089",
+          "option_name": "NaturalProduct 天然产物与中药成分",
+          "zotero_tag": "#Ｃ３Drug/NaturalProduct 天然产物与中药成分",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-090",
+          "option_name": "Antibiotic 抗生素与抗菌药",
+          "zotero_tag": "#Ｃ３Drug/Antibiotic 抗生素与抗菌药",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-091",
+          "option_name": "GasTherapy 气体与活性氧分子",
+          "zotero_tag": "#Ｃ３Drug/GasTherapy 气体与活性氧分子",
+          "feishu_option_id": null
+        }
+      ]
+    },
+    {
+      "dimension": "Ｄ１Target",
+      "field_name": "靶点与通路",
+      "field_type": "multi_select",
+      "feishu_field_id": null,
+      "options": [
+        {
+          "canonical_id": "ZT-092",
+          "option_name": "Pathway 信号通路/JAK-STAT",
+          "zotero_tag": "#Ｄ１Target/Pathway 信号通路/JAK-STAT",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-093",
+          "option_name": "Pathway 信号通路/NF-κB-RANKL",
+          "zotero_tag": "#Ｄ１Target/Pathway 信号通路/NF-κB-RANKL",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-094",
+          "option_name": "Pathway 信号通路/MAPKﾉERK",
+          "zotero_tag": "#Ｄ１Target/Pathway 信号通路/MAPKﾉERK",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-095",
+          "option_name": "Pathway 信号通路/PI3K-Akt-mTOR",
+          "zotero_tag": "#Ｄ１Target/Pathway 信号通路/PI3K-Akt-mTOR",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-096",
+          "option_name": "Pathway 信号通路/Wnt-BMP-TGFβ",
+          "zotero_tag": "#Ｄ１Target/Pathway 信号通路/Wnt-BMP-TGFβ",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-097",
+          "option_name": "Pathway 信号通路/Hippo-YAP",
+          "zotero_tag": "#Ｄ１Target/Pathway 信号通路/Hippo-YAP",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-098",
+          "option_name": "Pathway 信号通路/cAMPﾉPKA",
+          "zotero_tag": "#Ｄ１Target/Pathway 信号通路/cAMPﾉPKA",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-099",
+          "option_name": "Pathway 信号通路/InnateImmune 固有免疫",
+          "zotero_tag": "#Ｄ１Target/Pathway 信号通路/InnateImmune 固有免疫",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-100",
+          "option_name": "Pathway 信号通路/Nrf2",
+          "zotero_tag": "#Ｄ１Target/Pathway 信号通路/Nrf2",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-101",
+          "option_name": "Cytokine 细胞因子与生长因子/IL-6",
+          "zotero_tag": "#Ｄ１Target/Cytokine 细胞因子与生长因子/IL-6",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-102",
+          "option_name": "Cytokine 细胞因子与生长因子/InflammatoryCytokine 促炎因子 (IL-1-TNFα)",
+          "zotero_tag": "#Ｄ１Target/Cytokine 细胞因子与生长因子/InflammatoryCytokine 促炎因子 (IL-1-TNFα)",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-103",
+          "option_name": "Cytokine 细胞因子与生长因子/AngiogenicFactor 促血管生长因子 (VEGF-FGF)",
+          "zotero_tag": "#Ｄ１Target/Cytokine 细胞因子与生长因子/AngiogenicFactor 促血管生长因子 (VEGF-FGF)",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-104",
+          "option_name": "BoneMetabolism 骨与代谢分子/OCN 骨钙素",
+          "zotero_tag": "#Ｄ１Target/BoneMetabolism 骨与代谢分子/OCN 骨钙素",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-105",
+          "option_name": "BoneMetabolism 骨与代谢分子/Zfp467",
+          "zotero_tag": "#Ｄ１Target/BoneMetabolism 骨与代谢分子/Zfp467",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-106",
+          "option_name": "BoneMetabolism 骨与代谢分子/OsteogenicTF 成骨与成脂转录因子",
+          "zotero_tag": "#Ｄ１Target/BoneMetabolism 骨与代谢分子/OsteogenicTF 成骨与成脂转录因子",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-107",
+          "option_name": "BoneMetabolism 骨与代谢分子/BoneMatrixProtein 骨基质与矿化蛋白",
+          "zotero_tag": "#Ｄ１Target/BoneMetabolism 骨与代谢分子/BoneMatrixProtein 骨基质与矿化蛋白",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-108",
+          "option_name": "BoneMetabolism 骨与代谢分子/MetabolicHormone 糖脂代谢激素与受体",
+          "zotero_tag": "#Ｄ１Target/BoneMetabolism 骨与代谢分子/MetabolicHormone 糖脂代谢激素与受体",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-109",
+          "option_name": "NoncodingRNA 非编码RNA与表观调控",
+          "zotero_tag": "#Ｄ１Target/NoncodingRNA 非编码RNA与表观调控",
+          "feishu_option_id": null
+        }
+      ]
+    },
+    {
+      "dimension": "Ｄ２Mechanism",
+      "field_name": "机制",
+      "field_type": "multi_select",
+      "feishu_field_id": null,
+      "options": [
+        {
+          "canonical_id": "ZT-110",
+          "option_name": "MetabolicReprogramming 代谢重编程/Glycolysis-OXPHOS 糖酵解与氧化磷酸化",
+          "zotero_tag": "#Ｄ２Mechanism/MetabolicReprogramming 代谢重编程/Glycolysis-OXPHOS 糖酵解与氧化磷酸化",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-111",
+          "option_name": "MetabolicReprogramming 代谢重编程/LipidAminoAcid 脂质与氨基酸代谢",
+          "zotero_tag": "#Ｄ２Mechanism/MetabolicReprogramming 代谢重编程/LipidAminoAcid 脂质与氨基酸代谢",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-112",
+          "option_name": "CellDifferentiation 细胞分化调控",
+          "zotero_tag": "#Ｄ２Mechanism/CellDifferentiation 细胞分化调控",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-113",
+          "option_name": "CellMigration 细胞迁移与招募",
+          "zotero_tag": "#Ｄ２Mechanism/CellMigration 细胞迁移与招募",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-114",
+          "option_name": "CellSenescence 细胞衰老",
+          "zotero_tag": "#Ｄ２Mechanism/CellSenescence 细胞衰老",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-115",
+          "option_name": "CellDeath 细胞死亡与自噬",
+          "zotero_tag": "#Ｄ２Mechanism/CellDeath 细胞死亡与自噬",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-116",
+          "option_name": "CellCommunication 细胞通讯与旁分泌",
+          "zotero_tag": "#Ｄ２Mechanism/CellCommunication 细胞通讯与旁分泌",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-117",
+          "option_name": "Mechanotransduction 力学信号转导",
+          "zotero_tag": "#Ｄ２Mechanism/Mechanotransduction 力学信号转导",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-118",
+          "option_name": "OxidativeHypoxia 氧化应激与缺氧调控",
+          "zotero_tag": "#Ｄ２Mechanism/OxidativeHypoxia 氧化应激与缺氧调控",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-119",
+          "option_name": "IonMicroenvironment 离子与酸碱微环境",
+          "zotero_tag": "#Ｄ２Mechanism/IonMicroenvironment 离子与酸碱微环境",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-120",
+          "option_name": "AntimicrobialMech 破膜与生物膜瓦解",
+          "zotero_tag": "#Ｄ２Mechanism/AntimicrobialMech 破膜与生物膜瓦解",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-121",
+          "option_name": "Biomineralization 生物矿化与钙化",
+          "zotero_tag": "#Ｄ２Mechanism/Biomineralization 生物矿化与钙化",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-122",
+          "option_name": "ForeignBodyReaction 异物与植入物免疫反应",
+          "zotero_tag": "#Ｄ２Mechanism/ForeignBodyReaction 异物与植入物免疫反应",
+          "feishu_option_id": null
+        }
+      ]
+    },
+    {
+      "dimension": "Ｄ３Phenotype",
+      "field_name": "表型与结局",
+      "field_type": "multi_select",
+      "feishu_field_id": null,
+      "options": [
+        {
+          "canonical_id": "ZT-123",
+          "option_name": "Osteogenesis 成骨与骨再生",
+          "zotero_tag": "#Ｄ３Phenotype/Osteogenesis 成骨与骨再生",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-124",
+          "option_name": "BoneResorption 破骨与骨吸收",
+          "zotero_tag": "#Ｄ３Phenotype/BoneResorption 破骨与骨吸收",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-125",
+          "option_name": "Adipogenesis 成脂分化",
+          "zotero_tag": "#Ｄ３Phenotype/Adipogenesis 成脂分化",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-126",
+          "option_name": "EnergyMetabolism 糖脂与能量代谢",
+          "zotero_tag": "#Ｄ３Phenotype/EnergyMetabolism 糖脂与能量代谢",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-127",
+          "option_name": "CartilageHomeostasis 软骨修复与退变",
+          "zotero_tag": "#Ｄ３Phenotype/CartilageHomeostasis 软骨修复与退变",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-128",
+          "option_name": "Angiogenesis 促血管生成",
+          "zotero_tag": "#Ｄ３Phenotype/Angiogenesis 促血管生成",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-129",
+          "option_name": "Hemostasis 凝血与止血",
+          "zotero_tag": "#Ｄ３Phenotype/Hemostasis 凝血与止血",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-130",
+          "option_name": "Immunomodulation 免疫调控/Macrophage 巨噬细胞极化",
+          "zotero_tag": "#Ｄ３Phenotype/Immunomodulation 免疫调控/Macrophage 巨噬细胞极化",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-131",
+          "option_name": "Immunomodulation 免疫调控/Anti-Inflammation 抗炎调控",
+          "zotero_tag": "#Ｄ３Phenotype/Immunomodulation 免疫调控/Anti-Inflammation 抗炎调控",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-132",
+          "option_name": "Antibacterial 抗菌与抗生物膜",
+          "zotero_tag": "#Ｄ３Phenotype/Antibacterial 抗菌与抗生物膜",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-133",
+          "option_name": "WoundHealing 创面愈合与抗瘢痕",
+          "zotero_tag": "#Ｄ３Phenotype/WoundHealing 创面愈合与抗瘢痕",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-134",
+          "option_name": "Antitumor 抗肿瘤",
+          "zotero_tag": "#Ｄ３Phenotype/Antitumor 抗肿瘤",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-135",
+          "option_name": "Biomechanics 生物力学稳定性",
+          "zotero_tag": "#Ｄ３Phenotype/Biomechanics 生物力学稳定性",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-136",
+          "option_name": "Biodegradation 生物降解与吸收",
+          "zotero_tag": "#Ｄ３Phenotype/Biodegradation 生物降解与吸收",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-137",
+          "option_name": "ClinicalOutcome 临床疗效与并发症",
+          "zotero_tag": "#Ｄ３Phenotype/ClinicalOutcome 临床疗效与并发症",
+          "feishu_option_id": null
+        }
+      ]
+    },
+    {
+      "dimension": "Ｅ１Method",
+      "field_name": "研究方法",
+      "field_type": "multi_select",
+      "feishu_field_id": null,
+      "options": [
+        {
+          "canonical_id": "ZT-138",
+          "option_name": "StudyDesign 研究设计/Comparative 横向对比研究",
+          "zotero_tag": "#Ｅ１Method/StudyDesign 研究设计/Comparative 横向对比研究",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-139",
+          "option_name": "AnimalModel 动物模型/SmallAnimal 小动物模型",
+          "zotero_tag": "#Ｅ１Method/AnimalModel 动物模型/SmallAnimal 小动物模型",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-140",
+          "option_name": "AnimalModel 动物模型/LargeAnimal 大动物模型",
+          "zotero_tag": "#Ｅ１Method/AnimalModel 动物模型/LargeAnimal 大动物模型",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-141",
+          "option_name": "InVitroModel 体外模型/CellCulture 细胞培养体系",
+          "zotero_tag": "#Ｅ１Method/InVitroModel 体外模型/CellCulture 细胞培养体系",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-142",
+          "option_name": "InVitroModel 体外模型/3D-Organoid 三维培养与类器官",
+          "zotero_tag": "#Ｅ１Method/InVitroModel 体外模型/3D-Organoid 三维培养与类器官",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-143",
+          "option_name": "InVitroModel 体外模型/BiofilmModel 细菌与生物膜模型",
+          "zotero_tag": "#Ｅ１Method/InVitroModel 体外模型/BiofilmModel 细菌与生物膜模型",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-144",
+          "option_name": "InVitroModel 体外模型/SyntheticBone 体外仿真骨与力学模型",
+          "zotero_tag": "#Ｅ１Method/InVitroModel 体外模型/SyntheticBone 体外仿真骨与力学模型",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-145",
+          "option_name": "PhysicalTherapy 物理治疗技术/CAP 冷大气等离子体",
+          "zotero_tag": "#Ｅ１Method/PhysicalTherapy 物理治疗技术/CAP 冷大气等离子体",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-146",
+          "option_name": "PhysicalTherapy 物理治疗技术/Phototherapy 光热与光动力",
+          "zotero_tag": "#Ｅ１Method/PhysicalTherapy 物理治疗技术/Phototherapy 光热与光动力",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-147",
+          "option_name": "Fabrication 制备与加工工艺/3D-Printing 3D打印与增材制造",
+          "zotero_tag": "#Ｅ１Method/Fabrication 制备与加工工艺/3D-Printing 3D打印与增材制造",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-148",
+          "option_name": "Fabrication 制备与加工工艺/Processing 成型加工与灭菌",
+          "zotero_tag": "#Ｅ１Method/Fabrication 制备与加工工艺/Processing 成型加工与灭菌",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-149",
+          "option_name": "Characterization 表征与分析技术/BiomechanicalTest 生物力学测试",
+          "zotero_tag": "#Ｅ１Method/Characterization 表征与分析技术/BiomechanicalTest 生物力学测试",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-150",
+          "option_name": "Characterization 表征与分析技术/Physicochemical 理化与定量表征",
+          "zotero_tag": "#Ｅ１Method/Characterization 表征与分析技术/Physicochemical 理化与定量表征",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-151",
+          "option_name": "Characterization 表征与分析技术/Simulation 有限元与分子模拟",
+          "zotero_tag": "#Ｅ１Method/Characterization 表征与分析技术/Simulation 有限元与分子模拟",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-152",
+          "option_name": "Characterization 表征与分析技术/Omics 多组学与测序",
+          "zotero_tag": "#Ｅ１Method/Characterization 表征与分析技术/Omics 多组学与测序",
+          "feishu_option_id": null
+        },
+        {
+          "canonical_id": "ZT-153",
+          "option_name": "Characterization 表征与分析技术/HistologyImaging 影像与组织学分析",
+          "zotero_tag": "#Ｅ１Method/Characterization 表征与分析技术/HistologyImaging 影像与组织学分析",
+          "feishu_option_id": null
+        }
+      ]
+    }
+  ]
+}

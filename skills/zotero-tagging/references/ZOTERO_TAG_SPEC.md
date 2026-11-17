@@ -1,267 +1,224 @@
-# Zotero 全库文献多级标签正式规范（V2.0）
+# Zotero V2.1 标签规范
 
-本规范由十维正交受控词表（配套机器可读文件 `taxonomy.json`）构成，旨在支撑 **Zotero（Zotero Style 多级树状按层级序渲染） ↔ AI 自动打标 ↔ TextFold 精读 ↔ 飞书多维表格看板** 的无损协同。
+共154项受控标签，使用稳定ID管理名称及十维字段映射。
 
----
+## 分类与检索
 
-## 一、L0→L4 五层全角排序前缀架构
+Article三类分别服务机制、材料、器械评价精读。Clinical使用六个直接类型；每篇选择一个主要Type。其他维度依据核心研究内容稀疏选择。复合标签表示主题并集。
 
-为了使 Zotero Style 侧边栏严格按照从顶层研究范式（L0）到底层实验方法（L4）的自然阅读逻辑排序，10 个顶层母标签采用**全角字母+全角数字 + 单一凝练英文词（中间无空格）**的规范命名：
+## 名称与显示
 
-```text
-【L0 元范式层】       #Ａ１Type        —— 唯一排外的研究体裁与证据等级（每篇严格有且仅有 1 个）
-          │
-          ▼
-【L1 临床问题与场景】 #Ｂ１Disease     ∥  #Ｂ２Surgery
-          │               (疾病/病理态)     (外科术式与临床操作)
-          ▼
-【L2 干预工具箱层】   #Ｃ１Material    ➔  #Ｃ２Carrier     ➔  #Ｃ３Drug
-          │               (材料骨架/改性)   (递送剂型/载体)   (药理活性载荷)
-          ▼
-【L3 因果效应链层】   #Ｄ１Target      ➔  #Ｄ２Mechanism   ➔  #Ｄ３Phenotype
-          │               (通路/因子/分子)   (底层细胞/物理机制) (宏观表型/力学/结局)
-          ▼
-【L4 实验方法与设计】 #Ｅ１Method      —— StudyDesign（研究设计）+ Model + 物理干预/制备/表征技术
-```
+常用英文词、缩写和必要中文提示构成标签名。ZoteroStyle列当前使用`[a-zA-Zα-ω\d-]+`提取胶囊；LeFort-I、Zn-Fe、3D-Organoid使用普通连字符，PDLLA后用普通空格连接中文说明。保留已有`ﾉ`作为词表中的复合缩写分隔符。
 
-### V2.0 核心设计规则
-1. **`#Ａ１Type` 100% 严格唯一排他**：每篇文献在 `#Ａ１Type` 下**严格有且仅有 1 个标签**（`1,086` 篇对应 `1,086` 次标注）。原辅助对比设计标签迁入 `#Ｅ１Method/StudyDesign 研究设计/Comparative 横向对比研究`；临床研究拆清为 5 个互斥子类（`RCT`、`Prospective`、`Retrospective`、`CrossSectional`、`CaseReport`），消除原 `Cohort / Retrospective / Observational` 重叠混乱；产品手册 `ProductManual` 与实验规程 `Protocol` 分立，器械动物/力学评价明确为 `Article/DeviceEvaluation 器械临床前评价`。
-2. **「方式一：就细不就粗」父子互斥规则**：
-   - 当文献明确对应某三级细化子标签时，**只标三级子标签，禁止再重复标二级母标签**（由 Zotero Style 树自动向上聚合总数）；
-   - 仅当综述、泛指研究或未限定具体材质（如通篇只说“可吸收内固定板”未明言 `PLLA`/`PLGA`/`PDLLA`）时，才使用二级母标签。
-   - 常见商品名/材料简称统一按此规则下沉：`LactoSorb` → `PLGA`；`SonicWeld` / `Resorb-X` / `BioSorb` / `Inion` → `PDLLA`；`Osteotrans` / `u-HA/PLLA` → `u-HAﾉPLLA`。
-3. **干练常见用词与禁滥用 `ﾉ` 拼词原则**：
-   - 取消生硬拼词（如不再使用 `BookﾉChapter`、`HumanitiesﾉMethodology`、`PhysicalﾉFabrication`、`AngiogenesisﾉCoagulation`、`BiomechanicsﾉDegradation`、`NanocarrierﾉScaffold` 等）；
-   - 半角假名 `ﾉ`（`U+FF89`）**仅限保留在本身即为复合缩写的学术专有名词中**：`BSSROﾉSSRO`、`u-HAﾉPLLA`、`M1ﾉM2`、`MAPKﾉERK`、`cAMPﾉPKA`、`PTTﾉPDT`；严禁出现不可见 Unicode 标签字符（如 `U+E002F`）。
-4. **严格区分职责边界，杜绝概念捆绑**：
-   - **`#Ｃ１Material` vs `#Ｃ２Carrier`**：`Material` 只表征化学材质骨架及表面改性（如 `Nanomaterial` 只用于无机/碳基等功能纳米材料）；`Carrier` 只表征递送剂型或组织工程载体（拆清 `Scaffold` 与 `Nanocarrier`）；纯接骨板/螺钉等结构性器械的 `#Ｃ２Carrier` 留空。
-   - **`#Ｄ２Mechanism` vs `#Ｄ３Phenotype`**：`Biomechanics` 与 `Biodegradation` 拆分；`Angiogenesis` 与 `Hemostasis` 拆分；`Adipogenesis` 与 `EnergyMetabolism` 拆分；`CellDifferentiation` / `CellMigration` / `CellSenescence` 拆分；`AntimicrobialMech`（破膜与生物膜瓦解）**仅**用于研究了微观杀菌/破膜机制的文献，普通抑菌率/CFU 实验仅在 `#Ｄ３Phenotype` 标 `Antibacterial`。
-   - **`#Ｅ１Method` 物理治疗与制备工艺分离**：`CAP` 与新补齐的高频标签 `Phototherapy 光热与光动力治疗 (PTTﾉPDT)` 归入 `PhysicalTherapy 物理治疗技术`；`3D-Printing` 与 `Processing` 保留在 `Fabrication 制备与加工工艺`。
+完整别名由词表识别。具体名称更换使用`rename_map`中的精确映射，标签身份与文献归属按映射保持。
 
----
+## 数据保留
 
-## 二、制定原则：参考 MeSH 词表而不照搬 MeSH
+普通维护保留用户自定义标签、阅读状态、集合归属、附件和批注关系。全量替换分类仅作用于本词表管理的标签。定点待核记录见`pending_review.json`。
 
-本规范在词表凝练过程中继续秉持**“取 MeSH 之准、弃 MeSH 之繁”**五项原则：
-1. **MeSH 上位归一**：同一疾病或现象统一归入标准词条（例如按 DC/TMD 分类将 `TMJ-OA` 收编至 `#Ｂ１Disease/TMD.../TMJ-OA`，全身骨关节炎保留 `#Ｂ１Disease/Osteoarthritis`）。
-2. **弃倒装词序与副主题词斜杠**：语义组合交给 L0→L4 正交维度自由搭配。
-3. **树深封顶（<= 3 层）**：杜绝长尾合金/小众化合物孤儿标签（如镁合金型号统一收归 `Mg (Magnesium-Based)`）。
-4. **MeSH Major Topic 核心贡献原则**：每篇文献只标核心研究对象、干预、机制、表型与方法（通常 `2～9` 个 `#` 标签），常规细胞活性检测或背景提及不滥标。
-5. **同性质文献跨篇一致对齐**：
-   - **正颌文献**：所有正颌临床/动物研究（纯体外/尸体力学仿真除外）统一伴随 `#Ｂ１Disease/DentofacialDeformity 牙颌面畸形`，且不与 `#Ｂ２Surgery/MaxillofacialFixation`（专指颌面创伤与重建内固定）混标。
-   - **MRONJ / BRONJ 文献**：仅当 `BPs` / `Denosumab` 本身是被研究的治疗或药理/毒性评价对象时才标入 `#Ｃ３Drug`；仅作为建立动物 BRONJ 模型的背景诱导剂或病例既往用药史时，由 `BRONJ`/`DRONJ` 疾病标签体现，**不标 `#Ｃ３Drug`**。
-   - **临床疗效/并发症研究**：凡以临床随访结局、并发症或诊断准确率为主的 `#Ａ１Type/Clinical` 与临床比较型系统综述，统一对齐 `#Ｄ３Phenotype/ClinicalOutcome 临床疗效与并发症`。
+## 全部规范标签
 
----
+### Ａ１Type
 
-## 三、书写与工作流硬规范
-
-1. **顶层前缀**：必须为 `#Ａ１Type`、`#Ｂ１Disease`、`#Ｂ２Surgery`、`#Ｃ１Material`、`#Ｃ２Carrier`、`#Ｃ３Drug`、`#Ｄ１Target`、`#Ｄ２Mechanism`、`#Ｄ３Phenotype`、`#Ｅ１Method` 之一（全角字母与数字，无空格）。
-2. **工作流阅读状态**：顶层允许最多保留 **1 个**既有状态标签（`/Done` > `/reading` > `/unread`）；不强行给原无状态条目补标。
-3. **系统保护对象**：独立笔记、插件配置条目及普通 PDF 批注子条目保持原样，不参与文献批量打标。
-4. **AI 已标识别标记（`~ZTag-V2`）**：每篇经 AI Agent 按 V2.0 规范完成打标的条目，统一附加普通平铺标签 **`~ZTag-V2`**（纯 ASCII 字符，不带 `#` 或 `/`），不进入 `#` 多级树与 ZoteroStyle 正则列，也不占用 `/` 状态空间；可在 Zotero 高级筛选通过「标签 不包含 `~ZTag-V2`」快速定位待标注文献。
-5. **标准导入与标注顺序**：严格执行「**锁定父条目 ➔ 挂齐 PDF 附件 ➔ 读取全文并写入 V2.0 标签与 `~ZTag-V2`**」，防止在未绑定父条目的孤立 PDF 上先打标后触发元数据识别导致标签滞留子附件。
-
----
-
-## 四、不同文献类型的稀疏激活指南
-
-- **机制研究 (`#Ａ１Type/Article 论著/Mechanistic 机制研究`)**：重点标 `#Ｂ１Disease` + `#Ｄ１Target` + `#Ｄ２Mechanism` + `#Ｄ３Phenotype` + `#Ｅ１Method/AnimalModel` 或 `InVitroModel`；`#Ｃ１Material`/`#Ｃ２Carrier`/`#Ｂ２Surgery` 天然留空。
-- **生物材料研究 (`#Ａ１Type/Article 论著/Biomaterial 生物材料研究`)**：按需激活 `#Ｃ１Material`/`#Ｃ２Carrier`/`#Ｃ３Drug` + `#Ｂ１Disease` + `#Ｄ３Phenotype` + `#Ｄ２Mechanism` + `#Ｄ１Target` + `#Ｅ１Method`。
-- **器械临床前评价 (`#Ａ１Type/Article 论著/DeviceEvaluation 器械临床前评价`)**：重点标 `#Ｂ２Surgery`/`#Ｂ１Disease` + `#Ｃ１Material` + `#Ｄ３Phenotype/Biomechanics`（及/或 `Biodegradation` / `Osteogenesis`）+ `#Ｅ１Method`；`#Ｄ１Target`/`#Ｃ２Carrier` 通常留空。
-- **计算与仿真 (`#Ａ１Type/Computational 计算与仿真/...`)**：重点标 `#Ｂ２Surgery`/`#Ｂ１Disease` + `#Ｃ１Material` + `#Ｄ３Phenotype/Biomechanics`（若属生信/分子模拟可带对应靶点）+ `#Ｅ１Method/Characterization.../Simulation`。
-- **临床研究与综述 (`#Ａ１Type/Clinical...` / `Review` / `SystematicReview`)**：严格 1 个主 `#Ａ１Type` + 对应临床对比（`#Ｅ１Method/StudyDesign.../Comparative`）+ `#Ｂ１Disease`/`#Ｂ２Surgery` + `#Ｃ１Material`/`#Ｃ３Drug` + `#Ｄ３Phenotype/ClinicalOutcome`。
-- **指南/规程/手册/人文 (`Guideline` / `Protocol` / `ProductManual` / `Book` / `Humanities`)**：准确标注 `#Ａ１Type` 与其直接覆盖的疾病/材料/技术范围，绝不牵强凑分子靶点。
-
----
-
-## 五、标准受控词表全览（153 个受控标签，10 维）
-
-### 1. `#Ａ１Type`（L0：研究范式与文献体裁，21 个）
-- `#Ａ１Type/Article 论著/Mechanistic 机制研究`
-- `#Ａ１Type/Article 论著/Biomaterial 生物材料研究`
-- `#Ａ１Type/Article 论著/DeviceEvaluation 器械临床前评价`
-- `#Ａ１Type/Clinical 临床研究/RCT (Randomized Controlled Trial) 随机对照试验`
-- `#Ａ１Type/Clinical 临床研究/Prospective 前瞻性临床研究`
-- `#Ａ１Type/Clinical 临床研究/Retrospective 回顾性临床研究`
-- `#Ａ１Type/Clinical 临床研究/CrossSectional 横断面研究`
-- `#Ａ１Type/Clinical 临床研究/CaseReport 病例报告与系列`
-- `#Ａ１Type/Review 综述`
-- `#Ａ１Type/SystematicReview 系统综述`
-- `#Ａ１Type/SystematicReview 系统综述/MetaAnalysis Meta分析`
-- `#Ａ１Type/Computational 计算与仿真/FEA (Finite Element Analysis) 有限元分析`
-- `#Ａ１Type/Computational 计算与仿真/Bioinformatics 生物信息与分子模拟`
-- `#Ａ１Type/Guideline 指南与规范/ClinicalGuideline 临床诊疗指南`
-- `#Ａ１Type/Guideline 指南与规范/Standard 技术标准与报告规范`
-- `#Ａ１Type/Protocol 实验方案与规程`
-- `#Ａ１Type/ProductManual 产品手册与说明书`
-- `#Ａ１Type/Book 专著与教材`
-- `#Ａ１Type/Commentary 述评与观点`
-- `#Ａ１Type/Humanities 科技人文与方法论`
-- `#Ａ１Type/Humanities 科技人文与方法论/Bioethics 生命伦理与治理`
-
-### 2. `#Ｂ１Disease`（L1：临床疾病与病理状态，27 个）
-- `#Ｂ１Disease/MRONJ (Medication-Related Osteonecrosis of the Jaw) 药物相关颌骨坏死`
-- `#Ｂ１Disease/MRONJ (Medication-Related Osteonecrosis of the Jaw) 药物相关颌骨坏死/BRONJ 双膦酸盐相关颌骨坏死`
-- `#Ｂ１Disease/MRONJ (Medication-Related Osteonecrosis of the Jaw) 药物相关颌骨坏死/DRONJ 地诺单抗相关颌骨坏死`
-- `#Ｂ１Disease/ONFH (Osteonecrosis of the Femoral Head) 股骨头坏死`
-- `#Ｂ１Disease/ONFH (Osteonecrosis of the Femoral Head) 股骨头坏死/SONFH 激素性股骨头坏死`
-- `#Ｂ１Disease/ONFH (Osteonecrosis of the Femoral Head) 股骨头坏死/IschemicONFH 缺血性股骨头坏死`
-- `#Ｂ１Disease/TMD (Temporomandibular Disorders) 颞下颌关节病`
-- `#Ｂ１Disease/TMD (Temporomandibular Disorders) 颞下颌关节病/TMJ-OA (Temporomandibular Joint Osteoarthritis) 颞下颌关节骨关节炎`
-- `#Ｂ１Disease/Osteoarthritis 骨关节炎`
-- `#Ｂ１Disease/Osteoporosis 骨质疏松症`
-- `#Ｂ１Disease/Periodontitis 牙周炎`
-- `#Ｂ１Disease/Peri-Implantitis 种植体周围炎`
-- `#Ｂ１Disease/Endodontics 牙体牙髓病`
-- `#Ｂ１Disease/DentofacialDeformity 牙颌面畸形`
-- `#Ｂ１Disease/Craniosynostosis 颅缝早闭`
-- `#Ｂ１Disease/CraniofacialFracture 颅颌面骨折`
-- `#Ｂ１Disease/CraniofacialFracture 颅颌面骨折/MandibularFracture 下颌骨骨折`
-- `#Ｂ１Disease/CraniofacialFracture 颅颌面骨折/MidfacialFracture 面中部与眶壁骨折`
-- `#Ｂ１Disease/BoneDefect 骨缺损与拔牙窝创伤`
-- `#Ｂ１Disease/Infection 感染性疾病/OralInfection 口腔细菌与生物膜感染`
-- `#Ｂ１Disease/Infection 感染性疾病/ImplantInfection 手术与植入物感染`
-- `#Ｂ１Disease/Wound 皮肤黏膜创面`
-- `#Ｂ１Disease/Scar 病理性瘢痕与纤维化`
-- `#Ｂ１Disease/MetabolicDisorder 糖脂代谢疾病`
-- `#Ｂ１Disease/AutoimmuneDisease 自身免疫与风湿病`
-- `#Ｂ１Disease/CardiovascularDisease 心血管疾病`
-- `#Ｂ１Disease/Tumor 肿瘤`
-
-### 3. `#Ｂ２Surgery`（L1：外科术式与临床操作，8 个）
-- `#Ｂ２Surgery/Orthognathic 正颌外科`
-- `#Ｂ２Surgery/Orthognathic 正颌外科/BSSROﾉSSRO (Sagittal Split Ramus Osteotomy) 下颌升支矢状劈开术`
-- `#Ｂ２Surgery/Orthognathic 正颌外科/LeFort-I Le Fort I型截骨术`
-- `#Ｂ２Surgery/Orthognathic 正颌外科/Genioplasty 颏成形术`
-- `#Ｂ２Surgery/Orthognathic 正颌外科/DO (Distraction Osteogenesis) 牵张成骨`
-- `#Ｂ２Surgery/MaxillofacialFixation 颌面创伤与重建内固定`
-- `#Ｂ２Surgery/ImplantSurgery 牙槽与种植外科`
-- `#Ｂ２Surgery/OrthopedicFixation 骨科内固定与关节置换`
-
-### 4. `#Ｃ１Material`（L2：工程材料骨架与表面改性，21 个）
-- `#Ｃ１Material/ResorbablePolymer 可吸收高分子`
-- `#Ｃ１Material/ResorbablePolymer 可吸收高分子/PLLA (Poly-L-Lactic Acid) 左旋聚乳酸`
-- `#Ｃ１Material/ResorbablePolymer 可吸收高分子/PDLLA (Poly-DL-Lactic Acid) 外消旋与共聚聚乳酸`
-- `#Ｃ１Material/ResorbablePolymer 可吸收高分子/PLGA (Poly(lactic-co-glycolic acid)) 聚乳酸-羟基乙酸共聚物`
-- `#Ｃ１Material/ResorbablePolymer 可吸收高分子/PGA (Polyglycolic Acid) 聚乙醇酸`
-- `#Ｃ１Material/ResorbablePolymer 可吸收高分子/PCL (Polycaprolactone) 聚己内酯`
-- `#Ｃ１Material/ResorbablePolymer 可吸收高分子/u-HAﾉPLLA 羟基磷灰石ﾉ聚乳酸复合材料`
-- `#Ｃ１Material/BiodegradableMetal 可降解金属`
-- `#Ｃ１Material/BiodegradableMetal 可降解金属/Mg (Magnesium-Based) 镁与镁合金`
-- `#Ｃ１Material/BiodegradableMetal 可降解金属/ZnFeAlloy 锌基与铁基合金`
-- `#Ｃ１Material/Titanium 钛与钛合金`
-- `#Ｃ１Material/Hydrogel 水凝胶`
-- `#Ｃ１Material/Hydrogel 水凝胶/GelMA (Gelatin Methacryloyl) 甲基丙烯酰化明胶`
-- `#Ｃ１Material/Hydrogel 水凝胶/NaturalHydrogel 天然高分子水凝胶`
-- `#Ｃ１Material/Hydrogel 水凝胶/SmartHydrogel 合成与响应型水凝胶`
-- `#Ｃ１Material/MOF (Metal-Organic Framework) 金属有机框架`
-- `#Ｃ１Material/MOF (Metal-Organic Framework) 金属有机框架/ZIF-8 (Zeolitic Imidazolate Framework-8) 沸石咪唑酯骨架-8`
-- `#Ｃ１Material/Bioceramic 生物陶瓷与活性玻璃`
-- `#Ｃ１Material/Nanomaterial 无机与复合纳米材料`
-- `#Ｃ１Material/SurfaceModification 表面改性/Coating 表面涂层`
-- `#Ｃ１Material/SurfaceModification 表面改性/SurfaceTopography 表面形貌与电荷修饰`
-
-### 5. `#Ｃ２Carrier`（L2：递送载体与制剂剂型，5 个）
-- `#Ｃ２Carrier/Scaffold 组织工程与控释支架`
-- `#Ｃ２Carrier/Nanocarrier 纳米递送载体`
-- `#Ｃ２Carrier/tFNAs (Tetrahedral Framework Nucleic Acids) 四面体框架核酸`
-- `#Ｃ２Carrier/EVs (Extracellular Vesicles) 细胞外囊泡与外泌体`
-- `#Ｃ２Carrier/CellCarrier 细胞与血小板载体`
-
-### 6. `#Ｃ３Drug`（L2：活性药物与生物载荷，9 个）
-- `#Ｃ３Drug/Antiresorptive 抗骨吸收药/BPs (Bisphosphonates) 双膦酸盐`
-- `#Ｃ３Drug/Antiresorptive 抗骨吸收药/Denosumab 地诺单抗`
-- `#Ｃ３Drug/Biologics 蛋白与抗体药物/TCZ (Tocilizumab) 托珠单抗`
-- `#Ｃ３Drug/Biologics 蛋白与抗体药物/GrowthFactor 重组生长因子与多肽`
-- `#Ｃ３Drug/SmallMolecule 小分子化学药`
-- `#Ｃ３Drug/NucleicAcid 核酸药物`
-- `#Ｃ３Drug/NaturalProduct 天然产物与中药成分`
-- `#Ｃ３Drug/Antibiotic 抗生素与抗菌药`
-- `#Ｃ３Drug/GasTherapy 气体与活性氧分子`
-
-### 7. `#Ｄ１Target`（L3：分子靶点与信号通路，18 个）
-- `#Ｄ１Target/Pathway 信号通路/JAK-STAT 信号通路`
-- `#Ｄ１Target/Pathway 信号通路/NF-κB-RANKL 信号通路`
-- `#Ｄ１Target/Pathway 信号通路/MAPKﾉERK 信号通路`
-- `#Ｄ１Target/Pathway 信号通路/PI3K-Akt-mTOR 信号通路`
-- `#Ｄ１Target/Pathway 信号通路/Wnt-BMP-TGFβ 信号通路`
-- `#Ｄ１Target/Pathway 信号通路/Hippo-YAP 信号通路`
-- `#Ｄ１Target/Pathway 信号通路/cAMPﾉPKA 信号通路`
-- `#Ｄ１Target/Pathway 信号通路/InnateImmune 固有免疫通路 (TLR-NLRP3-STING)`
-- `#Ｄ１Target/Pathway 信号通路/Nrf2 抗氧化通路`
-- `#Ｄ１Target/Cytokine 细胞因子与生长因子/IL-6 白介素-6`
-- `#Ｄ１Target/Cytokine 细胞因子与生长因子/InflammatoryCytokine 促炎因子 (IL-1-TNFα)`
-- `#Ｄ１Target/Cytokine 细胞因子与生长因子/AngiogenicFactor 促血管生长因子 (VEGF-FGF)`
-- `#Ｄ１Target/BoneMetabolism 骨与代谢分子/OCN (Osteocalcin) 骨钙素`
-- `#Ｄ１Target/BoneMetabolism 骨与代谢分子/Zfp467 (Zinc Finger Protein 467) 锌指蛋白467`
-- `#Ｄ１Target/BoneMetabolism 骨与代谢分子/OsteogenicTF 成骨与成脂转录因子`
-- `#Ｄ１Target/BoneMetabolism 骨与代谢分子/BoneMatrixProtein 骨基质与矿化蛋白`
-- `#Ｄ１Target/BoneMetabolism 骨与代谢分子/MetabolicHormone 糖脂代谢激素与受体`
-- `#Ｄ１Target/NoncodingRNA 非编码RNA与表观调控`
-
-### 8. `#Ｄ２Mechanism`（L3：通用生物学与物理化学机制，13 个）
-- `#Ｄ２Mechanism/MetabolicReprogramming 代谢重编程/Glycolysis-OXPHOS 糖酵解与氧化磷酸化`
-- `#Ｄ２Mechanism/MetabolicReprogramming 代谢重编程/LipidAminoAcid 脂质与氨基酸代谢`
-- `#Ｄ２Mechanism/CellDifferentiation 细胞分化调控`
-- `#Ｄ２Mechanism/CellMigration 细胞迁移与招募`
-- `#Ｄ２Mechanism/CellSenescence 细胞衰老`
-- `#Ｄ２Mechanism/CellDeath 细胞死亡与自噬`
-- `#Ｄ２Mechanism/CellCommunication 细胞通讯与旁分泌`
-- `#Ｄ２Mechanism/Mechanotransduction 力学信号转导`
-- `#Ｄ２Mechanism/OxidativeHypoxia 氧化应激与缺氧调控`
-- `#Ｄ２Mechanism/IonMicroenvironment 离子与酸碱微环境`
-- `#Ｄ２Mechanism/AntimicrobialMech 破膜与生物膜瓦解`
-- `#Ｄ２Mechanism/Biomineralization 生物矿化与钙化`
-- `#Ｄ２Mechanism/ForeignBodyReaction 异物与植入物免疫反应`
-
-### 9. `#Ｄ３Phenotype`（L3：宏观表型与力学/临床结局，15 个）
-- `#Ｄ３Phenotype/Osteogenesis 成骨与骨再生`
-- `#Ｄ３Phenotype/BoneResorption 破骨与骨吸收`
-- `#Ｄ３Phenotype/Adipogenesis 成脂分化`
-- `#Ｄ３Phenotype/EnergyMetabolism 糖脂与能量代谢`
-- `#Ｄ３Phenotype/CartilageHomeostasis 软骨修复与退变`
-- `#Ｄ３Phenotype/Angiogenesis 促血管生成`
-- `#Ｄ３Phenotype/Hemostasis 凝血与止血`
-- `#Ｄ３Phenotype/Immunomodulation 免疫调控/MacrophagePolarization 巨噬细胞极化 (M1ﾉM2)`
-- `#Ｄ３Phenotype/Immunomodulation 免疫调控/Anti-Inflammation 抗炎调控`
-- `#Ｄ３Phenotype/Antibacterial 抗菌与抗生物膜`
-- `#Ｄ３Phenotype/WoundHealing 创面愈合与抗瘢痕`
-- `#Ｄ３Phenotype/Antitumor 抗肿瘤`
-- `#Ｄ３Phenotype/Biomechanics 生物力学稳定性`
-- `#Ｄ３Phenotype/Biodegradation 生物降解与吸收`
-- `#Ｄ３Phenotype/ClinicalOutcome 临床疗效与并发症`
-
-### 10. `#Ｅ１Method`（L4：研究设计、实验模型与表征/治疗技术，16 个）
-- `#Ｅ１Method/StudyDesign 研究设计/Comparative 横向对比研究`
-- `#Ｅ１Method/AnimalModel 动物模型/SmallAnimal 小动物模型`
-- `#Ｅ１Method/AnimalModel 动物模型/LargeAnimal 大动物模型`
-- `#Ｅ１Method/InVitroModel 体外模型/CellCulture 细胞培养体系`
-- `#Ｅ１Method/InVitroModel 体外模型/Organoid 3D培养与类器官`
-- `#Ｅ１Method/InVitroModel 体外模型/BiofilmModel 细菌与生物膜模型`
-- `#Ｅ１Method/InVitroModel 体外模型/SyntheticBone 体外仿真骨与力学模型`
-- `#Ｅ１Method/PhysicalTherapy 物理治疗技术/CAP (Cold Atmospheric Plasma) 冷大气等离子体`
-- `#Ｅ１Method/PhysicalTherapy 物理治疗技术/Phototherapy 光热与光动力治疗 (PTTﾉPDT)`
-- `#Ｅ１Method/Fabrication 制备与加工工艺/3D-Printing 3D打印与增材制造`
-- `#Ｅ１Method/Fabrication 制备与加工工艺/Processing 成型加工与灭菌`
-- `#Ｅ１Method/Characterization 表征与分析技术/BiomechanicalTest 生物力学测试`
-- `#Ｅ１Method/Characterization 表征与分析技术/Physicochemical 理化与定量表征`
-- `#Ｅ１Method/Characterization 表征与分析技术/Simulation 有限元与分子模拟`
-- `#Ｅ１Method/Characterization 表征与分析技术/Omics 多组学与测序`
-- `#Ｅ１Method/Characterization 表征与分析技术/HistologyImaging 影像与组织学分析`
-
----
-
-## 六、历史旧 `#` 标签迁移与纠偏要点（V2.0 对照摘要）
-
-| 旧标签模式 | V2.0 新规范去向 | 说明 |
+| ID | 标签 | 定义 |
 |---|---|---|
-| `#A` / `#R` / `#C/*` / `#M` / `#O` | `#Ａ１Type/*`（严格 1 个） | 依据研究范式与设计细分为 Mechanistic / Biomaterial / DeviceEvaluation、5 类互斥 Clinical、Standard、ProductManual 等 |
-| `#00Mc/*` | `#Ｄ２Mechanism/*` 或 `#Ｃ１Material/SurfaceModification/*` | `改变pH`→`IonMicroenvironment`；`消除缺氧`→`OxidativeHypoxia`；表面特征→`SurfaceTopography`；真破膜/物理杀菌机理→`AntimicrobialMech` |
-| `#01Ds/*` | `#Ｂ１Disease/*` | 修正 `Fructure` 拼写；`TMJ-OA` 归入 `TMD`；`UUO` 归入 `Scar` 病理性瘢痕与纤维化 |
-| `#02Pt/Apoptosis`、`Paracrine` | `#Ｄ２Mechanism/*` | 从表型迁回机制层（`CellDeath`、`CellCommunication`） |
-| `#12Pw/Migration`、`MAPK/ERK1...` | `#Ｄ２Mechanism/CellMigration`、`#Ｄ１Target/Pathway/MAPKﾉERK` | 迁移独立成机制，清除 `U+E002F` 不可见字符 |
-| `#13Dg/BPs...ZA` | 仅当药物本身为评价对象时标 `#Ｃ３Drug` | 纯 BRONJ 动物造模诱导剂或病例既往史不标 `#Ｃ３Drug` |
-| `#14Tm/*`、`#21Mt/*` | `#Ｃ１Material/*` / `#Ｃ２Carrier/*` / `#Ｃ３Drug/*` | 按“化学材质骨架 / 递送载体 / 活性药载”正交拆清；商品名材料按方式一下沉 |
-| `#15Tq/*`、`#31Tq/FEA`、`#16Mb/*` | `#Ｅ１Method/*` | 物理治疗（CAP/PTTﾉPDT）独立于加工工艺；生物膜模型归入 `InVitroModel` |
-| `#41VS/*` | `#Ｅ１Method/StudyDesign 研究设计/Comparative 横向对比研究` + 对应临床/材料标签 | 迁入 L4 研究设计轴，确保 `#Ａ１Type` 严格唯一排他 |
+| ZT-001 | `#Ａ１Type/Article 论著/Mechanistic 机制研究` | Mechanistic：主要阅读目标是分子或细胞机制、调控关系与生物学解释。关联、干预和计算证据的强度另行记录。 |
+| ZT-002 | `#Ａ１Type/Article 论著/Biomaterial 生物材料研究` | Biomaterial：主要阅读目标是材料合成、配方、载体设计及生物效应。 |
+| ZT-003 | `#Ａ１Type/Article 论著/DeviceEvaluation 器械临床前评价` | DeviceEvaluation：主要阅读目标是成熟器械或固定系统的力学、降解、相容性或临床前性能评价。 |
+| ZT-004 | `#Ａ１Type/Clinical 临床研究/RCT 随机对照试验` | RCT用于在Clinical下，直接一次筛选；按论文的随机干预设计判定。 |
+| ZT-005 | `#Ａ１Type/Clinical 临床研究/Prospective 前瞻性临床研究` | Prospective用于在Clinical下，直接筛选前瞻临床研究；明确的RCT或CaseControl优先使用具体类型。 |
+| ZT-006 | `#Ａ１Type/Clinical 临床研究/Retrospective 回顾性临床研究` | Retrospective用于在Clinical下，直接筛选回顾临床研究；明确病例对照时用CaseControl。 |
+| ZT-007 | `#Ａ１Type/Clinical 临床研究/CrossSectional 横断面研究` | CrossSectional用于；仅将已核实的病例对照误标条目转入新增CaseControl。 |
+| ZT-008 | `#Ａ１Type/Clinical 临床研究/CaseReport 病例报告与系列` | CaseReport统一覆盖病例报告与病例系列，按论文主要设计选择。 |
+| ZT-009 | `#Ａ１Type/Review 综述` | Review继续作为一般综述入口；有明确系统检索或Meta分析证据时用已有具体子类。 |
+| ZT-010 | `#Ａ１Type/SystematicReview 系统综述` | 用于SystematicReview入口及其与MetaAnalysis的既有层级。 |
+| ZT-011 | `#Ａ１Type/SystematicReview 系统综述/MetaAnalysis Meta分析` | MetaAnalysis用于具体入口；同一篇在Type中选择一个主要类型。 |
+| ZT-012 | `#Ａ１Type/Computational 计算与仿真/FEA 有限元分析` | FEA仍在Computational下直接分流，缩短英文展开式。 |
+| ZT-013 | `#Ａ１Type/Computational 计算与仿真/Bioinformatics 生物信息与分子模拟` | 3篇使用Bioinformatics，定义覆盖生信与分子模拟；用于综合计算研究入口。 |
+| ZT-014 | `#Ａ１Type/Guideline 指南与规范/ClinicalGuideline 临床诊疗指南` | ClinicalGuideline用于临床指南与规范入口。 |
+| ZT-015 | `#Ａ１Type/Guideline 指南与规范/Standard 技术标准与报告规范` | Standard用于技术、报告与命名共识等规范性资料。 |
+| ZT-016 | `#Ａ１Type/Protocol 实验方案与规程` | Protocol用于可执行实验规程，用于方法学习入口。 |
+| ZT-017 | `#Ａ１Type/ProductInfo 产品资料` | 产品手册、说明书、注册技术摘要等产品资料。 |
+| ZT-018 | `#Ａ１Type/Book 专著与教材` | Book统一专著、教材与章节，保持原范围。 |
+| ZT-019 | `#Ａ１Type/Commentary 述评与观点` | Commentary用于述评与观点入口。 |
+| ZT-020 | `#Ａ１Type/Humanities 科技人文与方法论` | Humanities用于科技人文与方法论资料。 |
+| ZT-021 | `#Ａ１Type/Humanities 科技人文与方法论/Bioethics 生命伦理与治理` | Bioethics用于生命伦理与治理资料。 |
+| ZT-154 | `#Ａ１Type/Clinical 临床研究/CaseControl 病例对照` | 病例对照研究，按结局或病例状态选择病例和对照，再比较暴露或相关因素。用于Clinical单次筛选；病例对照优先于笼统的回顾性描述。 |
+
+### Ｂ１Disease
+
+| ID | 标签 | 定义 |
+|---|---|---|
+| ZT-022 | `#Ｂ１Disease/MRONJ 药物相关颌骨坏死` | 药物相关颌骨坏死总类；BRONJ、DRONJ作为对应具体类型。 |
+| ZT-023 | `#Ｂ１Disease/MRONJ 药物相关颌骨坏死/BRONJ 双膦酸盐相关颌骨坏死` | 双膦酸盐相关颌骨坏死。 |
+| ZT-024 | `#Ｂ１Disease/MRONJ 药物相关颌骨坏死/DRONJ 地诺单抗相关颌骨坏死` | 地诺单抗相关颌骨坏死。 |
+| ZT-025 | `#Ｂ１Disease/ONFH 股骨头坏死` | 股骨头坏死总类，含病因子类。 |
+| ZT-026 | `#Ｂ１Disease/ONFH 股骨头坏死/SONFH 激素性股骨头坏死` | 激素性股骨头坏死。 |
+| ZT-027 | `#Ｂ１Disease/ONFH 股骨头坏死/IschemicONFH 缺血性股骨头坏死` | 缺血性股骨头坏死的检索类别。 |
+| ZT-028 | `#Ｂ１Disease/TMD 颞下颌关节病` | 颞下颌关节病总类，含TMJ-OA。 |
+| ZT-029 | `#Ｂ１Disease/TMD 颞下颌关节病/TMJ-OA 颞下颌关节骨关节炎` | 颞下颌关节骨关节炎。 |
+| ZT-030 | `#Ｂ１Disease/Osteoarthritis 骨关节炎` | 用于疾病分类范围与层级。 |
+| ZT-031 | `#Ｂ１Disease/Osteoporosis 骨质疏松症` | 用于疾病分类范围与层级。 |
+| ZT-032 | `#Ｂ１Disease/Periodontitis 牙周炎` | 用于疾病分类范围与层级。 |
+| ZT-033 | `#Ｂ１Disease/Peri-Implantitis 种植体周围炎` | 用于疾病分类范围与层级。 |
+| ZT-034 | `#Ｂ１Disease/Endodontics 牙体牙髓病` | 用于牙体牙髓疾病的综合入口。 |
+| ZT-035 | `#Ｂ１Disease/DentofacialDeformity 牙颌面畸形` | 用于疾病分类范围与层级。 |
+| ZT-036 | `#Ｂ１Disease/Craniosynostosis 颅缝早闭` | 用于疾病分类范围与层级。 |
+| ZT-037 | `#Ｂ１Disease/CraniofacialFracture 颅颌面骨折` | 用于疾病分类范围与层级。 |
+| ZT-038 | `#Ｂ１Disease/CraniofacialFracture 颅颌面骨折/MandibularFracture 下颌骨骨折` | 用于疾病分类范围与层级。 |
+| ZT-039 | `#Ｂ１Disease/CraniofacialFracture 颅颌面骨折/MidfacialFracture 面中部与眶壁骨折` | 面中部与眶壁作为本库已有综合部位入口。 |
+| ZT-040 | `#Ｂ１Disease/BoneDefect 骨缺损与拔牙窝创伤` | 用于骨缺损与拔牙窝的共同应用场景。 |
+| ZT-041 | `#Ｂ１Disease/Infection 感染性疾病/OralInfection 口腔细菌与生物膜感染` | 用于口腔细菌与生物膜感染的综合疾病入口。 |
+| ZT-042 | `#Ｂ１Disease/Infection 感染性疾病/ImplantInfection 手术与植入物感染` | 标签对应手术与植入物感染；历史自动映射须按实际疾病核实。 |
+| ZT-043 | `#Ｂ１Disease/Wound 皮肤黏膜创面` | 用于疾病分类范围与层级。 |
+| ZT-044 | `#Ｂ１Disease/Scar 病理性瘢痕与纤维化` | 瘢痕与纤维化用于综合入口，沿用已形成的检索习惯。 |
+| ZT-045 | `#Ｂ１Disease/MetabolicDisorder 糖脂代谢疾病` | 用于糖脂代谢疾病的综合疾病入口。 |
+| ZT-046 | `#Ｂ１Disease/AutoimmuneDisease 自身免疫与风湿病` | 用于自身免疫与风湿病的综合疾病入口。 |
+| ZT-047 | `#Ｂ１Disease/CardiovascularDisease 心血管疾病` | 用于疾病分类范围与层级。 |
+| ZT-048 | `#Ｂ１Disease/Tumor 肿瘤` | 用于疾病分类范围与层级。 |
+
+### Ｂ２Surgery
+
+| ID | 标签 | 定义 |
+|---|---|---|
+| ZT-049 | `#Ｂ２Surgery/Orthognathic 正颌外科` | Orthognathic总类及其常用术式叶节点使用。 |
+| ZT-050 | `#Ｂ２Surgery/Orthognathic 正颌外科/SSRO 矢状劈开术` | SSRO统一收纳SSRO、BSSRO、SSO、BSSO等升支矢状劈开术写法。 |
+| ZT-051 | `#Ｂ２Surgery/Orthognathic 正颌外科/LeFort-I 截骨术` | LeFort-I截骨术，名称兼容ZoteroStyle胶囊提取规则。 |
+| ZT-052 | `#Ｂ２Surgery/Orthognathic 正颌外科/Genioplasty 颏成形术` | 用于术式检索入口。 |
+| ZT-053 | `#Ｂ２Surgery/Orthognathic 正颌外科/DO 牵张成骨` | 牵张成骨，在正颌分支中提供直接入口。 |
+| ZT-054 | `#Ｂ２Surgery/MaxillofacialFixation 颌面创伤与重建内固定` | 用于颌面创伤与重建固定入口。 |
+| ZT-055 | `#Ｂ２Surgery/ImplantSurgery 牙槽与种植外科` | 用于牙槽与种植外科的综合操作入口。 |
+| ZT-056 | `#Ｂ２Surgery/OrthopedicFixation 骨科内固定与关节置换` | 用于骨科固定与关节置换入口。 |
+
+### Ｃ１Material
+
+| ID | 标签 | 定义 |
+|---|---|---|
+| ZT-057 | `#Ｃ１Material/ResorbablePolymer 可吸收高分子` | 用于可吸收高分子的上位材料词；已有具体成分时按原粒度选择。 |
+| ZT-058 | `#Ｃ１Material/ResorbablePolymer 可吸收高分子/PLLA` | 用于PLLA具体材料体系；全称由词表定义承接。 |
+| ZT-059 | `#Ｃ１Material/ResorbablePolymer 可吸收高分子/PDLLA 乳酸共聚物` | 外消旋聚乳酸及乳酸立构共聚、含TMC体系的综合材料类；明确PLGA、PLLA等已有专类时优先专类。 |
+| ZT-060 | `#Ｃ１Material/ResorbablePolymer 可吸收高分子/PLGA` | 用于PLGA成分入口；具体比例属于配方信息。 |
+| ZT-061 | `#Ｃ１Material/ResorbablePolymer 可吸收高分子/PGA` | 用于PGA成分入口。 |
+| ZT-062 | `#Ｃ１Material/ResorbablePolymer 可吸收高分子/PCL` | 用于PCL成分入口。 |
+| ZT-063 | `#Ｃ１Material/ResorbablePolymer 可吸收高分子/u-HAﾉPLLA` | 用于u-HAﾉPLLA复合体系，分隔符与检索含义沿用。 |
+| ZT-064 | `#Ｃ１Material/BiodegradableMetal 可降解金属` | 用于可降解金属上位材料词。 |
+| ZT-065 | `#Ｃ１Material/BiodegradableMetal 可降解金属/Mg 镁基` | 镁为基体的金属材料。 |
+| ZT-066 | `#Ｃ１Material/BiodegradableMetal 可降解金属/Zn-Fe 锌基与铁基` | 锌基或铁基任一材料体系的综合类别。 |
+| ZT-067 | `#Ｃ１Material/Titanium 钛与钛合金` | 用于材料体系范围。 |
+| ZT-068 | `#Ｃ１Material/Hydrogel 水凝胶` | 用于通用Hydrogel入口及已有具体子类。 |
+| ZT-069 | `#Ｃ１Material/Hydrogel 水凝胶/GelMA` | GelMA使用熟悉缩写；全称用于在定义中。 |
+| ZT-070 | `#Ｃ１Material/Hydrogel 水凝胶/NaturalHydrogel 天然高分子水凝胶` | 用于天然高分子水凝胶综合材料类。 |
+| ZT-071 | `#Ｃ１Material/Hydrogel 水凝胶/SmartHydrogel 合成与响应型水凝胶` | 用于合成与响应型水凝胶的综合类，具体性质按实际研究记录。 |
+| ZT-072 | `#Ｃ１Material/MOF 金属有机框架` | 用于材料体系范围。 |
+| ZT-073 | `#Ｃ１Material/MOF 金属有机框架/ZIF-8` | 用于材料体系范围。 |
+| ZT-074 | `#Ｃ１Material/Bioceramic 生物陶瓷与活性玻璃` | 用于生物陶瓷与活性玻璃的综合材料类。 |
+| ZT-075 | `#Ｃ１Material/Nanomaterial 无机与复合纳米材料` | 用于无机与复合纳米材料范围；成分与递送角色分别按C1、C2的用途表达。 |
+| ZT-076 | `#Ｃ１Material/SurfaceModification 表面改性/Coating 表面涂层` | 用于Coating涂层入口。 |
+| ZT-077 | `#Ｃ１Material/SurfaceModification 表面改性/SurfaceTopography 表面形貌与电荷修饰` | 用于表面形貌与电荷的综合设计入口。 |
+
+### Ｃ２Carrier
+
+| ID | 标签 | 定义 |
+|---|---|---|
+| ZT-078 | `#Ｃ２Carrier/Scaffold 组织工程与控释支架` | 用于组织工程及控释支架入口，按具体结构用途选择。 |
+| ZT-079 | `#Ｃ２Carrier/Nanocarrier 纳米递送载体` | 用于纳米递送载体入口。 |
+| ZT-080 | `#Ｃ２Carrier/tFNAs 四面体核酸` | tFNAs用于四面体框架核酸平台。 |
+| ZT-081 | `#Ｃ２Carrier/EVs 细胞外囊泡` | EVs覆盖细胞外囊泡及外泌体，沿用综合粒度。 |
+| ZT-082 | `#Ｃ２Carrier/CellCarrier 细胞与血小板载体` | 细胞或血小板相关载体与递送形式继续用于；无细胞条件培养基不自动归入该类。 |
+
+### Ｃ３Drug
+
+| ID | 标签 | 定义 |
+|---|---|---|
+| ZT-083 | `#Ｃ３Drug/Antiresorptive 抗骨吸收药/BPs 双膦酸盐` | BPs为双膦酸盐药物入口；按研究中药物的实际角色选择。 |
+| ZT-084 | `#Ｃ３Drug/Antiresorptive 抗骨吸收药/Denosumab 地诺单抗` | 用于Denosumab地诺单抗入口。 |
+| ZT-085 | `#Ｃ３Drug/Biologics 蛋白与抗体药物/TCZ 托珠单抗` | TCZ继续对应托珠单抗。 |
+| ZT-086 | `#Ｃ３Drug/Biologics 蛋白与抗体药物/GrowthFactor 重组生长因子与多肽` | 用于生长因子与多肽药载的综合入口。 |
+| ZT-087 | `#Ｃ３Drug/SmallMolecule 小分子化学药` | 用于小分子药物入口。 |
+| ZT-088 | `#Ｃ３Drug/NucleicAcid 核酸药物` | 用于核酸药物入口。 |
+| ZT-089 | `#Ｃ３Drug/NaturalProduct 天然产物与中药成分` | 用于天然产物与中药成分入口。 |
+| ZT-090 | `#Ｃ３Drug/Antibiotic 抗生素与抗菌药` | 用于Antibiotic英文抓手；定义沿用抗生素与其他抗菌药，如氯己定。 |
+| ZT-091 | `#Ｃ３Drug/GasTherapy 气体与活性氧分子` | 用于气体与活性氧干预综合入口；给药载荷与内源氧化应激根据研究角色区分。 |
+
+### Ｄ１Target
+
+| ID | 标签 | 定义 |
+|---|---|---|
+| ZT-092 | `#Ｄ１Target/Pathway 信号通路/JAK-STAT` | 用于通路组合，缩去重复的“信号通路”字样。 |
+| ZT-093 | `#Ｄ１Target/Pathway 信号通路/NF-κB-RANKL` | 用于NF-κB与RANKL相关信号的综合入口；标签表示覆盖相关内容。 |
+| ZT-094 | `#Ｄ１Target/Pathway 信号通路/MAPKﾉERK` | 用于MAPK/ERK综合信号入口。 |
+| ZT-095 | `#Ｄ１Target/Pathway 信号通路/PI3K-Akt-mTOR` | 用于PI3K-Akt-mTOR信号轴。 |
+| ZT-096 | `#Ｄ１Target/Pathway 信号通路/Wnt-BMP-TGFβ` | 用于Wnt-BMP-TGFβ综合入口；任一组成通路为核心研究内容即可适用。 |
+| ZT-097 | `#Ｄ１Target/Pathway 信号通路/Hippo-YAP` | 用于Hippo-YAP信号轴。 |
+| ZT-098 | `#Ｄ１Target/Pathway 信号通路/cAMPﾉPKA` | 用于cAMP/PKA信号轴。 |
+| ZT-099 | `#Ｄ１Target/Pathway 信号通路/InnateImmune 固有免疫` | 用于固有免疫综合入口，包含TLR、NLRP3、STING等；按实际研究主题选标。 |
+| ZT-100 | `#Ｄ１Target/Pathway 信号通路/Nrf2` | 用于Nrf2入口。 |
+| ZT-101 | `#Ｄ１Target/Cytokine 细胞因子与生长因子/IL-6` | 用于IL-6分子入口。 |
+| ZT-102 | `#Ｄ１Target/Cytokine 细胞因子与生长因子/InflammatoryCytokine 促炎因子 (IL-1-TNFα)` | 用于促炎因子综合入口，IL-1、TNF等在定义中列为覆盖范围。 |
+| ZT-103 | `#Ｄ１Target/Cytokine 细胞因子与生长因子/AngiogenicFactor 促血管生长因子 (VEGF-FGF)` | 用于VEGF、FGF等血管生长因子综合入口。 |
+| ZT-104 | `#Ｄ１Target/BoneMetabolism 骨与代谢分子/OCN 骨钙素` | OCN用于骨钙素辨识提示。 |
+| ZT-105 | `#Ｄ１Target/BoneMetabolism 骨与代谢分子/Zfp467` | Zfp467采用常用分子名称。 |
+| ZT-106 | `#Ｄ１Target/BoneMetabolism 骨与代谢分子/OsteogenicTF 成骨与成脂转录因子` | 用于成骨与成脂转录因子综合入口。 |
+| ZT-107 | `#Ｄ１Target/BoneMetabolism 骨与代谢分子/BoneMatrixProtein 骨基质与矿化蛋白` | 用于骨基质与矿化蛋白综合入口。 |
+| ZT-108 | `#Ｄ１Target/BoneMetabolism 骨与代谢分子/MetabolicHormone 糖脂代谢激素与受体` | 用于糖脂代谢激素与受体综合入口。 |
+| ZT-109 | `#Ｄ１Target/NoncodingRNA 非编码RNA与表观调控` | 用于非编码RNA与表观调控的既有综合入口。 |
+
+### Ｄ２Mechanism
+
+| ID | 标签 | 定义 |
+|---|---|---|
+| ZT-110 | `#Ｄ２Mechanism/MetabolicReprogramming 代谢重编程/Glycolysis-OXPHOS 糖酵解与氧化磷酸化` | 用于糖酵解与氧化磷酸化综合入口。 |
+| ZT-111 | `#Ｄ２Mechanism/MetabolicReprogramming 代谢重编程/LipidAminoAcid 脂质与氨基酸代谢` | 用于脂质与氨基酸代谢综合入口。 |
+| ZT-112 | `#Ｄ２Mechanism/CellDifferentiation 细胞分化调控` | 细胞分化作为核心研究过程时使用；只对已发现的“细胞鉴定检测”疑点做定点核查。 |
+| ZT-113 | `#Ｄ２Mechanism/CellMigration 细胞迁移与招募` | 用于迁移、募集与归巢的综合入口。 |
+| ZT-114 | `#Ｄ２Mechanism/CellSenescence 细胞衰老` | 用于细胞衰老入口。 |
+| ZT-115 | `#Ｄ２Mechanism/CellDeath 细胞死亡与自噬` | 用于细胞死亡与自噬综合入口。 |
+| ZT-116 | `#Ｄ２Mechanism/CellCommunication 细胞通讯与旁分泌` | 用于细胞通讯与旁分泌综合入口。 |
+| ZT-117 | `#Ｄ２Mechanism/Mechanotransduction 力学信号转导` | 用于Mechanotransduction力学转导入口。 |
+| ZT-118 | `#Ｄ２Mechanism/OxidativeHypoxia 氧化应激与缺氧调控` | 用于氧化应激与缺氧调控综合入口。 |
+| ZT-119 | `#Ｄ２Mechanism/IonMicroenvironment 离子与酸碱微环境` | 用于离子与酸碱微环境综合入口。 |
+| ZT-120 | `#Ｄ２Mechanism/AntimicrobialMech 破膜与生物膜瓦解` | 沿用既有破膜及生物膜瓦解范围；对已定位的抗黏附等边界个案核实后处理。 |
+| ZT-121 | `#Ｄ２Mechanism/Biomineralization 生物矿化与钙化` | 用于生物矿化与钙化过程入口。 |
+| ZT-122 | `#Ｄ２Mechanism/ForeignBodyReaction 异物与植入物免疫反应` | 用于异物与植入物免疫反应入口。 |
+
+### Ｄ３Phenotype
+
+| ID | 标签 | 定义 |
+|---|---|---|
+| ZT-123 | `#Ｄ３Phenotype/Osteogenesis 成骨与骨再生` | 用于成骨与骨再生综合表型。 |
+| ZT-124 | `#Ｄ３Phenotype/BoneResorption 破骨与骨吸收` | 用于破骨与骨吸收综合表型。 |
+| ZT-125 | `#Ｄ３Phenotype/Adipogenesis 成脂分化` | 用于成脂分化表型。 |
+| ZT-126 | `#Ｄ３Phenotype/EnergyMetabolism 糖脂与能量代谢` | 用于糖脂与能量代谢综合表型。 |
+| ZT-127 | `#Ｄ３Phenotype/CartilageHomeostasis 软骨修复与退变` | 用于软骨修复与退变综合表型。 |
+| ZT-128 | `#Ｄ３Phenotype/Angiogenesis 促血管生成` | 用于血管生成表型。 |
+| ZT-129 | `#Ｄ３Phenotype/Hemostasis 凝血与止血` | 用于凝血与止血综合表型。 |
+| ZT-130 | `#Ｄ３Phenotype/Immunomodulation 免疫调控/Macrophage 巨噬细胞极化` | 名称用于Macrophage英文辨识和巨噬极化中文提示；具体状态在原文证据中核对。 |
+| ZT-131 | `#Ｄ３Phenotype/Immunomodulation 免疫调控/Anti-Inflammation 抗炎调控` | 用于抗炎表型。 |
+| ZT-132 | `#Ｄ３Phenotype/Antibacterial 抗菌与抗生物膜` | 用于抗菌与抗生物膜综合表型。 |
+| ZT-133 | `#Ｄ３Phenotype/WoundHealing 创面愈合与抗瘢痕` | 用于创面愈合与抗瘢痕综合表型。 |
+| ZT-134 | `#Ｄ３Phenotype/Antitumor 抗肿瘤` | 用于抗肿瘤表型。 |
+| ZT-135 | `#Ｄ３Phenotype/Biomechanics 生物力学稳定性` | 用于Biomechanics力学稳定性入口。 |
+| ZT-136 | `#Ｄ３Phenotype/Biodegradation 生物降解与吸收` | 用于Biodegradation降解与吸收入口。 |
+| ZT-137 | `#Ｄ３Phenotype/ClinicalOutcome 临床疗效与并发症` | 用于临床疗效与并发症范围；疾病间关联的已定位个案单独纠偏。 |
+
+### Ｅ１Method
+
+| ID | 标签 | 定义 |
+|---|---|---|
+| ZT-138 | `#Ｅ１Method/StudyDesign 研究设计/Comparative 横向对比研究` | 用于Comparative比较研究入口；是否存在比较与比较的证据质量分别判断。 |
+| ZT-139 | `#Ｅ１Method/AnimalModel 动物模型/SmallAnimal 小动物模型` | 用于小动物模型入口。 |
+| ZT-140 | `#Ｅ１Method/AnimalModel 动物模型/LargeAnimal 大动物模型` | 用于大动物模型入口。 |
+| ZT-141 | `#Ｅ１Method/InVitroModel 体外模型/CellCulture 细胞培养体系` | 用于CellCulture细胞培养入口及既有归属。 |
+| ZT-142 | `#Ｅ１Method/InVitroModel 体外模型/3D-Organoid 三维培养与类器官` | 三维细胞培养或类器官的综合模型入口。 |
+| ZT-143 | `#Ｅ１Method/InVitroModel 体外模型/BiofilmModel 细菌与生物膜模型` | 用于细菌与生物膜模型的综合入口；词表明示其包括普通细菌培养。 |
+| ZT-144 | `#Ｅ１Method/InVitroModel 体外模型/SyntheticBone 体外仿真骨与力学模型` | 用于SyntheticBone仿真骨与力学模型入口。 |
+| ZT-145 | `#Ｅ１Method/PhysicalTherapy 物理治疗技术/CAP 冷大气等离子体` | 用于CAP缩写及中文提示。 |
+| ZT-146 | `#Ｅ１Method/PhysicalTherapy 物理治疗技术/Phototherapy 光热与光动力` | 用于光热与光动力综合干预入口。 |
+| ZT-147 | `#Ｅ１Method/Fabrication 制备与加工工艺/3D-Printing 3D打印与增材制造` | 用于3D-Printing及增材制造入口。 |
+| ZT-148 | `#Ｅ１Method/Fabrication 制备与加工工艺/Processing 成型加工与灭菌` | 用于加工与灭菌综合方法入口。 |
+| ZT-149 | `#Ｅ１Method/Characterization 表征与分析技术/BiomechanicalTest 生物力学测试` | 用于BiomechanicalTest力学测试入口。 |
+| ZT-150 | `#Ｅ１Method/Characterization 表征与分析技术/Physicochemical 理化与定量表征` | 用于Physicochemical理化表征入口。 |
+| ZT-151 | `#Ｅ１Method/Characterization 表征与分析技术/Simulation 有限元与分子模拟` | 用于Simulation有限元与分子模拟综合方法入口。 |
+| ZT-152 | `#Ｅ１Method/Characterization 表征与分析技术/Omics 多组学与测序` | 用于Omics组学与测序入口。 |
+| ZT-153 | `#Ｅ１Method/Characterization 表征与分析技术/HistologyImaging 影像与组织学分析` | 用于HistologyImaging影像与组织学综合方法入口。 |
+

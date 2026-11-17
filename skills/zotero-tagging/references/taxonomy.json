@@ -1,5 +1,6 @@
 {
-  "version": "2.0.0",
+  "version": "2.1.0",
+  "canonical_count": 154,
   "top_dimensions": [
     "Ａ１Type",
     "Ｂ１Disease",
@@ -29,7 +30,7 @@
     "#Ａ１Type/Article 论著/Mechanistic 机制研究",
     "#Ａ１Type/Article 论著/Biomaterial 生物材料研究",
     "#Ａ１Type/Article 论著/DeviceEvaluation 器械临床前评价",
-    "#Ａ１Type/Clinical 临床研究/RCT (Randomized Controlled Trial) 随机对照试验",
+    "#Ａ１Type/Clinical 临床研究/RCT 随机对照试验",
     "#Ａ１Type/Clinical 临床研究/Prospective 前瞻性临床研究",
     "#Ａ１Type/Clinical 临床研究/Retrospective 回顾性临床研究",
     "#Ａ１Type/Clinical 临床研究/CrossSectional 横断面研究",
@@ -37,24 +38,24 @@
     "#Ａ１Type/Review 综述",
     "#Ａ１Type/SystematicReview 系统综述",
     "#Ａ１Type/SystematicReview 系统综述/MetaAnalysis Meta分析",
-    "#Ａ１Type/Computational 计算与仿真/FEA (Finite Element Analysis) 有限元分析",
+    "#Ａ１Type/Computational 计算与仿真/FEA 有限元分析",
     "#Ａ１Type/Computational 计算与仿真/Bioinformatics 生物信息与分子模拟",
     "#Ａ１Type/Guideline 指南与规范/ClinicalGuideline 临床诊疗指南",
     "#Ａ１Type/Guideline 指南与规范/Standard 技术标准与报告规范",
     "#Ａ１Type/Protocol 实验方案与规程",
-    "#Ａ１Type/ProductManual 产品手册与说明书",
+    "#Ａ１Type/ProductInfo 产品资料",
     "#Ａ１Type/Book 专著与教材",
     "#Ａ１Type/Commentary 述评与观点",
     "#Ａ１Type/Humanities 科技人文与方法论",
     "#Ａ１Type/Humanities 科技人文与方法论/Bioethics 生命伦理与治理",
-    "#Ｂ１Disease/MRONJ (Medication-Related Osteonecrosis of the Jaw) 药物相关颌骨坏死",
-    "#Ｂ１Disease/MRONJ (Medication-Related Osteonecrosis of the Jaw) 药物相关颌骨坏死/BRONJ 双膦酸盐相关颌骨坏死",
-    "#Ｂ１Disease/MRONJ (Medication-Related Osteonecrosis of the Jaw) 药物相关颌骨坏死/DRONJ 地诺单抗相关颌骨坏死",
-    "#Ｂ１Disease/ONFH (Osteonecrosis of the Femoral Head) 股骨头坏死",
-    "#Ｂ１Disease/ONFH (Osteonecrosis of the Femoral Head) 股骨头坏死/SONFH 激素性股骨头坏死",
-    "#Ｂ１Disease/ONFH (Osteonecrosis of the Femoral Head) 股骨头坏死/IschemicONFH 缺血性股骨头坏死",
-    "#Ｂ１Disease/TMD (Temporomandibular Disorders) 颞下颌关节病",
-    "#Ｂ１Disease/TMD (Temporomandibular Disorders) 颞下颌关节病/TMJ-OA (Temporomandibular Joint Osteoarthritis) 颞下颌关节骨关节炎",
+    "#Ｂ１Disease/MRONJ 药物相关颌骨坏死",
+    "#Ｂ１Disease/MRONJ 药物相关颌骨坏死/BRONJ 双膦酸盐相关颌骨坏死",
+    "#Ｂ１Disease/MRONJ 药物相关颌骨坏死/DRONJ 地诺单抗相关颌骨坏死",
+    "#Ｂ１Disease/ONFH 股骨头坏死",
+    "#Ｂ１Disease/ONFH 股骨头坏死/SONFH 激素性股骨头坏死",
+    "#Ｂ１Disease/ONFH 股骨头坏死/IschemicONFH 缺血性股骨头坏死",
+    "#Ｂ１Disease/TMD 颞下颌关节病",
+    "#Ｂ１Disease/TMD 颞下颌关节病/TMJ-OA 颞下颌关节骨关节炎",
     "#Ｂ１Disease/Osteoarthritis 骨关节炎",
     "#Ｂ１Disease/Osteoporosis 骨质疏松症",
     "#Ｂ１Disease/Periodontitis 牙周炎",
@@ -75,62 +76,62 @@
     "#Ｂ１Disease/CardiovascularDisease 心血管疾病",
     "#Ｂ１Disease/Tumor 肿瘤",
     "#Ｂ２Surgery/Orthognathic 正颌外科",
-    "#Ｂ２Surgery/Orthognathic 正颌外科/BSSROﾉSSRO (Sagittal Split Ramus Osteotomy) 下颌升支矢状劈开术",
-    "#Ｂ２Surgery/Orthognathic 正颌外科/LeFort-I Le Fort I型截骨术",
+    "#Ｂ２Surgery/Orthognathic 正颌外科/SSRO 矢状劈开术",
+    "#Ｂ２Surgery/Orthognathic 正颌外科/LeFort-I 截骨术",
     "#Ｂ２Surgery/Orthognathic 正颌外科/Genioplasty 颏成形术",
-    "#Ｂ２Surgery/Orthognathic 正颌外科/DO (Distraction Osteogenesis) 牵张成骨",
+    "#Ｂ２Surgery/Orthognathic 正颌外科/DO 牵张成骨",
     "#Ｂ２Surgery/MaxillofacialFixation 颌面创伤与重建内固定",
     "#Ｂ２Surgery/ImplantSurgery 牙槽与种植外科",
     "#Ｂ２Surgery/OrthopedicFixation 骨科内固定与关节置换",
     "#Ｃ１Material/ResorbablePolymer 可吸收高分子",
-    "#Ｃ１Material/ResorbablePolymer 可吸收高分子/PLLA (Poly-L-Lactic Acid) 左旋聚乳酸",
-    "#Ｃ１Material/ResorbablePolymer 可吸收高分子/PDLLA (Poly-DL-Lactic Acid) 外消旋与共聚聚乳酸",
-    "#Ｃ１Material/ResorbablePolymer 可吸收高分子/PLGA (Poly(lactic-co-glycolic acid)) 聚乳酸-羟基乙酸共聚物",
-    "#Ｃ１Material/ResorbablePolymer 可吸收高分子/PGA (Polyglycolic Acid) 聚乙醇酸",
-    "#Ｃ１Material/ResorbablePolymer 可吸收高分子/PCL (Polycaprolactone) 聚己内酯",
-    "#Ｃ１Material/ResorbablePolymer 可吸收高分子/u-HAﾉPLLA 羟基磷灰石ﾉ聚乳酸复合材料",
+    "#Ｃ１Material/ResorbablePolymer 可吸收高分子/PLLA",
+    "#Ｃ１Material/ResorbablePolymer 可吸收高分子/PDLLA 乳酸共聚物",
+    "#Ｃ１Material/ResorbablePolymer 可吸收高分子/PLGA",
+    "#Ｃ１Material/ResorbablePolymer 可吸收高分子/PGA",
+    "#Ｃ１Material/ResorbablePolymer 可吸收高分子/PCL",
+    "#Ｃ１Material/ResorbablePolymer 可吸收高分子/u-HAﾉPLLA",
     "#Ｃ１Material/BiodegradableMetal 可降解金属",
-    "#Ｃ１Material/BiodegradableMetal 可降解金属/Mg (Magnesium-Based) 镁与镁合金",
-    "#Ｃ１Material/BiodegradableMetal 可降解金属/ZnFeAlloy 锌基与铁基合金",
+    "#Ｃ１Material/BiodegradableMetal 可降解金属/Mg 镁基",
+    "#Ｃ１Material/BiodegradableMetal 可降解金属/Zn-Fe 锌基与铁基",
     "#Ｃ１Material/Titanium 钛与钛合金",
     "#Ｃ１Material/Hydrogel 水凝胶",
-    "#Ｃ１Material/Hydrogel 水凝胶/GelMA (Gelatin Methacryloyl) 甲基丙烯酰化明胶",
+    "#Ｃ１Material/Hydrogel 水凝胶/GelMA",
     "#Ｃ１Material/Hydrogel 水凝胶/NaturalHydrogel 天然高分子水凝胶",
     "#Ｃ１Material/Hydrogel 水凝胶/SmartHydrogel 合成与响应型水凝胶",
-    "#Ｃ１Material/MOF (Metal-Organic Framework) 金属有机框架",
-    "#Ｃ１Material/MOF (Metal-Organic Framework) 金属有机框架/ZIF-8 (Zeolitic Imidazolate Framework-8) 沸石咪唑酯骨架-8",
+    "#Ｃ１Material/MOF 金属有机框架",
+    "#Ｃ１Material/MOF 金属有机框架/ZIF-8",
     "#Ｃ１Material/Bioceramic 生物陶瓷与活性玻璃",
     "#Ｃ１Material/Nanomaterial 无机与复合纳米材料",
     "#Ｃ１Material/SurfaceModification 表面改性/Coating 表面涂层",
     "#Ｃ１Material/SurfaceModification 表面改性/SurfaceTopography 表面形貌与电荷修饰",
     "#Ｃ２Carrier/Scaffold 组织工程与控释支架",
     "#Ｃ２Carrier/Nanocarrier 纳米递送载体",
-    "#Ｃ２Carrier/tFNAs (Tetrahedral Framework Nucleic Acids) 四面体框架核酸",
-    "#Ｃ２Carrier/EVs (Extracellular Vesicles) 细胞外囊泡与外泌体",
+    "#Ｃ２Carrier/tFNAs 四面体核酸",
+    "#Ｃ２Carrier/EVs 细胞外囊泡",
     "#Ｃ２Carrier/CellCarrier 细胞与血小板载体",
-    "#Ｃ３Drug/Antiresorptive 抗骨吸收药/BPs (Bisphosphonates) 双膦酸盐",
+    "#Ｃ３Drug/Antiresorptive 抗骨吸收药/BPs 双膦酸盐",
     "#Ｃ３Drug/Antiresorptive 抗骨吸收药/Denosumab 地诺单抗",
-    "#Ｃ３Drug/Biologics 蛋白与抗体药物/TCZ (Tocilizumab) 托珠单抗",
+    "#Ｃ３Drug/Biologics 蛋白与抗体药物/TCZ 托珠单抗",
     "#Ｃ３Drug/Biologics 蛋白与抗体药物/GrowthFactor 重组生长因子与多肽",
     "#Ｃ３Drug/SmallMolecule 小分子化学药",
     "#Ｃ３Drug/NucleicAcid 核酸药物",
     "#Ｃ３Drug/NaturalProduct 天然产物与中药成分",
     "#Ｃ３Drug/Antibiotic 抗生素与抗菌药",
     "#Ｃ３Drug/GasTherapy 气体与活性氧分子",
-    "#Ｄ１Target/Pathway 信号通路/JAK-STAT 信号通路",
-    "#Ｄ１Target/Pathway 信号通路/NF-κB-RANKL 信号通路",
-    "#Ｄ１Target/Pathway 信号通路/MAPKﾉERK 信号通路",
-    "#Ｄ１Target/Pathway 信号通路/PI3K-Akt-mTOR 信号通路",
-    "#Ｄ１Target/Pathway 信号通路/Wnt-BMP-TGFβ 信号通路",
-    "#Ｄ１Target/Pathway 信号通路/Hippo-YAP 信号通路",
-    "#Ｄ１Target/Pathway 信号通路/cAMPﾉPKA 信号通路",
-    "#Ｄ１Target/Pathway 信号通路/InnateImmune 固有免疫通路 (TLR-NLRP3-STING)",
-    "#Ｄ１Target/Pathway 信号通路/Nrf2 抗氧化通路",
-    "#Ｄ１Target/Cytokine 细胞因子与生长因子/IL-6 白介素-6",
+    "#Ｄ１Target/Pathway 信号通路/JAK-STAT",
+    "#Ｄ１Target/Pathway 信号通路/NF-κB-RANKL",
+    "#Ｄ１Target/Pathway 信号通路/MAPKﾉERK",
+    "#Ｄ１Target/Pathway 信号通路/PI3K-Akt-mTOR",
+    "#Ｄ１Target/Pathway 信号通路/Wnt-BMP-TGFβ",
+    "#Ｄ１Target/Pathway 信号通路/Hippo-YAP",
+    "#Ｄ１Target/Pathway 信号通路/cAMPﾉPKA",
+    "#Ｄ１Target/Pathway 信号通路/InnateImmune 固有免疫",
+    "#Ｄ１Target/Pathway 信号通路/Nrf2",
+    "#Ｄ１Target/Cytokine 细胞因子与生长因子/IL-6",
     "#Ｄ１Target/Cytokine 细胞因子与生长因子/InflammatoryCytokine 促炎因子 (IL-1-TNFα)",
     "#Ｄ１Target/Cytokine 细胞因子与生长因子/AngiogenicFactor 促血管生长因子 (VEGF-FGF)",
-    "#Ｄ１Target/BoneMetabolism 骨与代谢分子/OCN (Osteocalcin) 骨钙素",
-    "#Ｄ１Target/BoneMetabolism 骨与代谢分子/Zfp467 (Zinc Finger Protein 467) 锌指蛋白467",
+    "#Ｄ１Target/BoneMetabolism 骨与代谢分子/OCN 骨钙素",
+    "#Ｄ１Target/BoneMetabolism 骨与代谢分子/Zfp467",
     "#Ｄ１Target/BoneMetabolism 骨与代谢分子/OsteogenicTF 成骨与成脂转录因子",
     "#Ｄ１Target/BoneMetabolism 骨与代谢分子/BoneMatrixProtein 骨基质与矿化蛋白",
     "#Ｄ１Target/BoneMetabolism 骨与代谢分子/MetabolicHormone 糖脂代谢激素与受体",
@@ -155,7 +156,7 @@
     "#Ｄ３Phenotype/CartilageHomeostasis 软骨修复与退变",
     "#Ｄ３Phenotype/Angiogenesis 促血管生成",
     "#Ｄ３Phenotype/Hemostasis 凝血与止血",
-    "#Ｄ３Phenotype/Immunomodulation 免疫调控/MacrophagePolarization 巨噬细胞极化 (M1ﾉM2)",
+    "#Ｄ３Phenotype/Immunomodulation 免疫调控/Macrophage 巨噬细胞极化",
     "#Ｄ３Phenotype/Immunomodulation 免疫调控/Anti-Inflammation 抗炎调控",
     "#Ｄ３Phenotype/Antibacterial 抗菌与抗生物膜",
     "#Ｄ３Phenotype/WoundHealing 创面愈合与抗瘢痕",
@@ -167,627 +168,1106 @@
     "#Ｅ１Method/AnimalModel 动物模型/SmallAnimal 小动物模型",
     "#Ｅ１Method/AnimalModel 动物模型/LargeAnimal 大动物模型",
     "#Ｅ１Method/InVitroModel 体外模型/CellCulture 细胞培养体系",
-    "#Ｅ１Method/InVitroModel 体外模型/Organoid 3D培养与类器官",
+    "#Ｅ１Method/InVitroModel 体外模型/3D-Organoid 三维培养与类器官",
     "#Ｅ１Method/InVitroModel 体外模型/BiofilmModel 细菌与生物膜模型",
     "#Ｅ１Method/InVitroModel 体外模型/SyntheticBone 体外仿真骨与力学模型",
-    "#Ｅ１Method/PhysicalTherapy 物理治疗技术/CAP (Cold Atmospheric Plasma) 冷大气等离子体",
-    "#Ｅ１Method/PhysicalTherapy 物理治疗技术/Phototherapy 光热与光动力治疗 (PTTﾉPDT)",
+    "#Ｅ１Method/PhysicalTherapy 物理治疗技术/CAP 冷大气等离子体",
+    "#Ｅ１Method/PhysicalTherapy 物理治疗技术/Phototherapy 光热与光动力",
     "#Ｅ１Method/Fabrication 制备与加工工艺/3D-Printing 3D打印与增材制造",
     "#Ｅ１Method/Fabrication 制备与加工工艺/Processing 成型加工与灭菌",
     "#Ｅ１Method/Characterization 表征与分析技术/BiomechanicalTest 生物力学测试",
     "#Ｅ１Method/Characterization 表征与分析技术/Physicochemical 理化与定量表征",
     "#Ｅ１Method/Characterization 表征与分析技术/Simulation 有限元与分子模拟",
     "#Ｅ１Method/Characterization 表征与分析技术/Omics 多组学与测序",
-    "#Ｅ１Method/Characterization 表征与分析技术/HistologyImaging 影像与组织学分析"
+    "#Ｅ１Method/Characterization 表征与分析技术/HistologyImaging 影像与组织学分析",
+    "#Ａ１Type/Clinical 临床研究/CaseControl 病例对照"
   ],
-  "legacy_hash_map": {
-    "#00Mc/": {
-      "target": null,
-      "note": "Demo占位前缀，随Demo条目标记更新为 #Mechanism/"
-    },
-    "#00Mc/抑制粘附素基因表达": {
-      "target": "#Ｄ２Mechanism/AntimicrobialMech 破膜与生物膜瓦解",
-      "note": "抗菌与抗生物膜分子机制合并"
-    },
-    "#00Mc/抑制获得性膜的形成": {
-      "target": "#Ｄ２Mechanism/AntimicrobialMech 破膜与生物膜瓦解",
-      "note": "抗生物膜形成机制合并"
-    },
-    "#00Mc/改变 pH": {
-      "target": "#Ｄ２Mechanism/IonMicroenvironment 离子与酸碱微环境",
-      "note": "微环境酸碱调控归并"
-    },
-    "#00Mc/改善电荷": {
-      "target": "#Ｃ１Material/SurfaceModification 表面改性/SurfaceTopography 表面形貌与电荷修饰",
-      "note": "属于材料表面电荷改性属性而非通用生物机制"
-    },
-    "#00Mc/消除缺氧": {
-      "target": "#Ｄ２Mechanism/OxidativeHypoxia 氧化应激与缺氧调控",
-      "note": "缺氧与ROS调控归并"
-    },
-    "#00Mc/细菌表面的崩解": {
-      "target": "#Ｄ２Mechanism/AntimicrobialMech 破膜与生物膜瓦解",
-      "note": "杀菌破膜机制合并"
-    },
-    "#00Mc/结合粘附素": {
-      "target": "#Ｄ２Mechanism/AntimicrobialMech 破膜与生物膜瓦解",
-      "note": "抑制细菌粘附机制合并"
-    },
-    "#00Mc/表面特征": {
-      "target": "#Ｃ１Material/SurfaceModification 表面改性/SurfaceTopography 表面形貌与电荷修饰",
-      "note": "属于材料表面形貌/特征属性"
-    },
-    "#00Mc/静电作用抑制粘附": {
-      "target": "#Ｄ２Mechanism/AntimicrobialMech 破膜与生物膜瓦解",
-      "note": "可结合摘要补充 SurfaceChargeﾉTopography"
-    },
-    "#01Ds/": {
-      "target": null,
-      "note": "Demo占位前缀，更新为 #Disease/"
-    },
-    "#01Ds/AP (apical periodontitis) 根尖周炎": {
-      "target": "#Ｂ１Disease/Endodontics 牙体牙髓病",
-      "note": "参考MeSH上位概念归入牙体牙髓与根尖周病"
-    },
-    "#01Ds/Bacterial Infection 细菌感染": {
-      "target": "#Ｂ１Disease/Infection 感染性疾病/OralInfection 口腔细菌与生物膜感染",
-      "note": "按感染部位与摘要核实OralBiofilmInfection或SSI"
-    },
-    "#01Ds/Bone Defect 骨缺损": {
-      "target": "#Ｂ１Disease/BoneDefect 骨缺损与拔牙窝创伤",
-      "note": ""
-    },
-    "#01Ds/COVID-19": {
-      "target": "#Ｂ１Disease/Infection 感染性疾病/ImplantInfection 手术与植入物感染",
-      "note": "若为COVID-19本身(非手术感染)则保留提示或仅归Metabolic/Immunomodulation相关，结合摘要核实"
-    },
-    "#01Ds/Caries 龋病": {
-      "target": "#Ｂ１Disease/Endodontics 牙体牙髓病",
-      "note": ""
-    },
-    "#01Ds/Fructure 骨折/Condylar Fracture 髁突骨折": {
-      "target": "#Ｂ１Disease/CraniofacialFracture 颅颌面骨折/MandibularFracture 下颌骨骨折",
-      "note": "修复Fructure拼写错误"
-    },
-    "#01Ds/Fructure 骨折/Mandibular Fructure 下颌骨骨折": {
-      "target": "#Ｂ１Disease/CraniofacialFracture 颅颌面骨折/MandibularFracture 下颌骨骨折",
-      "note": "修复Fructure拼写错误"
-    },
-    "#01Ds/Infection 感染": {
-      "target": "#Ｂ１Disease/Infection 感染性疾病/OralInfection 口腔细菌与生物膜感染",
-      "note": "结合摘要核实是OralBiofilmInfection还是SSI"
-    },
-    "#01Ds/JIA 幼年特发性关节炎": {
-      "target": "#Ｂ１Disease/AutoimmuneDisease 自身免疫与风湿病",
-      "note": ""
-    },
-    "#01Ds/MRONJ 药物相关颌骨坏死": {
-      "target": "#Ｂ１Disease/MRONJ (Medication-Related Osteonecrosis of the Jaw) 药物相关颌骨坏死",
-      "note": ""
-    },
-    "#01Ds/MRONJ 药物相关颌骨坏死/BRONJ—双磷酸盐": {
-      "target": "#Ｂ１Disease/MRONJ (Medication-Related Osteonecrosis of the Jaw) 药物相关颌骨坏死/BRONJ 双膦酸盐相关颌骨坏死",
-      "note": ""
-    },
-    "#01Ds/MRONJ 药物相关颌骨坏死/DRONJ—地诺单抗": {
-      "target": "#Ｂ１Disease/MRONJ (Medication-Related Osteonecrosis of the Jaw) 药物相关颌骨坏死/DRONJ 地诺单抗相关颌骨坏死",
-      "note": ""
-    },
-    "#01Ds/NAFLD 非酒精性脂肪肝": {
-      "target": "#Ｂ１Disease/MetabolicDisorder 糖脂代谢疾病",
-      "note": ""
-    },
-    "#01Ds/OA 骨关节炎": {
-      "target": "#Ｂ１Disease/Osteoarthritis 骨关节炎",
-      "note": ""
-    },
-    "#01Ds/OA 骨关节炎/TMJ-OA": {
-      "target": "#Ｂ１Disease/TMD (Temporomandibular Disorders) 颞下颌关节病/TMJ-OA (Temporomandibular Joint Osteoarthritis) 颞下颌关节骨关节炎",
-      "note": ""
-    },
-    "#01Ds/ONFH 股骨头坏死": {
-      "target": "#Ｂ１Disease/ONFH (Osteonecrosis of the Femoral Head) 股骨头坏死",
-      "note": ""
-    },
-    "#01Ds/ONFH 股骨头坏死/Ischemic 缺血性": {
-      "target": "#Ｂ１Disease/ONFH (Osteonecrosis of the Femoral Head) 股骨头坏死/IschemicONFH 缺血性股骨头坏死",
-      "note": ""
-    },
-    "#01Ds/ONFH 股骨头坏死/LCPD 儿童缺血性股骨头坏死": {
-      "target": "#Ｂ１Disease/ONFH (Osteonecrosis of the Femoral Head) 股骨头坏死/IschemicONFH 缺血性股骨头坏死",
-      "note": ""
-    },
-    "#01Ds/ONFH 股骨头坏死/SONFH（激素性）": {
-      "target": "#Ｂ１Disease/ONFH (Osteonecrosis of the Femoral Head) 股骨头坏死/SONFH 激素性股骨头坏死",
-      "note": ""
-    },
-    "#01Ds/Orbital Wall Fracture 眶壁骨折": {
-      "target": "#Ｂ１Disease/CraniofacialFracture 颅颌面骨折/MidfacialFracture 面中部与眶壁骨折",
-      "note": ""
-    },
-    "#01Ds/PIDs (peri-implant diseases) 种植体周围疾病": {
-      "target": "#Ｂ１Disease/Peri-Implantitis 种植体周围炎",
-      "note": "参考MeSH同义归并"
-    },
-    "#01Ds/Peri-implantitis 种植体周围炎": {
-      "target": "#Ｂ１Disease/Peri-Implantitis 种植体周围炎",
-      "note": ""
-    },
-    "#01Ds/Periodontitis 牙周炎": {
-      "target": "#Ｂ１Disease/Periodontitis 牙周炎",
-      "note": ""
-    },
-    "#01Ds/SSI (surgical site infections) 手术部位感染": {
-      "target": "#Ｂ１Disease/Infection 感染性疾病/ImplantInfection 手术与植入物感染",
-      "note": ""
-    },
-    "#01Ds/TMJ disc perforation 颞下颌关节穿孔": {
-      "target": "#Ｂ１Disease/TMD (Temporomandibular Disorders) 颞下颌关节病",
-      "note": ""
-    },
-    "#01Ds/Tumor 肿瘤/OSCC (Oral Squamous Cell Carcinoma) 口腔鳞癌": {
-      "target": "#Ｂ１Disease/Tumor 肿瘤",
-      "note": ""
-    },
-    "#01Ds/UUO 单侧输尿管梗阻": {
-      "target": "#Ｂ１Disease/Scar 病理性瘢痕与纤维化",
-      "note": "单侧输尿管梗阻属于器官纤维化模型（V2.0 拆分为 Wounded vs Scar）"
-    },
-    "#01Sg/": {
-      "target": null,
-      "note": "Demo占位前缀，更新为 #Surgery/"
-    },
-    "#01Sg/Forefoot Surgery 前足手术": {
-      "target": "#Ｂ２Surgery/OrthopedicFixation 骨科内固定与关节置换",
-      "note": ""
-    },
-    "#01Sg/种植前上颌前牙槽突增高术": {
-      "target": "#Ｂ２Surgery/ImplantSurgery 牙槽与种植外科",
-      "note": ""
-    },
-    "#01Sg/颌面外": {
-      "target": "#Ｂ２Surgery/MaxillofacialFixation 颌面创伤与重建内固定",
-      "note": "结合摘要核实是正颌还是颌面创伤固定"
-    },
-    "#01Sg/颌面外/创伤": {
-      "target": "#Ｂ２Surgery/MaxillofacialFixation 颌面创伤与重建内固定",
-      "note": ""
-    },
-    "#01Sg/颌面外/正颌": {
-      "target": "#Ｂ２Surgery/Orthognathic 正颌外科",
-      "note": ""
-    },
-    "#01Sg/颌面外/正颌/BSSRO 双侧下颌升支矢状劈开切骨术": {
-      "target": "#Ｂ２Surgery/Orthognathic 正颌外科/BSSROﾉSSRO (Sagittal Split Ramus Osteotomy) 下颌升支矢状劈开术",
-      "note": ""
-    },
-    "#01Sg/颌面外/正颌/DO 牵张成骨": {
-      "target": "#Ｂ２Surgery/Orthognathic 正颌外科/DO (Distraction Osteogenesis) 牵张成骨",
-      "note": ""
-    },
-    "#01Sg/颌面外/正颌/DO 牵张成骨/Distraction with membrane addition 加膜牵引": {
-      "target": "#Ｂ２Surgery/Orthognathic 正颌外科/DO (Distraction Osteogenesis) 牵张成骨",
-      "note": "三层封顶向上收敛"
-    },
-    "#01Sg/颌面外/正颌/Le Fort I截骨术": {
-      "target": "#Ｂ２Surgery/Orthognathic 正颌外科/LeFort-I Le Fort I型截骨术",
-      "note": ""
-    },
-    "#01Sg/颌面外/正颌/SSRO 下颌升支矢状劈开切骨术": {
-      "target": "#Ｂ２Surgery/Orthognathic 正颌外科/BSSROﾉSSRO (Sagittal Split Ramus Osteotomy) 下颌升支矢状劈开术",
-      "note": ""
-    },
-    "#02Pt/": {
-      "target": null,
-      "note": "Demo占位前缀，更新为 #Phenotype/"
-    },
-    "#02Pt/AMR (Antimicrobial Resistance) 抗菌素耐药性": {
-      "target": "#Ｄ３Phenotype/Antibacterial 抗菌与抗生物膜",
-      "note": ""
-    },
-    "#02Pt/Alveolar Bone Destruction 牙槽骨破坏": {
-      "target": "#Ｄ３Phenotype/BoneResorption 破骨与骨吸收",
-      "note": ""
-    },
-    "#02Pt/Anti-bacterial 抗菌": {
-      "target": "#Ｄ３Phenotype/Antibacterial 抗菌与抗生物膜",
-      "note": ""
-    },
-    "#02Pt/Apoptosis 凋亡/Osteocyte 骨细胞": {
-      "target": "#Ｄ２Mechanism/CellDeath 细胞死亡与自噬",
-      "note": "关键纠偏：凋亡属于Mechanism而非Phenotype"
-    },
-    "#02Pt/Apoptosis 凋亡/Tumor Cells 肿瘤细胞": {
-      "target": "#Ｄ２Mechanism/CellDeath 细胞死亡与自噬",
-      "note": "关键纠偏：凋亡属于Mechanism，可结合摘要补充Antitumor"
-    },
-    "#02Pt/BTE (Bone Tissue Engineering) 骨组织工程": {
-      "target": "#Ｄ３Phenotype/Osteogenesis 成骨与骨再生",
-      "note": "虚泛领域词收敛至成骨再生"
-    },
-    "#02Pt/Paracrine 旁分泌": {
-      "target": "#Ｄ２Mechanism/CellCommunication 细胞通讯与旁分泌",
-      "note": "关键纠偏：旁分泌属于Mechanism"
-    },
-    "#02Pt/促成骨": {
-      "target": "#Ｄ３Phenotype/Osteogenesis 成骨与骨再生",
-      "note": ""
-    },
-    "#02Pt/促血管生成": {
-      "target": "#Ｄ３Phenotype/Angiogenesis 促血管生成",
-      "note": ""
-    },
-    "#02Pt/巨噬细胞极化": {
-      "target": "#Ｄ３Phenotype/Immunomodulation 免疫调控/MacrophagePolarization 巨噬细胞极化 (M1ﾉM2)",
-      "note": ""
-    },
-    "#02Pt/巨噬细胞极化/M1": {
-      "target": "#Ｄ３Phenotype/Immunomodulation 免疫调控/MacrophagePolarization 巨噬细胞极化 (M1ﾉM2)",
-      "note": ""
-    },
-    "#02Pt/巨噬细胞极化/M2": {
-      "target": "#Ｄ３Phenotype/Immunomodulation 免疫调控/MacrophagePolarization 巨噬细胞极化 (M1ﾉM2)",
-      "note": ""
-    },
-    "#02Pt/新骨形成": {
-      "target": "#Ｄ３Phenotype/Osteogenesis 成骨与骨再生",
-      "note": "参考MeSH同义归一"
-    },
-    "#02Pt/牙周膜-骨界面再生": {
-      "target": "#Ｄ３Phenotype/Osteogenesis 成骨与骨再生",
-      "note": "结合摘要可补充SoftTissueﾉFibrosis"
-    },
-    "#02Pt/破骨细胞转化": {
-      "target": "#Ｄ３Phenotype/BoneResorption 破骨与骨吸收",
-      "note": ""
-    },
-    "#02Pt/血运重建": {
-      "target": "#Ｄ３Phenotype/Angiogenesis 促血管生成",
-      "note": "参考MeSH同义归一"
-    },
-    "#02Pt/软骨细胞增殖": {
-      "target": "#Ｄ３Phenotype/CartilageHomeostasis 软骨修复与退变",
-      "note": ""
-    },
-    "#03Md/": {
-      "target": null,
-      "note": "Demo占位前缀，更新为 #Method/"
-    },
-    "#03Md/HFD 高脂肪饮食": {
-      "target": "#Ｅ１Method/AnimalModel 动物模型/SmallAnimal 小动物模型",
-      "note": "结合摘要补充MetabolicDisorder"
-    },
-    "#03Md/MLO-Y4 骨细胞样细胞系": {
-      "target": "#Ｅ１Method/InVitroModel 体外模型/CellCulture 细胞培养体系",
-      "note": ""
-    },
-    "#03Md/THP-1 单核细胞模型": {
-      "target": "#Ｅ１Method/InVitroModel 体外模型/CellCulture 细胞培养体系",
-      "note": ""
-    },
-    "#11Cd/": {
-      "target": null,
-      "note": "Demo占位前缀，更新为 #Target/"
-    },
-    "#11Cd/AMP 抗菌肽/Tet213": {
-      "target": "#Ｃ３Drug/Antibiotic 抗生素与抗菌药",
-      "note": "结合摘要若为外源载药抗菌肽归Drug或GrowthFactorﾉPeptide"
-    },
-    "#11Cd/IL 白介素/IL-1": {
-      "target": "#Ｄ１Target/Cytokine 细胞因子与生长因子/InflammatoryCytokine 促炎因子 (IL-1-TNFα)",
-      "note": ""
-    },
-    "#11Cd/IL 白介素/IL-1β": {
-      "target": "#Ｄ１Target/Cytokine 细胞因子与生长因子/InflammatoryCytokine 促炎因子 (IL-1-TNFα)",
-      "note": ""
-    },
-    "#11Cd/IL 白介素/IL-6": {
-      "target": "#Ｄ１Target/Cytokine 细胞因子与生长因子/IL-6 白介素-6",
-      "note": ""
-    },
-    "#11Cd/IL 白介素/IL-8": {
-      "target": "#Ｄ１Target/Cytokine 细胞因子与生长因子/InflammatoryCytokine 促炎因子 (IL-1-TNFα)",
-      "note": "低频促炎细胞因子向上收敛"
-    },
-    "#11Cd/Lys (lysozyme) 溶菌酶": {
-      "target": "#Ｃ３Drug/Antibiotic 抗生素与抗菌药",
-      "note": "若为外源抗菌酶归AntibioticﾉAntiseptic，若为内源蛋白结合摘要判定"
-    },
-    "#11Cd/MMP 基质金属蛋白酶": {
-      "target": "#Ｄ１Target/BoneMetabolism 骨与代谢分子/BoneMatrixProtein 骨基质与矿化蛋白",
-      "note": ""
-    },
-    "#11Cd/OPN (osteopontin) 骨桥蛋白": {
-      "target": "#Ｄ１Target/BoneMetabolism 骨与代谢分子/BoneMatrixProtein 骨基质与矿化蛋白",
-      "note": ""
-    },
-    "#11Cd/PDGF-BB 血小板衍生生长因子-BB": {
-      "target": "#Ｄ１Target/Cytokine 细胞因子与生长因子/AngiogenicFactor 促血管生长因子 (VEGF-FGF)",
-      "note": ""
-    },
-    "#11Cd/TLR-4": {
-      "target": "#Ｄ１Target/Pathway 信号通路/InnateImmune 固有免疫通路 (TLR-NLRP3-STING)",
-      "note": ""
-    },
-    "#11Cd/TNF-α": {
-      "target": "#Ｄ１Target/Cytokine 细胞因子与生长因子/InflammatoryCytokine 促炎因子 (IL-1-TNFα)",
-      "note": ""
-    },
-    "#11Cd/VEGF 血管内皮生长因子": {
-      "target": "#Ｄ１Target/Cytokine 细胞因子与生长因子/AngiogenicFactor 促血管生长因子 (VEGF-FGF)",
-      "note": ""
-    },
-    "#11Cd/leptin 瘦素": {
-      "target": "#Ｄ１Target/BoneMetabolism 骨与代谢分子/MetabolicHormone 糖脂代谢激素与受体",
-      "note": ""
-    },
-    "#11Cd/miRNA/miRNA-34a": {
-      "target": "#Ｄ１Target/NoncodingRNA 非编码RNA与表观调控",
-      "note": ""
-    },
-    "#12Pw/": {
-      "target": null,
-      "note": "Demo占位前缀，更新为 #Target/"
-    },
-    "#12Pw/JAK-STAT": {
-      "target": "#Ｄ１Target/Pathway 信号通路/JAK-STAT 信号通路",
-      "note": ""
-    },
-    "#12Pw/JAK-STAT/JAK2-STAT3": {
-      "target": "#Ｄ１Target/Pathway 信号通路/JAK-STAT 信号通路",
-      "note": ""
-    },
-    "#12Pw/MAPK/ERK1ﾉ2": {
-      "target": "#Ｄ１Target/Pathway 信号通路/MAPKﾉERK 信号通路",
-      "note": "清洗不可见Unicode字符"
-    },
-    "#12Pw/Migration 细胞迁移": {
-      "target": "#Ｄ２Mechanism/CellMigration 细胞迁移与招募",
-      "note": "细胞迁移独立为机制标签（V2.0 拆分 CellDifferentiation / CellMigration / CellSenescence）"
-    },
-    "#12Pw/NF-κB/OPGﾉRANKﾉRANKL": {
-      "target": "#Ｄ１Target/Pathway 信号通路/NF-κB-RANKL 信号通路",
-      "note": ""
-    },
-    "#12Pw/Nrf2": {
-      "target": "#Ｄ１Target/Pathway 信号通路/Nrf2 抗氧化通路",
-      "note": ""
-    },
-    "#13Dg/": {
-      "target": null,
-      "note": "Demo占位前缀，更新为 #Drug/"
-    },
-    "#13Dg/BPs (bisphosphonates) 双膦酸盐": {
-      "target": "#Ｃ３Drug/Antiresorptive 抗骨吸收药/BPs (Bisphosphonates) 双膦酸盐",
-      "note": "须结合摘要核查：若ZA/BP仅用于造模或引发MRONJ背景而非本文评价药物，不标#Drug"
-    },
-    "#13Dg/BPs (bisphosphonates) 双膦酸盐/ZA (Zoledronic Acid) 唑来膦酸": {
-      "target": "#Ｃ３Drug/Antiresorptive 抗骨吸收药/BPs (Bisphosphonates) 双膦酸盐",
-      "note": "须结合摘要核查是否仅为造模剂"
-    },
-    "#13Dg/CY (cyclophosphamide) 环磷酰胺": {
-      "target": "#Ｃ３Drug/SmallMolecule 小分子化学药",
-      "note": "若为免疫抑制造模剂需核查"
-    },
-    "#13Dg/GEN (Gentamicin) 庆大霉素": {
-      "target": "#Ｃ３Drug/Antibiotic 抗生素与抗菌药",
-      "note": ""
-    },
-    "#13Dg/Icariin 淫羊藿": {
-      "target": "#Ｃ３Drug/NaturalProduct 天然产物与中药成分",
-      "note": ""
-    },
-    "#13Dg/KLT 一种 VEGF 模拟肽": {
-      "target": "#Ｃ３Drug/Biologics 蛋白与抗体药物/GrowthFactor 重组生长因子与多肽",
-      "note": ""
-    },
-    "#13Dg/TCZ (Tocilizumab) 托珠单抗": {
-      "target": "#Ｃ３Drug/Biologics 蛋白与抗体药物/TCZ (Tocilizumab) 托珠单抗",
-      "note": ""
-    },
-    "#13Dg/Tofacitinib 托法替尼": {
-      "target": "#Ｃ３Drug/SmallMolecule 小分子化学药",
-      "note": ""
-    },
-    "#13Dg/mAb (Denosumab) 抗RANKL抗体": {
-      "target": "#Ｃ３Drug/Antiresorptive 抗骨吸收药/Denosumab 地诺单抗",
-      "note": ""
-    },
-    "#14Tm/": {
-      "target": null,
-      "note": "Demo占位前缀，更新为 #Carrier/"
-    },
-    "#14Tm/Cranberry 蔓越莓成分": {
-      "target": "#Ｃ３Drug/NaturalProduct 天然产物与中药成分",
-      "note": "关键纠偏：天然活性提取物归#Drug而非#Carrier"
-    },
-    "#14Tm/MSCs 间充质干细胞": {
-      "target": "#Ｃ２Carrier/CellCarrier 细胞与血小板载体",
-      "note": ""
-    },
-    "#14Tm/dECM 脱细胞细胞外基质": {
-      "target": "#Ｃ２Carrier/Scaffold 组织工程与控释支架",
-      "note": ""
-    },
-    "#15Tq/": {
-      "target": null,
-      "note": "Demo占位前缀，更新为 #Method/"
-    },
-    "#15Tq/3D printing 3D 打印": {
-      "target": "#Ｅ１Method/Fabrication 制备与加工工艺/3D-Printing 3D打印与增材制造",
-      "note": ""
-    },
-    "#15Tq/DIW printing 直接墨水书写打印": {
-      "target": "#Ｅ１Method/Fabrication 制备与加工工艺/3D-Printing 3D打印与增材制造",
-      "note": ""
-    },
-    "#15Tq/DLP printing 数字光处理打印": {
-      "target": "#Ｅ１Method/Fabrication 制备与加工工艺/3D-Printing 3D打印与增材制造",
-      "note": ""
-    },
-    "#16Mb/": {
-      "target": null,
-      "note": "Demo占位前缀，合并入 #Method/InVitroModel"
-    },
-    "#16Mb/P. gingivalis 牙龈卟啉单胞菌": {
-      "target": "#Ｅ１Method/InVitroModel 体外模型/BiofilmModel 细菌与生物膜模型",
-      "note": ""
-    },
-    "#21Mt/": {
-      "target": null,
-      "note": "Demo占位前缀，更新为 #Material/"
-    },
-    "#21Mt/Au NPs 金纳米颗粒": {
-      "target": "#Ｃ１Material/Nanomaterial 无机与复合纳米材料",
-      "note": ""
-    },
-    "#21Mt/CS (Chitosan) 壳聚糖": {
-      "target": "#Ｃ１Material/Hydrogel 水凝胶/NaturalHydrogel 天然高分子水凝胶",
-      "note": ""
-    },
-    "#21Mt/GGNs 气体生成纳米平台/O2": {
-      "target": "#Ｃ１Material/Nanomaterial 无机与复合纳米材料",
-      "note": "结合摘要补充 #Drug/GasﾉSignalingMolecule 与 #Mechanism/OxidativeStressﾉHypoxia"
-    },
-    "#21Mt/HAp 羟基磷灰石": {
-      "target": "#Ｃ１Material/Bioceramic 生物陶瓷与活性玻璃",
-      "note": ""
-    },
-    "#21Mt/Hydrogel 水凝胶": {
-      "target": "#Ｃ１Material/Hydrogel 水凝胶",
-      "note": ""
-    },
-    "#21Mt/Hydrogel 水凝胶/GelMA 明胶甲基丙烯酰胺": {
-      "target": "#Ｃ１Material/Hydrogel 水凝胶/GelMA (Gelatin Methacryloyl) 甲基丙烯酰化明胶",
-      "note": ""
-    },
-    "#21Mt/MOF 金属有机框架": {
-      "target": "#Ｃ１Material/MOF (Metal-Organic Framework) 金属有机框架",
-      "note": ""
-    },
-    "#21Mt/MOF 金属有机框架/ZIF 沸石咪唑盐框架": {
-      "target": "#Ｃ１Material/MOF (Metal-Organic Framework) 金属有机框架",
-      "note": ""
-    },
-    "#21Mt/MOF 金属有机框架/ZIF 沸石咪唑盐框架/ZIF-67": {
-      "target": "#Ｃ１Material/MOF (Metal-Organic Framework) 金属有机框架",
-      "note": "低频MOF向上收敛"
-    },
-    "#21Mt/MOF 金属有机框架/ZIF 沸石咪唑盐框架/ZIF-8": {
-      "target": "#Ｃ１Material/MOF (Metal-Organic Framework) 金属有机框架/ZIF-8 (Zeolitic Imidazolate Framework-8) 沸石咪唑酯骨架-8",
-      "note": ""
-    },
-    "#21Mt/Quaternary Ammonium Groups 季铵基团": {
-      "target": "#Ｃ１Material/SurfaceModification 表面改性/SurfaceTopography 表面形貌与电荷修饰",
-      "note": "表面抗菌功能基团修饰"
-    },
-    "#21Mt/Ti6Al4V": {
-      "target": "#Ｃ１Material/Titanium 钛与钛合金",
-      "note": ""
-    },
-    "#21Mt/tFNAs 四面体框架核酸": {
-      "target": "#Ｃ２Carrier/tFNAs (Tetrahedral Framework Nucleic Acids) 四面体框架核酸",
-      "note": "关键纠偏：tFNAs归#Carrier递送载体"
-    },
-    "#21Mt/可吸收材料": {
-      "target": "#Ｃ１Material/ResorbablePolymer 可吸收高分子",
-      "note": "结合摘要核实具体为Polymer还是BiodegradableMetal"
-    },
-    "#21Mt/可吸收材料/Metals/Mg": {
-      "target": "#Ｃ１Material/BiodegradableMetal 可降解金属/Mg (Magnesium-Based) 镁与镁合金",
-      "note": ""
-    },
-    "#21Mt/可吸收材料/Metals/Mg-Ca-Zn 合金": {
-      "target": "#Ｃ１Material/BiodegradableMetal 可降解金属/Mg (Magnesium-Based) 镁与镁合金",
-      "note": "长尾合金牌号向上收敛"
-    },
-    "#21Mt/可吸收材料/Metals/Mg/镁合金AZ31B": {
-      "target": "#Ｃ１Material/BiodegradableMetal 可降解金属/Mg (Magnesium-Based) 镁与镁合金",
-      "note": "长尾合金牌号向上收敛"
-    },
-    "#21Mt/可吸收材料/Metals/Zn": {
-      "target": "#Ｃ１Material/BiodegradableMetal 可降解金属/ZnFeAlloy 锌基与铁基合金",
-      "note": ""
-    },
-    "#21Mt/可吸收材料/Polymers": {
-      "target": "#Ｃ１Material/ResorbablePolymer 可吸收高分子",
-      "note": ""
-    },
-    "#21Mt/可吸收材料/Polymers/PDLA": {
-      "target": "#Ｃ１Material/ResorbablePolymer 可吸收高分子/PDLLA (Poly-DL-Lactic Acid) 外消旋与共聚聚乳酸",
-      "note": ""
-    },
-    "#21Mt/可吸收材料/Polymers/PLLA": {
-      "target": "#Ｃ１Material/ResorbablePolymer 可吸收高分子/PLLA (Poly-L-Lactic Acid) 左旋聚乳酸",
-      "note": ""
-    },
-    "#21Mt/可吸收材料/Polymers/PLLAﾉPGA": {
-      "target": "#Ｃ１Material/ResorbablePolymer 可吸收高分子/PLGA (Poly(lactic-co-glycolic acid)) 聚乳酸-羟基乙酸共聚物",
-      "note": "共聚物或分别标PLLA/PGA"
-    },
-    "#21Mt/可吸收材料/Polymers/u-HAﾉPLLA": {
-      "target": "#Ｃ１Material/ResorbablePolymer 可吸收高分子/u-HAﾉPLLA 羟基磷灰石ﾉ聚乳酸复合材料",
-      "note": ""
-    },
-    "#22Ct/": {
-      "target": null,
-      "note": "Demo占位前缀，已并入 #Material/SurfaceMod"
-    },
-    "#22Ct/Target 靶向/静电作用": {
-      "target": "#Ｃ１Material/SurfaceModification 表面改性/SurfaceTopography 表面形貌与电荷修饰",
-      "note": "表面静电/电荷修饰规范映射"
-    },
-    "#31Tq/": {
-      "target": null,
-      "note": "Demo占位前缀，合并入 #Method/"
-    },
-    "#31Tq/finite element model 有限元分析": {
-      "target": "#Ｅ１Method/Characterization 表征与分析技术/Simulation 有限元与分子模拟",
-      "note": "结合摘要若为纯仿真归 #Type/Computational.../FEA"
-    },
-    "#41VS/": {
-      "target": null,
-      "note": "Demo占位前缀，升维入 #Type/Design 研究设计/Comparative"
-    },
-    "#41VS/Ds/DRONJ&MRONJ": {
-      "target": "#Ｅ１Method/StudyDesign 研究设计/Comparative 横向对比研究",
-      "note": "同时结合摘要标出BRONJ与DRONJ"
-    },
-    "#A": {
-      "target": "#Ａ１Type/Article 论著/Mechanistic 机制研究",
-      "note": "须结合摘要精细区分 Mechanistic / Biomaterial / Preclinical"
-    },
-    "#C": {
-      "target": "#Ａ１Type/Clinical 临床研究/CrossSectional 横断面研究",
-      "note": "须结合摘要精细区分 RCT / Cohort / Retrospective / CaseReport / Observational"
-    },
-    "#C/Cohort study 队列研究": {
-      "target": "#Ａ１Type/Clinical 临床研究/Retrospective 回顾性临床研究",
-      "note": ""
-    },
-    "#C/RCT 随机对照试验": {
-      "target": "#Ａ１Type/Clinical 临床研究/RCT (Randomized Controlled Trial) 随机对照试验",
-      "note": ""
-    },
-    "#C/retrospective study 回顾性研究": {
-      "target": "#Ａ１Type/Clinical 临床研究/Retrospective 回顾性临床研究",
-      "note": ""
-    },
-    "#M": {
-      "target": "#Ａ１Type/SystematicReview 系统综述/MetaAnalysis Meta分析",
-      "note": "结合摘要区分 SystematicReview 或 MetaAnalysis"
-    },
-    "#O": {
-      "target": "#Ａ１Type/Commentary 述评与观点",
-      "note": "结合摘要精细区分 Protocol / Commentary / Humanities / Book 等"
-    },
-    "#R": {
-      "target": "#Ａ１Type/Review 综述",
-      "note": "核查是否误将机制/生物材料原著标为 #R"
-    },
-    "#12Pw/MAPK/ERK1󠀯󠀯󠀯ﾉ2": {
-      "target": "#Ｄ１Target/Pathway 信号通路/MAPKﾉERK 信号通路",
-      "note": "清洗U+E002F不可见字符"
+  "terms": [
+    {
+      "id": "ZT-001",
+      "tag": "#Ａ１Type/Article 论著/Mechanistic 机制研究",
+      "definition": "Mechanistic：主要阅读目标是分子或细胞机制、调控关系与生物学解释。关联、干预和计算证据的强度另行记录。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-002",
+      "tag": "#Ａ１Type/Article 论著/Biomaterial 生物材料研究",
+      "definition": "Biomaterial：主要阅读目标是材料合成、配方、载体设计及生物效应。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-003",
+      "tag": "#Ａ１Type/Article 论著/DeviceEvaluation 器械临床前评价",
+      "definition": "DeviceEvaluation：主要阅读目标是成熟器械或固定系统的力学、降解、相容性或临床前性能评价。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-004",
+      "tag": "#Ａ１Type/Clinical 临床研究/RCT 随机对照试验",
+      "definition": "RCT用于在Clinical下，直接一次筛选；按论文的随机干预设计判定。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-005",
+      "tag": "#Ａ１Type/Clinical 临床研究/Prospective 前瞻性临床研究",
+      "definition": "Prospective用于在Clinical下，直接筛选前瞻临床研究；明确的RCT或CaseControl优先使用具体类型。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-006",
+      "tag": "#Ａ１Type/Clinical 临床研究/Retrospective 回顾性临床研究",
+      "definition": "Retrospective用于在Clinical下，直接筛选回顾临床研究；明确病例对照时用CaseControl。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-007",
+      "tag": "#Ａ１Type/Clinical 临床研究/CrossSectional 横断面研究",
+      "definition": "CrossSectional用于；仅将已核实的病例对照误标条目转入新增CaseControl。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-008",
+      "tag": "#Ａ１Type/Clinical 临床研究/CaseReport 病例报告与系列",
+      "definition": "CaseReport统一覆盖病例报告与病例系列，按论文主要设计选择。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-009",
+      "tag": "#Ａ１Type/Review 综述",
+      "definition": "Review继续作为一般综述入口；有明确系统检索或Meta分析证据时用已有具体子类。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-010",
+      "tag": "#Ａ１Type/SystematicReview 系统综述",
+      "definition": "用于SystematicReview入口及其与MetaAnalysis的既有层级。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-011",
+      "tag": "#Ａ１Type/SystematicReview 系统综述/MetaAnalysis Meta分析",
+      "definition": "MetaAnalysis用于具体入口；同一篇在Type中选择一个主要类型。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-012",
+      "tag": "#Ａ１Type/Computational 计算与仿真/FEA 有限元分析",
+      "definition": "FEA仍在Computational下直接分流，缩短英文展开式。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-013",
+      "tag": "#Ａ１Type/Computational 计算与仿真/Bioinformatics 生物信息与分子模拟",
+      "definition": "3篇使用Bioinformatics，定义覆盖生信与分子模拟；用于综合计算研究入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-014",
+      "tag": "#Ａ１Type/Guideline 指南与规范/ClinicalGuideline 临床诊疗指南",
+      "definition": "ClinicalGuideline用于临床指南与规范入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-015",
+      "tag": "#Ａ１Type/Guideline 指南与规范/Standard 技术标准与报告规范",
+      "definition": "Standard用于技术、报告与命名共识等规范性资料。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-016",
+      "tag": "#Ａ１Type/Protocol 实验方案与规程",
+      "definition": "Protocol用于可执行实验规程，用于方法学习入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-017",
+      "tag": "#Ａ１Type/ProductInfo 产品资料",
+      "definition": "产品手册、说明书、注册技术摘要等产品资料。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-018",
+      "tag": "#Ａ１Type/Book 专著与教材",
+      "definition": "Book统一专著、教材与章节，保持原范围。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-019",
+      "tag": "#Ａ１Type/Commentary 述评与观点",
+      "definition": "Commentary用于述评与观点入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-020",
+      "tag": "#Ａ１Type/Humanities 科技人文与方法论",
+      "definition": "Humanities用于科技人文与方法论资料。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-021",
+      "tag": "#Ａ１Type/Humanities 科技人文与方法论/Bioethics 生命伦理与治理",
+      "definition": "Bioethics用于生命伦理与治理资料。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-022",
+      "tag": "#Ｂ１Disease/MRONJ 药物相关颌骨坏死",
+      "definition": "药物相关颌骨坏死总类；BRONJ、DRONJ作为对应具体类型。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-023",
+      "tag": "#Ｂ１Disease/MRONJ 药物相关颌骨坏死/BRONJ 双膦酸盐相关颌骨坏死",
+      "definition": "双膦酸盐相关颌骨坏死。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-024",
+      "tag": "#Ｂ１Disease/MRONJ 药物相关颌骨坏死/DRONJ 地诺单抗相关颌骨坏死",
+      "definition": "地诺单抗相关颌骨坏死。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-025",
+      "tag": "#Ｂ１Disease/ONFH 股骨头坏死",
+      "definition": "股骨头坏死总类，含病因子类。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-026",
+      "tag": "#Ｂ１Disease/ONFH 股骨头坏死/SONFH 激素性股骨头坏死",
+      "definition": "激素性股骨头坏死。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-027",
+      "tag": "#Ｂ１Disease/ONFH 股骨头坏死/IschemicONFH 缺血性股骨头坏死",
+      "definition": "缺血性股骨头坏死的检索类别。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-028",
+      "tag": "#Ｂ１Disease/TMD 颞下颌关节病",
+      "definition": "颞下颌关节病总类，含TMJ-OA。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-029",
+      "tag": "#Ｂ１Disease/TMD 颞下颌关节病/TMJ-OA 颞下颌关节骨关节炎",
+      "definition": "颞下颌关节骨关节炎。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-030",
+      "tag": "#Ｂ１Disease/Osteoarthritis 骨关节炎",
+      "definition": "用于疾病分类范围与层级。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-031",
+      "tag": "#Ｂ１Disease/Osteoporosis 骨质疏松症",
+      "definition": "用于疾病分类范围与层级。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-032",
+      "tag": "#Ｂ１Disease/Periodontitis 牙周炎",
+      "definition": "用于疾病分类范围与层级。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-033",
+      "tag": "#Ｂ１Disease/Peri-Implantitis 种植体周围炎",
+      "definition": "用于疾病分类范围与层级。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-034",
+      "tag": "#Ｂ１Disease/Endodontics 牙体牙髓病",
+      "definition": "用于牙体牙髓疾病的综合入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-035",
+      "tag": "#Ｂ１Disease/DentofacialDeformity 牙颌面畸形",
+      "definition": "用于疾病分类范围与层级。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-036",
+      "tag": "#Ｂ１Disease/Craniosynostosis 颅缝早闭",
+      "definition": "用于疾病分类范围与层级。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-037",
+      "tag": "#Ｂ１Disease/CraniofacialFracture 颅颌面骨折",
+      "definition": "用于疾病分类范围与层级。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-038",
+      "tag": "#Ｂ１Disease/CraniofacialFracture 颅颌面骨折/MandibularFracture 下颌骨骨折",
+      "definition": "用于疾病分类范围与层级。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-039",
+      "tag": "#Ｂ１Disease/CraniofacialFracture 颅颌面骨折/MidfacialFracture 面中部与眶壁骨折",
+      "definition": "面中部与眶壁作为本库已有综合部位入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-040",
+      "tag": "#Ｂ１Disease/BoneDefect 骨缺损与拔牙窝创伤",
+      "definition": "用于骨缺损与拔牙窝的共同应用场景。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-041",
+      "tag": "#Ｂ１Disease/Infection 感染性疾病/OralInfection 口腔细菌与生物膜感染",
+      "definition": "用于口腔细菌与生物膜感染的综合疾病入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-042",
+      "tag": "#Ｂ１Disease/Infection 感染性疾病/ImplantInfection 手术与植入物感染",
+      "definition": "标签对应手术与植入物感染；历史自动映射须按实际疾病核实。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-043",
+      "tag": "#Ｂ１Disease/Wound 皮肤黏膜创面",
+      "definition": "用于疾病分类范围与层级。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-044",
+      "tag": "#Ｂ１Disease/Scar 病理性瘢痕与纤维化",
+      "definition": "瘢痕与纤维化用于综合入口，沿用已形成的检索习惯。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-045",
+      "tag": "#Ｂ１Disease/MetabolicDisorder 糖脂代谢疾病",
+      "definition": "用于糖脂代谢疾病的综合疾病入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-046",
+      "tag": "#Ｂ１Disease/AutoimmuneDisease 自身免疫与风湿病",
+      "definition": "用于自身免疫与风湿病的综合疾病入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-047",
+      "tag": "#Ｂ１Disease/CardiovascularDisease 心血管疾病",
+      "definition": "用于疾病分类范围与层级。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-048",
+      "tag": "#Ｂ１Disease/Tumor 肿瘤",
+      "definition": "用于疾病分类范围与层级。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-049",
+      "tag": "#Ｂ２Surgery/Orthognathic 正颌外科",
+      "definition": "Orthognathic总类及其常用术式叶节点使用。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-050",
+      "tag": "#Ｂ２Surgery/Orthognathic 正颌外科/SSRO 矢状劈开术",
+      "definition": "SSRO统一收纳SSRO、BSSRO、SSO、BSSO等升支矢状劈开术写法。",
+      "aliases": [
+        "SSRO",
+        "BSSRO",
+        "SSO",
+        "BSSO"
+      ]
+    },
+    {
+      "id": "ZT-051",
+      "tag": "#Ｂ２Surgery/Orthognathic 正颌外科/LeFort-I 截骨术",
+      "definition": "LeFort-I截骨术，名称兼容ZoteroStyle胶囊提取规则。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-052",
+      "tag": "#Ｂ２Surgery/Orthognathic 正颌外科/Genioplasty 颏成形术",
+      "definition": "用于术式检索入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-053",
+      "tag": "#Ｂ２Surgery/Orthognathic 正颌外科/DO 牵张成骨",
+      "definition": "牵张成骨，在正颌分支中提供直接入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-054",
+      "tag": "#Ｂ２Surgery/MaxillofacialFixation 颌面创伤与重建内固定",
+      "definition": "用于颌面创伤与重建固定入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-055",
+      "tag": "#Ｂ２Surgery/ImplantSurgery 牙槽与种植外科",
+      "definition": "用于牙槽与种植外科的综合操作入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-056",
+      "tag": "#Ｂ２Surgery/OrthopedicFixation 骨科内固定与关节置换",
+      "definition": "用于骨科固定与关节置换入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-057",
+      "tag": "#Ｃ１Material/ResorbablePolymer 可吸收高分子",
+      "definition": "用于可吸收高分子的上位材料词；已有具体成分时按原粒度选择。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-058",
+      "tag": "#Ｃ１Material/ResorbablePolymer 可吸收高分子/PLLA",
+      "definition": "用于PLLA具体材料体系；全称由词表定义承接。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-059",
+      "tag": "#Ｃ１Material/ResorbablePolymer 可吸收高分子/PDLLA 乳酸共聚物",
+      "definition": "外消旋聚乳酸及乳酸立构共聚、含TMC体系的综合材料类；明确PLGA、PLLA等已有专类时优先专类。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-060",
+      "tag": "#Ｃ１Material/ResorbablePolymer 可吸收高分子/PLGA",
+      "definition": "用于PLGA成分入口；具体比例属于配方信息。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-061",
+      "tag": "#Ｃ１Material/ResorbablePolymer 可吸收高分子/PGA",
+      "definition": "用于PGA成分入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-062",
+      "tag": "#Ｃ１Material/ResorbablePolymer 可吸收高分子/PCL",
+      "definition": "用于PCL成分入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-063",
+      "tag": "#Ｃ１Material/ResorbablePolymer 可吸收高分子/u-HAﾉPLLA",
+      "definition": "用于u-HAﾉPLLA复合体系，分隔符与检索含义沿用。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-064",
+      "tag": "#Ｃ１Material/BiodegradableMetal 可降解金属",
+      "definition": "用于可降解金属上位材料词。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-065",
+      "tag": "#Ｃ１Material/BiodegradableMetal 可降解金属/Mg 镁基",
+      "definition": "镁为基体的金属材料。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-066",
+      "tag": "#Ｃ１Material/BiodegradableMetal 可降解金属/Zn-Fe 锌基与铁基",
+      "definition": "锌基或铁基任一材料体系的综合类别。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-067",
+      "tag": "#Ｃ１Material/Titanium 钛与钛合金",
+      "definition": "用于材料体系范围。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-068",
+      "tag": "#Ｃ１Material/Hydrogel 水凝胶",
+      "definition": "用于通用Hydrogel入口及已有具体子类。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-069",
+      "tag": "#Ｃ１Material/Hydrogel 水凝胶/GelMA",
+      "definition": "GelMA使用熟悉缩写；全称用于在定义中。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-070",
+      "tag": "#Ｃ１Material/Hydrogel 水凝胶/NaturalHydrogel 天然高分子水凝胶",
+      "definition": "用于天然高分子水凝胶综合材料类。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-071",
+      "tag": "#Ｃ１Material/Hydrogel 水凝胶/SmartHydrogel 合成与响应型水凝胶",
+      "definition": "用于合成与响应型水凝胶的综合类，具体性质按实际研究记录。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-072",
+      "tag": "#Ｃ１Material/MOF 金属有机框架",
+      "definition": "用于材料体系范围。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-073",
+      "tag": "#Ｃ１Material/MOF 金属有机框架/ZIF-8",
+      "definition": "用于材料体系范围。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-074",
+      "tag": "#Ｃ１Material/Bioceramic 生物陶瓷与活性玻璃",
+      "definition": "用于生物陶瓷与活性玻璃的综合材料类。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-075",
+      "tag": "#Ｃ１Material/Nanomaterial 无机与复合纳米材料",
+      "definition": "用于无机与复合纳米材料范围；成分与递送角色分别按C1、C2的用途表达。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-076",
+      "tag": "#Ｃ１Material/SurfaceModification 表面改性/Coating 表面涂层",
+      "definition": "用于Coating涂层入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-077",
+      "tag": "#Ｃ１Material/SurfaceModification 表面改性/SurfaceTopography 表面形貌与电荷修饰",
+      "definition": "用于表面形貌与电荷的综合设计入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-078",
+      "tag": "#Ｃ２Carrier/Scaffold 组织工程与控释支架",
+      "definition": "用于组织工程及控释支架入口，按具体结构用途选择。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-079",
+      "tag": "#Ｃ２Carrier/Nanocarrier 纳米递送载体",
+      "definition": "用于纳米递送载体入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-080",
+      "tag": "#Ｃ２Carrier/tFNAs 四面体核酸",
+      "definition": "tFNAs用于四面体框架核酸平台。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-081",
+      "tag": "#Ｃ２Carrier/EVs 细胞外囊泡",
+      "definition": "EVs覆盖细胞外囊泡及外泌体，沿用综合粒度。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-082",
+      "tag": "#Ｃ２Carrier/CellCarrier 细胞与血小板载体",
+      "definition": "细胞或血小板相关载体与递送形式继续用于；无细胞条件培养基不自动归入该类。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-083",
+      "tag": "#Ｃ３Drug/Antiresorptive 抗骨吸收药/BPs 双膦酸盐",
+      "definition": "BPs为双膦酸盐药物入口；按研究中药物的实际角色选择。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-084",
+      "tag": "#Ｃ３Drug/Antiresorptive 抗骨吸收药/Denosumab 地诺单抗",
+      "definition": "用于Denosumab地诺单抗入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-085",
+      "tag": "#Ｃ３Drug/Biologics 蛋白与抗体药物/TCZ 托珠单抗",
+      "definition": "TCZ继续对应托珠单抗。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-086",
+      "tag": "#Ｃ３Drug/Biologics 蛋白与抗体药物/GrowthFactor 重组生长因子与多肽",
+      "definition": "用于生长因子与多肽药载的综合入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-087",
+      "tag": "#Ｃ３Drug/SmallMolecule 小分子化学药",
+      "definition": "用于小分子药物入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-088",
+      "tag": "#Ｃ３Drug/NucleicAcid 核酸药物",
+      "definition": "用于核酸药物入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-089",
+      "tag": "#Ｃ３Drug/NaturalProduct 天然产物与中药成分",
+      "definition": "用于天然产物与中药成分入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-090",
+      "tag": "#Ｃ３Drug/Antibiotic 抗生素与抗菌药",
+      "definition": "用于Antibiotic英文抓手；定义沿用抗生素与其他抗菌药，如氯己定。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-091",
+      "tag": "#Ｃ３Drug/GasTherapy 气体与活性氧分子",
+      "definition": "用于气体与活性氧干预综合入口；给药载荷与内源氧化应激根据研究角色区分。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-092",
+      "tag": "#Ｄ１Target/Pathway 信号通路/JAK-STAT",
+      "definition": "用于通路组合，缩去重复的“信号通路”字样。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-093",
+      "tag": "#Ｄ１Target/Pathway 信号通路/NF-κB-RANKL",
+      "definition": "用于NF-κB与RANKL相关信号的综合入口；标签表示覆盖相关内容。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-094",
+      "tag": "#Ｄ１Target/Pathway 信号通路/MAPKﾉERK",
+      "definition": "用于MAPK/ERK综合信号入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-095",
+      "tag": "#Ｄ１Target/Pathway 信号通路/PI3K-Akt-mTOR",
+      "definition": "用于PI3K-Akt-mTOR信号轴。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-096",
+      "tag": "#Ｄ１Target/Pathway 信号通路/Wnt-BMP-TGFβ",
+      "definition": "用于Wnt-BMP-TGFβ综合入口；任一组成通路为核心研究内容即可适用。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-097",
+      "tag": "#Ｄ１Target/Pathway 信号通路/Hippo-YAP",
+      "definition": "用于Hippo-YAP信号轴。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-098",
+      "tag": "#Ｄ１Target/Pathway 信号通路/cAMPﾉPKA",
+      "definition": "用于cAMP/PKA信号轴。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-099",
+      "tag": "#Ｄ１Target/Pathway 信号通路/InnateImmune 固有免疫",
+      "definition": "用于固有免疫综合入口，包含TLR、NLRP3、STING等；按实际研究主题选标。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-100",
+      "tag": "#Ｄ１Target/Pathway 信号通路/Nrf2",
+      "definition": "用于Nrf2入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-101",
+      "tag": "#Ｄ１Target/Cytokine 细胞因子与生长因子/IL-6",
+      "definition": "用于IL-6分子入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-102",
+      "tag": "#Ｄ１Target/Cytokine 细胞因子与生长因子/InflammatoryCytokine 促炎因子 (IL-1-TNFα)",
+      "definition": "用于促炎因子综合入口，IL-1、TNF等在定义中列为覆盖范围。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-103",
+      "tag": "#Ｄ１Target/Cytokine 细胞因子与生长因子/AngiogenicFactor 促血管生长因子 (VEGF-FGF)",
+      "definition": "用于VEGF、FGF等血管生长因子综合入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-104",
+      "tag": "#Ｄ１Target/BoneMetabolism 骨与代谢分子/OCN 骨钙素",
+      "definition": "OCN用于骨钙素辨识提示。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-105",
+      "tag": "#Ｄ１Target/BoneMetabolism 骨与代谢分子/Zfp467",
+      "definition": "Zfp467采用常用分子名称。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-106",
+      "tag": "#Ｄ１Target/BoneMetabolism 骨与代谢分子/OsteogenicTF 成骨与成脂转录因子",
+      "definition": "用于成骨与成脂转录因子综合入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-107",
+      "tag": "#Ｄ１Target/BoneMetabolism 骨与代谢分子/BoneMatrixProtein 骨基质与矿化蛋白",
+      "definition": "用于骨基质与矿化蛋白综合入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-108",
+      "tag": "#Ｄ１Target/BoneMetabolism 骨与代谢分子/MetabolicHormone 糖脂代谢激素与受体",
+      "definition": "用于糖脂代谢激素与受体综合入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-109",
+      "tag": "#Ｄ１Target/NoncodingRNA 非编码RNA与表观调控",
+      "definition": "用于非编码RNA与表观调控的既有综合入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-110",
+      "tag": "#Ｄ２Mechanism/MetabolicReprogramming 代谢重编程/Glycolysis-OXPHOS 糖酵解与氧化磷酸化",
+      "definition": "用于糖酵解与氧化磷酸化综合入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-111",
+      "tag": "#Ｄ２Mechanism/MetabolicReprogramming 代谢重编程/LipidAminoAcid 脂质与氨基酸代谢",
+      "definition": "用于脂质与氨基酸代谢综合入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-112",
+      "tag": "#Ｄ２Mechanism/CellDifferentiation 细胞分化调控",
+      "definition": "细胞分化作为核心研究过程时使用；只对已发现的“细胞鉴定检测”疑点做定点核查。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-113",
+      "tag": "#Ｄ２Mechanism/CellMigration 细胞迁移与招募",
+      "definition": "用于迁移、募集与归巢的综合入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-114",
+      "tag": "#Ｄ２Mechanism/CellSenescence 细胞衰老",
+      "definition": "用于细胞衰老入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-115",
+      "tag": "#Ｄ２Mechanism/CellDeath 细胞死亡与自噬",
+      "definition": "用于细胞死亡与自噬综合入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-116",
+      "tag": "#Ｄ２Mechanism/CellCommunication 细胞通讯与旁分泌",
+      "definition": "用于细胞通讯与旁分泌综合入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-117",
+      "tag": "#Ｄ２Mechanism/Mechanotransduction 力学信号转导",
+      "definition": "用于Mechanotransduction力学转导入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-118",
+      "tag": "#Ｄ２Mechanism/OxidativeHypoxia 氧化应激与缺氧调控",
+      "definition": "用于氧化应激与缺氧调控综合入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-119",
+      "tag": "#Ｄ２Mechanism/IonMicroenvironment 离子与酸碱微环境",
+      "definition": "用于离子与酸碱微环境综合入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-120",
+      "tag": "#Ｄ２Mechanism/AntimicrobialMech 破膜与生物膜瓦解",
+      "definition": "沿用既有破膜及生物膜瓦解范围；对已定位的抗黏附等边界个案核实后处理。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-121",
+      "tag": "#Ｄ２Mechanism/Biomineralization 生物矿化与钙化",
+      "definition": "用于生物矿化与钙化过程入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-122",
+      "tag": "#Ｄ２Mechanism/ForeignBodyReaction 异物与植入物免疫反应",
+      "definition": "用于异物与植入物免疫反应入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-123",
+      "tag": "#Ｄ３Phenotype/Osteogenesis 成骨与骨再生",
+      "definition": "用于成骨与骨再生综合表型。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-124",
+      "tag": "#Ｄ３Phenotype/BoneResorption 破骨与骨吸收",
+      "definition": "用于破骨与骨吸收综合表型。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-125",
+      "tag": "#Ｄ３Phenotype/Adipogenesis 成脂分化",
+      "definition": "用于成脂分化表型。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-126",
+      "tag": "#Ｄ３Phenotype/EnergyMetabolism 糖脂与能量代谢",
+      "definition": "用于糖脂与能量代谢综合表型。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-127",
+      "tag": "#Ｄ３Phenotype/CartilageHomeostasis 软骨修复与退变",
+      "definition": "用于软骨修复与退变综合表型。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-128",
+      "tag": "#Ｄ３Phenotype/Angiogenesis 促血管生成",
+      "definition": "用于血管生成表型。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-129",
+      "tag": "#Ｄ３Phenotype/Hemostasis 凝血与止血",
+      "definition": "用于凝血与止血综合表型。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-130",
+      "tag": "#Ｄ３Phenotype/Immunomodulation 免疫调控/Macrophage 巨噬细胞极化",
+      "definition": "名称用于Macrophage英文辨识和巨噬极化中文提示；具体状态在原文证据中核对。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-131",
+      "tag": "#Ｄ３Phenotype/Immunomodulation 免疫调控/Anti-Inflammation 抗炎调控",
+      "definition": "用于抗炎表型。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-132",
+      "tag": "#Ｄ３Phenotype/Antibacterial 抗菌与抗生物膜",
+      "definition": "用于抗菌与抗生物膜综合表型。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-133",
+      "tag": "#Ｄ３Phenotype/WoundHealing 创面愈合与抗瘢痕",
+      "definition": "用于创面愈合与抗瘢痕综合表型。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-134",
+      "tag": "#Ｄ３Phenotype/Antitumor 抗肿瘤",
+      "definition": "用于抗肿瘤表型。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-135",
+      "tag": "#Ｄ３Phenotype/Biomechanics 生物力学稳定性",
+      "definition": "用于Biomechanics力学稳定性入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-136",
+      "tag": "#Ｄ３Phenotype/Biodegradation 生物降解与吸收",
+      "definition": "用于Biodegradation降解与吸收入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-137",
+      "tag": "#Ｄ３Phenotype/ClinicalOutcome 临床疗效与并发症",
+      "definition": "用于临床疗效与并发症范围；疾病间关联的已定位个案单独纠偏。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-138",
+      "tag": "#Ｅ１Method/StudyDesign 研究设计/Comparative 横向对比研究",
+      "definition": "用于Comparative比较研究入口；是否存在比较与比较的证据质量分别判断。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-139",
+      "tag": "#Ｅ１Method/AnimalModel 动物模型/SmallAnimal 小动物模型",
+      "definition": "用于小动物模型入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-140",
+      "tag": "#Ｅ１Method/AnimalModel 动物模型/LargeAnimal 大动物模型",
+      "definition": "用于大动物模型入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-141",
+      "tag": "#Ｅ１Method/InVitroModel 体外模型/CellCulture 细胞培养体系",
+      "definition": "用于CellCulture细胞培养入口及既有归属。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-142",
+      "tag": "#Ｅ１Method/InVitroModel 体外模型/3D-Organoid 三维培养与类器官",
+      "definition": "三维细胞培养或类器官的综合模型入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-143",
+      "tag": "#Ｅ１Method/InVitroModel 体外模型/BiofilmModel 细菌与生物膜模型",
+      "definition": "用于细菌与生物膜模型的综合入口；词表明示其包括普通细菌培养。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-144",
+      "tag": "#Ｅ１Method/InVitroModel 体外模型/SyntheticBone 体外仿真骨与力学模型",
+      "definition": "用于SyntheticBone仿真骨与力学模型入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-145",
+      "tag": "#Ｅ１Method/PhysicalTherapy 物理治疗技术/CAP 冷大气等离子体",
+      "definition": "用于CAP缩写及中文提示。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-146",
+      "tag": "#Ｅ１Method/PhysicalTherapy 物理治疗技术/Phototherapy 光热与光动力",
+      "definition": "用于光热与光动力综合干预入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-147",
+      "tag": "#Ｅ１Method/Fabrication 制备与加工工艺/3D-Printing 3D打印与增材制造",
+      "definition": "用于3D-Printing及增材制造入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-148",
+      "tag": "#Ｅ１Method/Fabrication 制备与加工工艺/Processing 成型加工与灭菌",
+      "definition": "用于加工与灭菌综合方法入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-149",
+      "tag": "#Ｅ１Method/Characterization 表征与分析技术/BiomechanicalTest 生物力学测试",
+      "definition": "用于BiomechanicalTest力学测试入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-150",
+      "tag": "#Ｅ１Method/Characterization 表征与分析技术/Physicochemical 理化与定量表征",
+      "definition": "用于Physicochemical理化表征入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-151",
+      "tag": "#Ｅ１Method/Characterization 表征与分析技术/Simulation 有限元与分子模拟",
+      "definition": "用于Simulation有限元与分子模拟综合方法入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-152",
+      "tag": "#Ｅ１Method/Characterization 表征与分析技术/Omics 多组学与测序",
+      "definition": "用于Omics组学与测序入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-153",
+      "tag": "#Ｅ１Method/Characterization 表征与分析技术/HistologyImaging 影像与组织学分析",
+      "definition": "用于HistologyImaging影像与组织学综合方法入口。",
+      "aliases": []
+    },
+    {
+      "id": "ZT-154",
+      "tag": "#Ａ１Type/Clinical 临床研究/CaseControl 病例对照",
+      "definition": "病例对照研究，按结局或病例状态选择病例和对照，再比较暴露或相关因素。用于Clinical单次筛选；病例对照优先于笼统的回顾性描述。",
+      "aliases": []
     }
-  }
+  ],
+  "rename_map": {
+    "#Ａ１Type/Article 论著/Mechanistic 机制研究": "#Ａ１Type/Article 论著/Mechanistic 机制研究",
+    "#Ａ１Type/Article 论著/Biomaterial 生物材料研究": "#Ａ１Type/Article 论著/Biomaterial 生物材料研究",
+    "#Ａ１Type/Article 论著/DeviceEvaluation 器械临床前评价": "#Ａ１Type/Article 论著/DeviceEvaluation 器械临床前评价",
+    "#Ａ１Type/Clinical 临床研究/RCT (Randomized Controlled Trial) 随机对照试验": "#Ａ１Type/Clinical 临床研究/RCT 随机对照试验",
+    "#Ａ１Type/Clinical 临床研究/Prospective 前瞻性临床研究": "#Ａ１Type/Clinical 临床研究/Prospective 前瞻性临床研究",
+    "#Ａ１Type/Clinical 临床研究/Retrospective 回顾性临床研究": "#Ａ１Type/Clinical 临床研究/Retrospective 回顾性临床研究",
+    "#Ａ１Type/Clinical 临床研究/CrossSectional 横断面研究": "#Ａ１Type/Clinical 临床研究/CrossSectional 横断面研究",
+    "#Ａ１Type/Clinical 临床研究/CaseReport 病例报告与系列": "#Ａ１Type/Clinical 临床研究/CaseReport 病例报告与系列",
+    "#Ａ１Type/Review 综述": "#Ａ１Type/Review 综述",
+    "#Ａ１Type/SystematicReview 系统综述": "#Ａ１Type/SystematicReview 系统综述",
+    "#Ａ１Type/SystematicReview 系统综述/MetaAnalysis Meta分析": "#Ａ１Type/SystematicReview 系统综述/MetaAnalysis Meta分析",
+    "#Ａ１Type/Computational 计算与仿真/FEA (Finite Element Analysis) 有限元分析": "#Ａ１Type/Computational 计算与仿真/FEA 有限元分析",
+    "#Ａ１Type/Computational 计算与仿真/Bioinformatics 生物信息与分子模拟": "#Ａ１Type/Computational 计算与仿真/Bioinformatics 生物信息与分子模拟",
+    "#Ａ１Type/Guideline 指南与规范/ClinicalGuideline 临床诊疗指南": "#Ａ１Type/Guideline 指南与规范/ClinicalGuideline 临床诊疗指南",
+    "#Ａ１Type/Guideline 指南与规范/Standard 技术标准与报告规范": "#Ａ１Type/Guideline 指南与规范/Standard 技术标准与报告规范",
+    "#Ａ１Type/Protocol 实验方案与规程": "#Ａ１Type/Protocol 实验方案与规程",
+    "#Ａ１Type/ProductManual 产品手册与说明书": "#Ａ１Type/ProductInfo 产品资料",
+    "#Ａ１Type/Book 专著与教材": "#Ａ１Type/Book 专著与教材",
+    "#Ａ１Type/Commentary 述评与观点": "#Ａ１Type/Commentary 述评与观点",
+    "#Ａ１Type/Humanities 科技人文与方法论": "#Ａ１Type/Humanities 科技人文与方法论",
+    "#Ａ１Type/Humanities 科技人文与方法论/Bioethics 生命伦理与治理": "#Ａ１Type/Humanities 科技人文与方法论/Bioethics 生命伦理与治理",
+    "#Ｂ１Disease/MRONJ (Medication-Related Osteonecrosis of the Jaw) 药物相关颌骨坏死": "#Ｂ１Disease/MRONJ 药物相关颌骨坏死",
+    "#Ｂ１Disease/MRONJ (Medication-Related Osteonecrosis of the Jaw) 药物相关颌骨坏死/BRONJ 双膦酸盐相关颌骨坏死": "#Ｂ１Disease/MRONJ 药物相关颌骨坏死/BRONJ 双膦酸盐相关颌骨坏死",
+    "#Ｂ１Disease/MRONJ (Medication-Related Osteonecrosis of the Jaw) 药物相关颌骨坏死/DRONJ 地诺单抗相关颌骨坏死": "#Ｂ１Disease/MRONJ 药物相关颌骨坏死/DRONJ 地诺单抗相关颌骨坏死",
+    "#Ｂ１Disease/ONFH (Osteonecrosis of the Femoral Head) 股骨头坏死": "#Ｂ１Disease/ONFH 股骨头坏死",
+    "#Ｂ１Disease/ONFH (Osteonecrosis of the Femoral Head) 股骨头坏死/SONFH 激素性股骨头坏死": "#Ｂ１Disease/ONFH 股骨头坏死/SONFH 激素性股骨头坏死",
+    "#Ｂ１Disease/ONFH (Osteonecrosis of the Femoral Head) 股骨头坏死/IschemicONFH 缺血性股骨头坏死": "#Ｂ１Disease/ONFH 股骨头坏死/IschemicONFH 缺血性股骨头坏死",
+    "#Ｂ１Disease/TMD (Temporomandibular Disorders) 颞下颌关节病": "#Ｂ１Disease/TMD 颞下颌关节病",
+    "#Ｂ１Disease/TMD (Temporomandibular Disorders) 颞下颌关节病/TMJ-OA (Temporomandibular Joint Osteoarthritis) 颞下颌关节骨关节炎": "#Ｂ１Disease/TMD 颞下颌关节病/TMJ-OA 颞下颌关节骨关节炎",
+    "#Ｂ１Disease/Osteoarthritis 骨关节炎": "#Ｂ１Disease/Osteoarthritis 骨关节炎",
+    "#Ｂ１Disease/Osteoporosis 骨质疏松症": "#Ｂ１Disease/Osteoporosis 骨质疏松症",
+    "#Ｂ１Disease/Periodontitis 牙周炎": "#Ｂ１Disease/Periodontitis 牙周炎",
+    "#Ｂ１Disease/Peri-Implantitis 种植体周围炎": "#Ｂ１Disease/Peri-Implantitis 种植体周围炎",
+    "#Ｂ１Disease/Endodontics 牙体牙髓病": "#Ｂ１Disease/Endodontics 牙体牙髓病",
+    "#Ｂ１Disease/DentofacialDeformity 牙颌面畸形": "#Ｂ１Disease/DentofacialDeformity 牙颌面畸形",
+    "#Ｂ１Disease/Craniosynostosis 颅缝早闭": "#Ｂ１Disease/Craniosynostosis 颅缝早闭",
+    "#Ｂ１Disease/CraniofacialFracture 颅颌面骨折": "#Ｂ１Disease/CraniofacialFracture 颅颌面骨折",
+    "#Ｂ１Disease/CraniofacialFracture 颅颌面骨折/MandibularFracture 下颌骨骨折": "#Ｂ１Disease/CraniofacialFracture 颅颌面骨折/MandibularFracture 下颌骨骨折",
+    "#Ｂ１Disease/CraniofacialFracture 颅颌面骨折/MidfacialFracture 面中部与眶壁骨折": "#Ｂ１Disease/CraniofacialFracture 颅颌面骨折/MidfacialFracture 面中部与眶壁骨折",
+    "#Ｂ１Disease/BoneDefect 骨缺损与拔牙窝创伤": "#Ｂ１Disease/BoneDefect 骨缺损与拔牙窝创伤",
+    "#Ｂ１Disease/Infection 感染性疾病/OralInfection 口腔细菌与生物膜感染": "#Ｂ１Disease/Infection 感染性疾病/OralInfection 口腔细菌与生物膜感染",
+    "#Ｂ１Disease/Infection 感染性疾病/ImplantInfection 手术与植入物感染": "#Ｂ１Disease/Infection 感染性疾病/ImplantInfection 手术与植入物感染",
+    "#Ｂ１Disease/Wound 皮肤黏膜创面": "#Ｂ１Disease/Wound 皮肤黏膜创面",
+    "#Ｂ１Disease/Scar 病理性瘢痕与纤维化": "#Ｂ１Disease/Scar 病理性瘢痕与纤维化",
+    "#Ｂ１Disease/MetabolicDisorder 糖脂代谢疾病": "#Ｂ１Disease/MetabolicDisorder 糖脂代谢疾病",
+    "#Ｂ１Disease/AutoimmuneDisease 自身免疫与风湿病": "#Ｂ１Disease/AutoimmuneDisease 自身免疫与风湿病",
+    "#Ｂ１Disease/CardiovascularDisease 心血管疾病": "#Ｂ１Disease/CardiovascularDisease 心血管疾病",
+    "#Ｂ１Disease/Tumor 肿瘤": "#Ｂ１Disease/Tumor 肿瘤",
+    "#Ｂ２Surgery/Orthognathic 正颌外科": "#Ｂ２Surgery/Orthognathic 正颌外科",
+    "#Ｂ２Surgery/Orthognathic 正颌外科/BSSROﾉSSRO (Sagittal Split Ramus Osteotomy) 下颌升支矢状劈开术": "#Ｂ２Surgery/Orthognathic 正颌外科/SSRO 矢状劈开术",
+    "#Ｂ２Surgery/Orthognathic 正颌外科/LeFort-I Le Fort I型截骨术": "#Ｂ２Surgery/Orthognathic 正颌外科/LeFort-I 截骨术",
+    "#Ｂ２Surgery/Orthognathic 正颌外科/Genioplasty 颏成形术": "#Ｂ２Surgery/Orthognathic 正颌外科/Genioplasty 颏成形术",
+    "#Ｂ２Surgery/Orthognathic 正颌外科/DO (Distraction Osteogenesis) 牵张成骨": "#Ｂ２Surgery/Orthognathic 正颌外科/DO 牵张成骨",
+    "#Ｂ２Surgery/MaxillofacialFixation 颌面创伤与重建内固定": "#Ｂ２Surgery/MaxillofacialFixation 颌面创伤与重建内固定",
+    "#Ｂ２Surgery/ImplantSurgery 牙槽与种植外科": "#Ｂ２Surgery/ImplantSurgery 牙槽与种植外科",
+    "#Ｂ２Surgery/OrthopedicFixation 骨科内固定与关节置换": "#Ｂ２Surgery/OrthopedicFixation 骨科内固定与关节置换",
+    "#Ｃ１Material/ResorbablePolymer 可吸收高分子": "#Ｃ１Material/ResorbablePolymer 可吸收高分子",
+    "#Ｃ１Material/ResorbablePolymer 可吸收高分子/PLLA (Poly-L-Lactic Acid) 左旋聚乳酸": "#Ｃ１Material/ResorbablePolymer 可吸收高分子/PLLA",
+    "#Ｃ１Material/ResorbablePolymer 可吸收高分子/PDLLA (Poly-DL-Lactic Acid) 外消旋与共聚聚乳酸": "#Ｃ１Material/ResorbablePolymer 可吸收高分子/PDLLA 乳酸共聚物",
+    "#Ｃ１Material/ResorbablePolymer 可吸收高分子/PLGA (Poly(lactic-co-glycolic acid)) 聚乳酸-羟基乙酸共聚物": "#Ｃ１Material/ResorbablePolymer 可吸收高分子/PLGA",
+    "#Ｃ１Material/ResorbablePolymer 可吸收高分子/PGA (Polyglycolic Acid) 聚乙醇酸": "#Ｃ１Material/ResorbablePolymer 可吸收高分子/PGA",
+    "#Ｃ１Material/ResorbablePolymer 可吸收高分子/PCL (Polycaprolactone) 聚己内酯": "#Ｃ１Material/ResorbablePolymer 可吸收高分子/PCL",
+    "#Ｃ１Material/ResorbablePolymer 可吸收高分子/u-HAﾉPLLA 羟基磷灰石ﾉ聚乳酸复合材料": "#Ｃ１Material/ResorbablePolymer 可吸收高分子/u-HAﾉPLLA",
+    "#Ｃ１Material/BiodegradableMetal 可降解金属": "#Ｃ１Material/BiodegradableMetal 可降解金属",
+    "#Ｃ１Material/BiodegradableMetal 可降解金属/Mg (Magnesium-Based) 镁与镁合金": "#Ｃ１Material/BiodegradableMetal 可降解金属/Mg 镁基",
+    "#Ｃ１Material/BiodegradableMetal 可降解金属/ZnFeAlloy 锌基与铁基合金": "#Ｃ１Material/BiodegradableMetal 可降解金属/Zn-Fe 锌基与铁基",
+    "#Ｃ１Material/Titanium 钛与钛合金": "#Ｃ１Material/Titanium 钛与钛合金",
+    "#Ｃ１Material/Hydrogel 水凝胶": "#Ｃ１Material/Hydrogel 水凝胶",
+    "#Ｃ１Material/Hydrogel 水凝胶/GelMA (Gelatin Methacryloyl) 甲基丙烯酰化明胶": "#Ｃ１Material/Hydrogel 水凝胶/GelMA",
+    "#Ｃ１Material/Hydrogel 水凝胶/NaturalHydrogel 天然高分子水凝胶": "#Ｃ１Material/Hydrogel 水凝胶/NaturalHydrogel 天然高分子水凝胶",
+    "#Ｃ１Material/Hydrogel 水凝胶/SmartHydrogel 合成与响应型水凝胶": "#Ｃ１Material/Hydrogel 水凝胶/SmartHydrogel 合成与响应型水凝胶",
+    "#Ｃ１Material/MOF (Metal-Organic Framework) 金属有机框架": "#Ｃ１Material/MOF 金属有机框架",
+    "#Ｃ１Material/MOF (Metal-Organic Framework) 金属有机框架/ZIF-8 (Zeolitic Imidazolate Framework-8) 沸石咪唑酯骨架-8": "#Ｃ１Material/MOF 金属有机框架/ZIF-8",
+    "#Ｃ１Material/Bioceramic 生物陶瓷与活性玻璃": "#Ｃ１Material/Bioceramic 生物陶瓷与活性玻璃",
+    "#Ｃ１Material/Nanomaterial 无机与复合纳米材料": "#Ｃ１Material/Nanomaterial 无机与复合纳米材料",
+    "#Ｃ１Material/SurfaceModification 表面改性/Coating 表面涂层": "#Ｃ１Material/SurfaceModification 表面改性/Coating 表面涂层",
+    "#Ｃ１Material/SurfaceModification 表面改性/SurfaceTopography 表面形貌与电荷修饰": "#Ｃ１Material/SurfaceModification 表面改性/SurfaceTopography 表面形貌与电荷修饰",
+    "#Ｃ２Carrier/Scaffold 组织工程与控释支架": "#Ｃ２Carrier/Scaffold 组织工程与控释支架",
+    "#Ｃ２Carrier/Nanocarrier 纳米递送载体": "#Ｃ２Carrier/Nanocarrier 纳米递送载体",
+    "#Ｃ２Carrier/tFNAs (Tetrahedral Framework Nucleic Acids) 四面体框架核酸": "#Ｃ２Carrier/tFNAs 四面体核酸",
+    "#Ｃ２Carrier/EVs (Extracellular Vesicles) 细胞外囊泡与外泌体": "#Ｃ２Carrier/EVs 细胞外囊泡",
+    "#Ｃ２Carrier/CellCarrier 细胞与血小板载体": "#Ｃ２Carrier/CellCarrier 细胞与血小板载体",
+    "#Ｃ３Drug/Antiresorptive 抗骨吸收药/BPs (Bisphosphonates) 双膦酸盐": "#Ｃ３Drug/Antiresorptive 抗骨吸收药/BPs 双膦酸盐",
+    "#Ｃ３Drug/Antiresorptive 抗骨吸收药/Denosumab 地诺单抗": "#Ｃ３Drug/Antiresorptive 抗骨吸收药/Denosumab 地诺单抗",
+    "#Ｃ３Drug/Biologics 蛋白与抗体药物/TCZ (Tocilizumab) 托珠单抗": "#Ｃ３Drug/Biologics 蛋白与抗体药物/TCZ 托珠单抗",
+    "#Ｃ３Drug/Biologics 蛋白与抗体药物/GrowthFactor 重组生长因子与多肽": "#Ｃ３Drug/Biologics 蛋白与抗体药物/GrowthFactor 重组生长因子与多肽",
+    "#Ｃ３Drug/SmallMolecule 小分子化学药": "#Ｃ３Drug/SmallMolecule 小分子化学药",
+    "#Ｃ３Drug/NucleicAcid 核酸药物": "#Ｃ３Drug/NucleicAcid 核酸药物",
+    "#Ｃ３Drug/NaturalProduct 天然产物与中药成分": "#Ｃ３Drug/NaturalProduct 天然产物与中药成分",
+    "#Ｃ３Drug/Antibiotic 抗生素与抗菌药": "#Ｃ３Drug/Antibiotic 抗生素与抗菌药",
+    "#Ｃ３Drug/GasTherapy 气体与活性氧分子": "#Ｃ３Drug/GasTherapy 气体与活性氧分子",
+    "#Ｄ１Target/Pathway 信号通路/JAK-STAT 信号通路": "#Ｄ１Target/Pathway 信号通路/JAK-STAT",
+    "#Ｄ１Target/Pathway 信号通路/NF-κB-RANKL 信号通路": "#Ｄ１Target/Pathway 信号通路/NF-κB-RANKL",
+    "#Ｄ１Target/Pathway 信号通路/MAPKﾉERK 信号通路": "#Ｄ１Target/Pathway 信号通路/MAPKﾉERK",
+    "#Ｄ１Target/Pathway 信号通路/PI3K-Akt-mTOR 信号通路": "#Ｄ１Target/Pathway 信号通路/PI3K-Akt-mTOR",
+    "#Ｄ１Target/Pathway 信号通路/Wnt-BMP-TGFβ 信号通路": "#Ｄ１Target/Pathway 信号通路/Wnt-BMP-TGFβ",
+    "#Ｄ１Target/Pathway 信号通路/Hippo-YAP 信号通路": "#Ｄ１Target/Pathway 信号通路/Hippo-YAP",
+    "#Ｄ１Target/Pathway 信号通路/cAMPﾉPKA 信号通路": "#Ｄ１Target/Pathway 信号通路/cAMPﾉPKA",
+    "#Ｄ１Target/Pathway 信号通路/InnateImmune 固有免疫通路 (TLR-NLRP3-STING)": "#Ｄ１Target/Pathway 信号通路/InnateImmune 固有免疫",
+    "#Ｄ１Target/Pathway 信号通路/Nrf2 抗氧化通路": "#Ｄ１Target/Pathway 信号通路/Nrf2",
+    "#Ｄ１Target/Cytokine 细胞因子与生长因子/IL-6 白介素-6": "#Ｄ１Target/Cytokine 细胞因子与生长因子/IL-6",
+    "#Ｄ１Target/Cytokine 细胞因子与生长因子/InflammatoryCytokine 促炎因子 (IL-1-TNFα)": "#Ｄ１Target/Cytokine 细胞因子与生长因子/InflammatoryCytokine 促炎因子 (IL-1-TNFα)",
+    "#Ｄ１Target/Cytokine 细胞因子与生长因子/AngiogenicFactor 促血管生长因子 (VEGF-FGF)": "#Ｄ１Target/Cytokine 细胞因子与生长因子/AngiogenicFactor 促血管生长因子 (VEGF-FGF)",
+    "#Ｄ１Target/BoneMetabolism 骨与代谢分子/OCN (Osteocalcin) 骨钙素": "#Ｄ１Target/BoneMetabolism 骨与代谢分子/OCN 骨钙素",
+    "#Ｄ１Target/BoneMetabolism 骨与代谢分子/Zfp467 (Zinc Finger Protein 467) 锌指蛋白467": "#Ｄ１Target/BoneMetabolism 骨与代谢分子/Zfp467",
+    "#Ｄ１Target/BoneMetabolism 骨与代谢分子/OsteogenicTF 成骨与成脂转录因子": "#Ｄ１Target/BoneMetabolism 骨与代谢分子/OsteogenicTF 成骨与成脂转录因子",
+    "#Ｄ１Target/BoneMetabolism 骨与代谢分子/BoneMatrixProtein 骨基质与矿化蛋白": "#Ｄ１Target/BoneMetabolism 骨与代谢分子/BoneMatrixProtein 骨基质与矿化蛋白",
+    "#Ｄ１Target/BoneMetabolism 骨与代谢分子/MetabolicHormone 糖脂代谢激素与受体": "#Ｄ１Target/BoneMetabolism 骨与代谢分子/MetabolicHormone 糖脂代谢激素与受体",
+    "#Ｄ１Target/NoncodingRNA 非编码RNA与表观调控": "#Ｄ１Target/NoncodingRNA 非编码RNA与表观调控",
+    "#Ｄ２Mechanism/MetabolicReprogramming 代谢重编程/Glycolysis-OXPHOS 糖酵解与氧化磷酸化": "#Ｄ２Mechanism/MetabolicReprogramming 代谢重编程/Glycolysis-OXPHOS 糖酵解与氧化磷酸化",
+    "#Ｄ２Mechanism/MetabolicReprogramming 代谢重编程/LipidAminoAcid 脂质与氨基酸代谢": "#Ｄ２Mechanism/MetabolicReprogramming 代谢重编程/LipidAminoAcid 脂质与氨基酸代谢",
+    "#Ｄ２Mechanism/CellDifferentiation 细胞分化调控": "#Ｄ２Mechanism/CellDifferentiation 细胞分化调控",
+    "#Ｄ２Mechanism/CellMigration 细胞迁移与招募": "#Ｄ２Mechanism/CellMigration 细胞迁移与招募",
+    "#Ｄ２Mechanism/CellSenescence 细胞衰老": "#Ｄ２Mechanism/CellSenescence 细胞衰老",
+    "#Ｄ２Mechanism/CellDeath 细胞死亡与自噬": "#Ｄ２Mechanism/CellDeath 细胞死亡与自噬",
+    "#Ｄ２Mechanism/CellCommunication 细胞通讯与旁分泌": "#Ｄ２Mechanism/CellCommunication 细胞通讯与旁分泌",
+    "#Ｄ２Mechanism/Mechanotransduction 力学信号转导": "#Ｄ２Mechanism/Mechanotransduction 力学信号转导",
+    "#Ｄ２Mechanism/OxidativeHypoxia 氧化应激与缺氧调控": "#Ｄ２Mechanism/OxidativeHypoxia 氧化应激与缺氧调控",
+    "#Ｄ２Mechanism/IonMicroenvironment 离子与酸碱微环境": "#Ｄ２Mechanism/IonMicroenvironment 离子与酸碱微环境",
+    "#Ｄ２Mechanism/AntimicrobialMech 破膜与生物膜瓦解": "#Ｄ２Mechanism/AntimicrobialMech 破膜与生物膜瓦解",
+    "#Ｄ２Mechanism/Biomineralization 生物矿化与钙化": "#Ｄ２Mechanism/Biomineralization 生物矿化与钙化",
+    "#Ｄ２Mechanism/ForeignBodyReaction 异物与植入物免疫反应": "#Ｄ２Mechanism/ForeignBodyReaction 异物与植入物免疫反应",
+    "#Ｄ３Phenotype/Osteogenesis 成骨与骨再生": "#Ｄ３Phenotype/Osteogenesis 成骨与骨再生",
+    "#Ｄ３Phenotype/BoneResorption 破骨与骨吸收": "#Ｄ３Phenotype/BoneResorption 破骨与骨吸收",
+    "#Ｄ３Phenotype/Adipogenesis 成脂分化": "#Ｄ３Phenotype/Adipogenesis 成脂分化",
+    "#Ｄ３Phenotype/EnergyMetabolism 糖脂与能量代谢": "#Ｄ３Phenotype/EnergyMetabolism 糖脂与能量代谢",
+    "#Ｄ３Phenotype/CartilageHomeostasis 软骨修复与退变": "#Ｄ３Phenotype/CartilageHomeostasis 软骨修复与退变",
+    "#Ｄ３Phenotype/Angiogenesis 促血管生成": "#Ｄ３Phenotype/Angiogenesis 促血管生成",
+    "#Ｄ３Phenotype/Hemostasis 凝血与止血": "#Ｄ３Phenotype/Hemostasis 凝血与止血",
+    "#Ｄ３Phenotype/Immunomodulation 免疫调控/MacrophagePolarization 巨噬细胞极化 (M1ﾉM2)": "#Ｄ３Phenotype/Immunomodulation 免疫调控/Macrophage 巨噬细胞极化",
+    "#Ｄ３Phenotype/Immunomodulation 免疫调控/Anti-Inflammation 抗炎调控": "#Ｄ３Phenotype/Immunomodulation 免疫调控/Anti-Inflammation 抗炎调控",
+    "#Ｄ３Phenotype/Antibacterial 抗菌与抗生物膜": "#Ｄ３Phenotype/Antibacterial 抗菌与抗生物膜",
+    "#Ｄ３Phenotype/WoundHealing 创面愈合与抗瘢痕": "#Ｄ３Phenotype/WoundHealing 创面愈合与抗瘢痕",
+    "#Ｄ３Phenotype/Antitumor 抗肿瘤": "#Ｄ３Phenotype/Antitumor 抗肿瘤",
+    "#Ｄ３Phenotype/Biomechanics 生物力学稳定性": "#Ｄ３Phenotype/Biomechanics 生物力学稳定性",
+    "#Ｄ３Phenotype/Biodegradation 生物降解与吸收": "#Ｄ３Phenotype/Biodegradation 生物降解与吸收",
+    "#Ｄ３Phenotype/ClinicalOutcome 临床疗效与并发症": "#Ｄ３Phenotype/ClinicalOutcome 临床疗效与并发症",
+    "#Ｅ１Method/StudyDesign 研究设计/Comparative 横向对比研究": "#Ｅ１Method/StudyDesign 研究设计/Comparative 横向对比研究",
+    "#Ｅ１Method/AnimalModel 动物模型/SmallAnimal 小动物模型": "#Ｅ１Method/AnimalModel 动物模型/SmallAnimal 小动物模型",
+    "#Ｅ１Method/AnimalModel 动物模型/LargeAnimal 大动物模型": "#Ｅ１Method/AnimalModel 动物模型/LargeAnimal 大动物模型",
+    "#Ｅ１Method/InVitroModel 体外模型/CellCulture 细胞培养体系": "#Ｅ１Method/InVitroModel 体外模型/CellCulture 细胞培养体系",
+    "#Ｅ１Method/InVitroModel 体外模型/Organoid 3D培养与类器官": "#Ｅ１Method/InVitroModel 体外模型/3D-Organoid 三维培养与类器官",
+    "#Ｅ１Method/InVitroModel 体外模型/BiofilmModel 细菌与生物膜模型": "#Ｅ１Method/InVitroModel 体外模型/BiofilmModel 细菌与生物膜模型",
+    "#Ｅ１Method/InVitroModel 体外模型/SyntheticBone 体外仿真骨与力学模型": "#Ｅ１Method/InVitroModel 体外模型/SyntheticBone 体外仿真骨与力学模型",
+    "#Ｅ１Method/PhysicalTherapy 物理治疗技术/CAP (Cold Atmospheric Plasma) 冷大气等离子体": "#Ｅ１Method/PhysicalTherapy 物理治疗技术/CAP 冷大气等离子体",
+    "#Ｅ１Method/PhysicalTherapy 物理治疗技术/Phototherapy 光热与光动力治疗 (PTTﾉPDT)": "#Ｅ１Method/PhysicalTherapy 物理治疗技术/Phototherapy 光热与光动力",
+    "#Ｅ１Method/Fabrication 制备与加工工艺/3D-Printing 3D打印与增材制造": "#Ｅ１Method/Fabrication 制备与加工工艺/3D-Printing 3D打印与增材制造",
+    "#Ｅ１Method/Fabrication 制备与加工工艺/Processing 成型加工与灭菌": "#Ｅ１Method/Fabrication 制备与加工工艺/Processing 成型加工与灭菌",
+    "#Ｅ１Method/Characterization 表征与分析技术/BiomechanicalTest 生物力学测试": "#Ｅ１Method/Characterization 表征与分析技术/BiomechanicalTest 生物力学测试",
+    "#Ｅ１Method/Characterization 表征与分析技术/Physicochemical 理化与定量表征": "#Ｅ１Method/Characterization 表征与分析技术/Physicochemical 理化与定量表征",
+    "#Ｅ１Method/Characterization 表征与分析技术/Simulation 有限元与分子模拟": "#Ｅ１Method/Characterization 表征与分析技术/Simulation 有限元与分子模拟",
+    "#Ｅ１Method/Characterization 表征与分析技术/Omics 多组学与测序": "#Ｅ１Method/Characterization 表征与分析技术/Omics 多组学与测序",
+    "#Ｅ１Method/Characterization 表征与分析技术/HistologyImaging 影像与组织学分析": "#Ｅ１Method/Characterization 表征与分析技术/HistologyImaging 影像与组织学分析"
+  },
+  "capsule_regex": "/#(?:.+\\/)*(?:(?=.*[a-zA-Zα-ω\\d-])([a-zA-Zα-ω\\d-]+)|(.+))/",
+  "field_mapping": "structured_fields.json"
 }
