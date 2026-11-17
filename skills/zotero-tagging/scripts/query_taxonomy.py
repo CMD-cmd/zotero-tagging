@@ -42,15 +42,15 @@ def query_taxonomy(dimensions=None, query=None, ids=None, all_terms=False, offse
     for old, new in tax.get('rename_map', {}).items():
         if old != new:
             aliases.setdefault(new, []).append(old)
-    needle = query.casefold().strip() if query is not None else None
+    tokens = query.casefold().split() if query is not None else []
     results = []
     for t in terms:
         if selected_dims and dimension_code(t['tag'].split('/')[0]) not in selected_dims:
             continue
         if selected_ids and t['id'] not in selected_ids:
             continue
-        search_text = ' '.join([t['tag'], t.get('definition', ''), *t.get('aliases', []), *aliases.get(t['tag'], [])])
-        if needle and needle not in search_text.casefold():
+        hay = ' '.join([t['tag'], t.get('definition', ''), *t.get('aliases', []), *aliases.get(t['tag'], [])]).casefold()
+        if tokens and not all(tok in hay for tok in tokens):
             continue
         results.append(t)
     page = results[offset:offset + limit]

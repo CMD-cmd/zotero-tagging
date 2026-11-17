@@ -7,11 +7,6 @@ ROOT = Path(__file__).resolve().parent.parent
 TAX_PATH = ROOT / 'references' / 'taxonomy.json'
 
 
-def keep_specific_children(tags):
-    """Return a leaf-preferred suggestion; callers choose whether to apply it."""
-    return [t for t in dict.fromkeys(tags) if not any(c.startswith(t + '/') for c in tags if c != t)]
-
-
 def validate_and_merge(new_tags, existing_tags, add_marker=True, mode='add', status=None):
     tax = json.loads(TAX_PATH.read_text(encoding='utf-8'))
     canon = set(tax['canonical_tags'])
@@ -72,7 +67,10 @@ def validate_and_merge(new_tags, existing_tags, add_marker=True, mode='add', sta
             errors.append('Reading state conflict; use --status for an explicit transition')
     parents = [t for t in controlled if any(c.startswith(t + '/') for c in controlled if c != t)]
     if parents:
-        warnings.append('Parent and child tags coexist; review specificity: ' + ', '.join(parents))
+        if mode == 'rename-only':
+            warnings.append('Parent and child tags coexist; review specificity: ' + ', '.join(parents))
+        else:
+            errors.append('Parent and child tags cannot coexist (keep specific child only): ' + ', '.join(parents))
     if len(controlled) > 9:
         warnings.append(f'{len(controlled)} controlled tags; count is informational')
     return {'valid': not errors, 'errors': errors, 'warnings': warnings,

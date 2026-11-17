@@ -45,5 +45,13 @@ class ValidatorTests(unittest.TestCase):
  def test_no_marker_preserves_existing(self):
   r=v.validate_and_merge([],[TYPE,'~ZTag-V2'],add_marker=False)
   self.assertTrue(r['valid']);self.assertIn('~ZTag-V2',r['final_tags'])
+ def test_parent_child_rejected(self):
+  parent='#Ｃ１Material/Hydrogel 水凝胶'
+  child='#Ｃ１Material/Hydrogel 水凝胶/GelMA'
+  for mode in ('add','replace-managed'):
+   with self.subTest(mode=mode):
+    r=v.validate_and_merge([parent,child],[TYPE],mode=mode)
+    self.assertFalse(r['valid'])
+    self.assertTrue(any('Parent and child tags cannot coexist' in e for e in r['errors']))
 
 if __name__=='__main__':unittest.main()

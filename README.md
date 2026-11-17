@@ -1,90 +1,75 @@
 # zotero-tagging
 
-面向生物医药与生物材料领域的 Zotero 文献导入与受控打标 Skill。V2.1 提供154项十维标签，服务精读分流、文献检索与结构化多选字段。
+面向生物医药与生物材料领域的 Zotero 文献导入与受控打标 Skill。V2.1 提供 154 项 L0–L4 十维正交词表（`ZT-001`–`ZT-154`），服务精读分流、Zotero 多级检索与飞书多维表格同步。
 
 ## 核心特性
 
-- 十个维度：Type、Disease、Surgery、Material、Carrier、Drug、Target、Mechanism、Phenotype、Method。
-- Article直接分为Mechanistic、Biomaterial、DeviceEvaluation；Clinical使用RCT、Prospective、Retrospective、CrossSectional、CaseReport、CaseControl六个入口。
-- 名称采用熟悉英文词、缩写和必要中文提示，配有稳定ID、定义及精确名称映射。
-- `~ZTag-V2`继续作为V2系列处理标记，词表版本单独记录。
-- 校验器支持增补、受控分类替换和仅名称迁移，保留用户自定义标签及阅读状态。
-- 十维标签可映射为十个多选字段；字段模板随Skill提供。
+- **L0–L4 十维正交体系**：Type、Disease、Surgery、Material、Carrier、Drug、Target、Mechanism、Phenotype、Method。
+- **精读直接分流**：`#Ａ１Type` 每篇严格唯一，`Article` 直接区分 `Mechanistic` / `Biomaterial` / `DeviceEvaluation`，`Clinical` 六选一（`RCT` / `CaseControl` / `Prospective` / `Retrospective` / `CrossSectional` / `CaseReport`）。
+- **按需查词与胶囊兼容**：`query_taxonomy.py` 支持维度、多词检索、品牌/中英文别名与稳定 ID 查询；命名严格兼容 ZoteroStyle 彩色胶囊正则与多级树排序。
+- **保留式硬校验**：`validate_tags.py` 自动附带 `~ZTag-V2` 处理标记，硬性拦截非法词、多 `Type`、状态冲突及父子共标（「就细不就粗」），同时完整保留用户自定义标签与阅读状态。
+- **结构化多选映射**：随 Skill 提供十维多选字段与选项 ID 映射模板（`structured_fields.json`）。
 
 ## 安装
 
-使用已有的skills CLI安装方式：
+使用 Skills CLI 一键安装：
 
 ```bash
 npx skills add CMD-cmd/zotero-tagging
 ```
 
-也可获取本仓库，将`skills/zotero-tagging`目录复制到Agent的Skills目录。
+或获取本仓库后，将 `skills/zotero-tagging` 复制到对应 Agent 的全局 `skills/` 目录。
 
 ## 使用条件
 
-本地运行Zotero，并连接可读取和写入标签的Zotero MCP服务。典型工具包括`add_by_identifier`、`write_item`、`write_tag`、`get_item_details`和`get_content`。ZoteroStyle可展示多级标签树和标签列。
+本地运行 Zotero 并连接 Zotero MCP 服务（具备 `add_by_identifier`、`write_item`、`write_tag`、`get_item_details`、`get_content` 等读写工具）。推荐配合 **ZoteroStyle** 插件展示十维标签树与列表胶囊。
 
-先确定唯一文献条目，挂接附件并读取文献内容，再按受控词表选择标签。写入前检查拟新增、移除和保留的标签，写后回读。
+入库与更新严格遵循三步顺序：**锁定唯一父条目 ➔ 挂齐全文附件 ➔ 读取内容、过校验并写入回读**。
 
-## 按需读取词表
+## 按需查询词表
 
-`SKILL.md`提供流程与分流原则，`taxonomy.json`保存规范词表。AI先读小型索引，再查询任务所需的维度或词条：
+AI 先获取小型维度索引，再按当前文献需求查询候选词条与边界定义，不向上下文倾倒整份词表：
 
 ```bash
 python3 skills/zotero-tagging/scripts/query_taxonomy.py
 python3 skills/zotero-tagging/scripts/query_taxonomy.py --dimension A1 --dimension C1
-python3 skills/zotero-tagging/scripts/query_taxonomy.py --query SSRO
+python3 skills/zotero-tagging/scripts/query_taxonomy.py --query "GelMA 水凝胶"
 python3 skills/zotero-tagging/scripts/query_taxonomy.py --id ZT-050
 ```
 
-默认输出十维索引。筛选支持维度、关键词、稳定ID与分页；全词表读取使用`--all --limit 200`。查询和写入校验共享同一份词表数据源。
+## 校验与回归测试
 
-## 词表随使用演进
-
-日常调用既完成文献归类，也记录实际分类缺口和检索反馈。候选保存来源文献、实际筛选用途、定义边界及拟调整方式。
-
-新领域、重复缺口和检索困难可触发小范围新增、别名、更名、合并、拆分或停用建议。依据用户确认或已有范围授权发布新版本，保持稳定ID及历史映射；受影响条目按明确范围迁移。
-
-具体流程见`references/taxonomy_evolution.md`，候选记录保存在实例的`references/taxonomy_candidates.json`。词表的规范数据由`taxonomy.json`维护，查询与校验持续读取当前版本。
-
-## 校验
-
-Python 3标准库即可运行：
+写入 Zotero 前通过 Python 3 标准库脚本校验并生成精确差异 `diff`：
 
 ```bash
 python3 skills/zotero-tagging/scripts/validate_tags.py \
-  --existing '["/unread"]' \
+  --mode replace-managed \
+  --existing '["/unread", "自定义标签"]' \
   --tags '#Ａ１Type/Article 论著/Biomaterial 生物材料研究' \
          '#Ｂ１Disease/BoneDefect 骨缺损与拔牙窝创伤'
 ```
 
-- 默认`add`：增补受控标签并保留现有标签。
-- `--mode replace-managed`：仅替换词表管理的分类，保留其他用户标签。
-- `--mode rename-only`：执行精确名称映射并保持标签归属。
-- `--status /Done`：显式转换阅读状态。
+- `--mode add`（默认）：增量补标并保留已有分类、自定义标签及阅读状态。
+- `--mode replace-managed`：仅全量替换本词表管理的 `#` 标签与已知旧名，保留其余用户标签与阅读状态。
+- `--mode rename-only`：仅按 `rename_map` 映射已改名的词表标签，保持原归属与标记不变。
+- `--status /unread|/reading|/Done`：显式切换阅读状态。
 
-校验结果包含`valid`、`errors`、`warnings`、`final_tags`和`diff`。校验器生成建议结果，Zotero写入由Agent通过连接工具完成。
-
-运行回归检查：
+运行全套单元测试：
 
 ```bash
 python3 -m unittest discover -s skills/zotero-tagging/tests -v
 ```
 
-## 文件
+## 文件结构
 
-- `SKILL.md`：工作流程与分类边界。
-- `references/taxonomy.json`：154项规范标签、稳定ID、定义和旧名称映射。
-- `references/ZOTERO_TAG_SPEC.md`：完整标签规范与显示规则。
-- `references/pending_review.json`：待核与已解决记录模板。
-- `references/taxonomy_evolution.md`：日常词表演进流程。
-- `references/taxonomy_candidates.json`：候选与审议记录模板。
-- `references/structured_fields.json`：十维多选字段映射。
-- `scripts/query_taxonomy.py`：按维度、关键词或ID读取词表。
-- `scripts/validate_tags.py`：保留式标签校验。
+- `skills/zotero-tagging/SKILL.md`：Agent 执行入口、按需查词、五条铁规则与三大 MCP 工作流。
+- `skills/zotero-tagging/references/taxonomy.json`：154 项规范标签、稳定 ID、定义、中英文别名与旧名称映射。
+- `skills/zotero-tagging/references/ZOTERO_TAG_SPEC.md`：L0–L4 架构说明、稀疏激活模板与全量受控词表。
+- `skills/zotero-tagging/references/structured_fields.json`：十维结构化多选字段映射模板。
+- `skills/zotero-tagging/scripts/query_taxonomy.py`：按维度、多词关键词、别名或 ID 查询词表。
+- `skills/zotero-tagging/scripts/validate_tags.py`：写入前硬校验与差异生成脚本。
+- `skills/zotero-tagging/tests/test_query_taxonomy.py`、`test_validate_tags.py`：词表、查询与校验器单元测试。
 
 ## License
 
 MIT License
-

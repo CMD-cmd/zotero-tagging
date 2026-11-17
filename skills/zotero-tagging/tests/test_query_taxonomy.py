@@ -58,5 +58,16 @@ class QueryTests(unittest.TestCase):
         r=q.query_taxonomy(all_terms=True,limit=T['canonical_count'])
         source=json.loads((ROOT/'references/taxonomy.json').read_text())
         self.assertEqual(r['terms'],source['terms'])
+    def test_multi_token_and_aliases(self):
+        self.assertEqual([t['id'] for t in q.query_taxonomy(query='GelMA 水凝胶')['terms']], ['ZT-069'])
+        self.assertEqual([t['id'] for t in q.query_taxonomy(query='LactoSorb')['terms']], ['ZT-060'])
+        self.assertEqual([t['id'] for t in q.query_taxonomy(query='Gelatin Methacryloyl')['terms']], ['ZT-069'])
+        self.assertEqual([t['id'] for t in q.query_taxonomy(query='Ferroptosis')['terms']], ['ZT-115'])
+    def test_clean_definitions(self):
+        for t in T['terms']:
+            defn = t.get('definition', '')
+            self.assertTrue(defn.endswith('。'), msg=f"{t['id']} definition should be a complete sentence: {defn!r}")
+            self.assertGreaterEqual(len(defn), 6, msg=f"{t['id']} definition too short")
+            self.assertIsInstance(t.get('aliases'), list)
 
 if __name__=='__main__':unittest.main()
