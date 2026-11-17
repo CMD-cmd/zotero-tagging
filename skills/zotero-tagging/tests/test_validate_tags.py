@@ -12,9 +12,10 @@ OTHER='#Ａ１Type/Article 论著/Biomaterial 生物材料研究'
 
 class ValidatorTests(unittest.TestCase):
  def test_taxonomy_unique(self):
-  self.assertEqual(len(T['canonical_tags']),154)
-  self.assertEqual(len(set(T['canonical_tags'])),154)
-  self.assertEqual(len({t['id'] for t in T['terms']}),154)
+  self.assertEqual(len(T['canonical_tags']),T['canonical_count'])
+  self.assertEqual(len(set(T['canonical_tags'])),T['canonical_count'])
+  self.assertEqual(len({t['id'] for t in T['terms']}),T['canonical_count'])
+  self.assertEqual({t['tag'] for t in T['terms']},set(T['canonical_tags']))
  def test_all_renames(self):
   for old,new in T['rename_map'].items():
    with self.subTest(old=old):
